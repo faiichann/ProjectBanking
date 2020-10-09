@@ -2,6 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome project</h1>
-</div>
+<center><p>Term Calculation</p></center><br /><br />
+
+<form asp-controller="Home" asp-action="CalFixed" method="post">
+    <span>First money : </span><input id="Fmoney" type="number" name="Fmoney" /><br />
+    <span>Select Term : </span>
+    <input id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
+    <input id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
+    <input id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
+    <span>Rate : </span><input id="Frate" type="number" name="Frate" value="0" hidden/><br />
+    <span>Second money : </span><input id="Smoney" type="number" name="Smoney" /><br />
+    <input id="cal" type="submit" value="Calculation" /><br />
+    <label>Result is <br />
+    First Money : @ViewBag.Earlysaving</label><br />
+    <label>Last Money : @ViewBag.Lastsaving</label><br />
+    <label>Total Rate : @ViewBag.Ratesaving</label><br />
+    <label>Total Money : @ViewBag.Totalsaving</label>
+    
+
+    
+</form>

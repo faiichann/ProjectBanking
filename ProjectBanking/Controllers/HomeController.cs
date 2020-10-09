@@ -39,35 +39,46 @@ namespace ProjectBanking.Controllers
         }
         public IActionResult CalFixed()
         {
-            int Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Fmoney"].ToString());
-            int Rate = Convert.ToInt32(HttpContext.Request.Form["Frate"].ToString());
+            float Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Fmoney"].ToString());
+            float Secondmoney = Convert.ToInt32(HttpContext.Request.Form["Smoney"].ToString());
+            float Rate = Convert.ToInt32(HttpContext.Request.Form["Frate"].ToString());
             int Term = Convert.ToInt32(HttpContext.Request.Form["Fday"].ToString());
 
             if (Term == 3)
             {
-                int TotalRate = (Firstmoney * (Rate / 100) * 90) / 365;
-                int Total = Firstmoney + TotalRate;
+                Rate = 2;
+                float TotalMoney = Firstmoney + (Secondmoney * 3);
+                float TotalRate = ((Firstmoney + (Secondmoney * 3)) * (Rate / 100) * 90) / 365;
+                float Total = TotalMoney + TotalRate;
                 ViewBag.Earlysaving = Firstmoney.ToString();
+                ViewBag.Lastsaving = TotalMoney.ToString();
                 ViewBag.Ratesaving = TotalRate.ToString();
                 ViewBag.Totalsaving = Total.ToString();
             }
             if (Term == 6)
             {
-                int TotalRate = (Firstmoney * (Rate / 100) * 183) / 365;
-                int Total = Firstmoney + TotalRate;
+                Rate = 3;
+                float TotalMoney = Firstmoney + (Secondmoney * 6);
+                float TotalRate = ((Firstmoney +(Secondmoney * 6)) * (Rate / 100) * 183) / 365;
+                float Total = TotalMoney + TotalRate;
                 ViewBag.Earlysaving = Firstmoney.ToString();
+                ViewBag.Lastsaving = TotalMoney.ToString();
                 ViewBag.Ratesaving = TotalRate.ToString();
                 ViewBag.Totalsaving = Total.ToString();
             }
+        
             if (Term == 12)
             {
-                int TotalRate = (Firstmoney * (Rate / 100) * 365) / 365;
-                int Total = Firstmoney + TotalRate;
+                Rate = 4;
+                float TotalMoney = Firstmoney + (Secondmoney * 12);
+                float TotalRate = ((Firstmoney + (Secondmoney * 12)) * (Rate / 100) * 365) / 365;
+                float Total = TotalMoney + TotalRate;
                 ViewBag.Earlysaving = Firstmoney.ToString();
+                ViewBag.Lastsaving = TotalMoney.ToString();
                 ViewBag.Ratesaving = TotalRate.ToString();
                 ViewBag.Totalsaving = Total.ToString();
             }
-            return View("fixeddeposit");
+            return View("Index");
         }
 
 
