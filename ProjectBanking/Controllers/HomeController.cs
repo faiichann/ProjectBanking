@@ -30,13 +30,32 @@ namespace ProjectBanking.Controllers
             double Rate = Convert.ToInt32(HttpContext.Request.Form["Srate"].ToString());
             int Term = Convert.ToInt32(HttpContext.Request.Form["Sday"].ToString());
 
+            /* SCB */
             Rate = 0.25;
-            double TotalRate = (Firstmoney * (Rate/100) * Term / 365);
-            double Total = Firstmoney + TotalRate;
-            ViewBag.Earlysaving = Firstmoney.ToString("0.00");
-            ViewBag.Ratesaving = TotalRate.ToString("0.00");
-            ViewBag.Rate = Rate.ToString("0.00");
-            ViewBag.Totalsaving = Total.ToString("0.00");
+            double TotalRate1 = (Firstmoney * (Rate/100) * Term / 365);
+            double Total1 = Firstmoney + TotalRate1;
+            ViewBag.Earlysaving1 = Firstmoney.ToString("0.00");
+            ViewBag.Ratesaving1 = TotalRate1.ToString("0.00");
+            ViewBag.Rate1 = Rate.ToString("0.00");
+            ViewBag.Totalsaving1 = Total1.ToString("0.00");
+
+            /* KBANK */
+            Rate = 0.25;
+            double TotalRate2 = (Firstmoney * (Rate / 100) * Term / 365);
+            double Total2 = Firstmoney + TotalRate2;
+            ViewBag.Earlysaving2 = Firstmoney.ToString("0.00");
+            ViewBag.Ratesaving2 = TotalRate2.ToString("0.00");
+            ViewBag.Rate2 = Rate.ToString("0.00");
+            ViewBag.Totalsaving2 = Total1.ToString("0.00");
+
+            /* Krungsri */
+            Rate = 0.25;
+            double TotalRate3 = (Firstmoney * (Rate / 100) * Term / 365);
+            double Total3 = Firstmoney + TotalRate3;
+            ViewBag.Earlysaving3 = Firstmoney.ToString("0.00");
+            ViewBag.Ratesaving3 = TotalRate1.ToString("0.00");
+            ViewBag.Rate3 = Rate.ToString("0.00");
+            ViewBag.Totalsaving3 = Total3.ToString("0.00");
             return View("Index");
         }
         public IActionResult CalFixed()
