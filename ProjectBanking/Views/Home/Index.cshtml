@@ -3,62 +3,70 @@
 }
 
 <center><p>Term Calculation</p></center><br /><br />
-<p>ฝากประจำ</p>
-<form asp-controller="Home" asp-action="CalFixed" method="post">
-    <span>First money : </span><input id="Fmoney" type="number" name="Fmoney" /><br />
-    <span>Select Term : </span>
-    <input id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
-    <input id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
-    <input id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
-    <input id="Frate" type="number" name="Frate" value="0" hidden/>
-    <span>Second money : </span><input id="Smoney" type="number" name="Smoney" /><br />
-    <input id="cal1" type="submit" value="Calculation" /><br />
+                                              <div>
+                                                  <p>ฝากประจำ</p>
+                                                  <form asp-controller="Home" asp-action="CalFixed" method="post">
+                                                      <span>First money : </span><input id="Fmoney" type="number" name="Fmoney" /><br />
+                                                      <span>Select Term : </span>
+                                                      <input id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
+                                                      <input id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
+                                                      <input id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
+                                                      <input id="Frate" type="number" name="Frate" value="0" hidden />
+                                                      <span>Second money : </span><input id="Smoney" type="number" name="Smoney" /><br />
+                                                      <input id="cal1" type="submit" value="Calculation" /><br />
 
-    <label>Result of SCB is <br />
-    First Money : @ViewBag.Earlysaving1</label><br />
-    <label>Last Money : @ViewBag.Lastsaving1</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving1</label><br />
-    <label>Rate : @ViewBag.Rate1  %</label><br />
-    <label>Total Money : @ViewBag.Totalsaving1</label><br />
+                                                      <label>
+                                                          Result of SCB is <br />
+                                                          First Money : @ViewBag.Earlysaving4
+                                                      </label><br />
+                                                      <label>Last Money : @ViewBag.Lastsaving4</label><br />
+                                                      <label>Total Rate : @ViewBag.Ratesaving4</label><br />
+                                                      <label>Rate : @ViewBag.Rate4  %</label><br />
+                                                      <label>Total Money : @ViewBag.Totalsaving4</label><br />
 
-    <label>Result of KBANK is <br />
-    First Money : @ViewBag.Earlysaving2</label><br />
-    <label>Last Money : @ViewBag.Lastsaving2</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving2</label><br />
-    <label>Rate : @ViewBag.Rate2  %</label><br />
-    <label>Total Money : @ViewBag.Totalsaving2</label><br />
+                                                      <label>
+                                                          Result of KBANK is <br />
+                                                          First Money : @ViewBag.Earlysaving5
+                                                      </label><br />
+                                                      <label>Last Money : @ViewBag.Lastsaving5</label><br />
+                                                      <label>Total Rate : @ViewBag.Ratesaving5</label><br />
+                                                      <label>Rate : @ViewBag.Rate5  %</label><br />
+                                                      <label>Total Money : @ViewBag.Totalsaving5</label><br />
 
-    <label>Result of Krungsri is <br />
-    First Money : @ViewBag.Earlysaving3</label><br />
-    <label>Last Money : @ViewBag.Lastsaving3</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving3</label><br />
-    <label>Rate : @ViewBag.Rate3  %</label><br />
-    <label>Total Money : @ViewBag.Totalsaving3</label>
-</form><br /><br />
+                                                      <label>
+                                                          Result of Krungsri is <br />
+                                                          First Money : @ViewBag.Earlysaving6
+                                                      </label><br />
+                                                      <label>Last Money : @ViewBag.Lastsaving6</label><br />
+                                                      <label>Total Rate : @ViewBag.Ratesaving6</label><br />
+                                                      <label>Rate : @ViewBag.Rate6  %</label><br />
+                                                      <label>Total Money : @ViewBag.Totalsaving6</label>
+                                                  </form><br /><br />
+                                              </div>
+                                              <div>
+                                                  <p>ฝากออมทรัพย์</p>
+                                                  <form asp-controller="Home" asp-action="CalSaving" method="post">
+                                                      <span>First money : </span><input id="Smoney" type="number" name="Smoney" /><br />
+                                                      <span>Term : </span><input id="Sday" type="number" name="Sday" /><br />
+                                                      <input id="Srate" type="number" name="Srate" value="0" hidden />
+                                                      <input id="cal2" type="submit" value="Calculation2" /><br />
 
+                                                      <label>Result of SCB is</label><br />
+                                                      <label>First Money : @ViewBag.Earlysaving1</label><br />
+                                                      <label>Total Rate : @ViewBag.Ratesaving1</label><br />
+                                                      <label>Rate : @ViewBag.Rate1  %</label><br />
+                                                      <label>Total Money : @ViewBag.Totalsaving1</label><br />
 
-<p>ฝากออมทรัพย์</p>
-<form asp-controller="Home" asp-action="CalSaving" method="post">
-    <span>First money : </span><input id="Smoney" type="number" name="Smoney" /><br />
-    <span>Term : </span><input id="Sday" type="number" name="Sday" /><br />
-    <input id="Srate" type="number" name="Srate" value="0" hidden />
-    <input id="cal2" type="submit" value="Calculation" /><br />
+                                                      <label>Result of KBANK is</label><br />
+                                                      <label>First Money : @ViewBag.Earlysaving2</label><br />
+                                                      <label>Total Rate : @ViewBag.Ratesaving2</label><br />
+                                                      <label>Rate : @ViewBag.Rate2  %</label><br />
+                                                      <label>Total Money : @ViewBag.Totalsaving2</label><br />
 
-    <label>Result of SCB is</label><br />
-    <label>First Money : @ViewBag.Earlysaving1</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving1</label><br />
-    <label>Rate : @ViewBag.Rate1  %</label><br />
-    <label>Total Money : @ViewBag.Totalsaving1</label><br />
-
-    <label>Result of KBANK is</label><br />
-    <label>First Money : @ViewBag.Earlysaving2</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving2</label><br />
-    <label>Rate : @ViewBag.Rate2  %</label><br />
-    <label>Total Money : @ViewBag.Totalsaving2</label><br />
-
-    <label>Result of Krungsri is</label><br />
-    <label>First Money : @ViewBag.Earlysaving3</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving3</label><br />
-    <label>Rate : @ViewBag.Rate3  %</label><br />
-    <label>Total Money : @ViewBag.Totalsaving3</label>
-</form>
+                                                      <label>Result of Krungsri is</label><br />
+                                                      <label>First Money : @ViewBag.Earlysaving3</label><br />
+                                                      <label>Total Rate : @ViewBag.Ratesaving3</label><br />
+                                                      <label>Rate : @ViewBag.Rate3  %</label><br />
+                                                      <label>Total Money : @ViewBag.Totalsaving3</label>
+                                                  </form>
+                                              </div>

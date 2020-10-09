@@ -20,7 +20,6 @@ C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.TagHelpers.output.cache
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorCoreGenerate.cache
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Homepage.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
