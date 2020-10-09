@@ -3,7 +3,7 @@
 }
 
 <center><p>Term Calculation</p></center><br /><br />
-
+<p>ฝากประจำ</p>
 <form asp-controller="Home" asp-action="CalFixed" method="post">
     <span>First money : </span><input id="Fmoney" type="number" name="Fmoney" /><br />
     <span>Select Term : </span>
@@ -18,7 +18,17 @@
     <label>Last Money : @ViewBag.Lastsaving</label><br />
     <label>Total Rate : @ViewBag.Ratesaving</label><br />
     <label>Total Money : @ViewBag.Totalsaving</label>
-    
+</form><br /><br />
 
-    
+
+<p>ฝากออมทรัพย์</p>
+<form asp-controller="Home" asp-action="CalSaving" method="post">
+    <span>First money : </span><input id="Smoney" type="number" name="Smoney" /><br />
+    <span>Term : </span><input id="Sday" type="number" name="Sday" /><br />
+    <span>Rate : </span><input id="Srate" type="number" name="Srate" value="0" readonly /><br />
+    <input id="Cal" type="submit" value="Calculation" /><br />
+    <label>Result is</label><br />
+    <label>First Money : @ViewBag.Earlysaving</label><br />
+    <label>Total Rate : @ViewBag.Ratesaving</label><br />
+    <label>Total Money : @ViewBag.Totalsaving</label>
 </form>
