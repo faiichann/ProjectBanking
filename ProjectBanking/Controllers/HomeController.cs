@@ -20,10 +20,20 @@ namespace ProjectBanking.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.listbank = AllBank();
             return View();
         }
 
         [HttpPost]
+        public List<Bank> AllBank()
+        {
+            List<Bank> listbank = new List<Bank>();
+            listbank.Add(new Bank { BankID = "001", BankName = "Bank1", BankAddress = "Bankok" , BankInterestRate = 1.1});
+            listbank.Add(new Bank { BankID = "002", BankName = "Bank2", BankAddress = "Bankok", BankInterestRate = 0.75 });
+            listbank.Add(new Bank { BankID = "003", BankName = "Bank3", BankAddress = "Bankok", BankInterestRate = 0.8 });
+
+            return listbank;
+        }
         public IActionResult CalSaving()
         {
             int Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Smoney"].ToString());

@@ -7,27 +7,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectBanking.Models
 {
-    public class GSBbank
+    public class Bank
     {
-        public string GsbBankID { get; set; }
-        public string GsbBankName { get; set; }
-        public string GsbBankAddress { get; set; }
-        public string GsbBankInterestRate { get; set; }
-    }
-
-    public class KTBbank
-    {
-        public string KtbBankID { get; set; }
-        public string ktbBankName { get; set; }
-        public string ktbBankAddress { get; set; }
-        public string ktbBankInterestRate { get; set; }
-    }
-
-    public class SCBbank
-    {
-        public string ScbBankID { get; set; }
-        public string ScbBankName { get; set; }
-        public string ScbBankAddress { get; set; }
-        public string ScbBankInterestRate { get; set; }
+        public string BankID { get; set; }
+        public string BankName { get; set; }
+        public string BankAddress { get; set; }
+        public double BankInterestRate { get; set; }
     }
 }
