@@ -35,49 +35,122 @@ namespace ProjectBanking.Controllers
             double Total = Firstmoney + TotalRate;
             ViewBag.Earlysaving = Firstmoney.ToString("0.00");
             ViewBag.Ratesaving = TotalRate.ToString("0.00");
+            ViewBag.Rate = Rate.ToString("0.00");
             ViewBag.Totalsaving = Total.ToString("0.00");
             return View("Index");
         }
         public IActionResult CalFixed()
         {
-            float Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Fmoney"].ToString());
-            float Secondmoney = Convert.ToInt32(HttpContext.Request.Form["Smoney"].ToString());
-            float Rate = Convert.ToInt32(HttpContext.Request.Form["Frate"].ToString());
+            double Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Fmoney"].ToString());
+            double Secondmoney = Convert.ToInt32(HttpContext.Request.Form["Smoney"].ToString());
+            double Rate = Convert.ToInt32(HttpContext.Request.Form["Frate"].ToString());
             int Term = Convert.ToInt32(HttpContext.Request.Form["Fday"].ToString());
 
             if (Term == 3)
-            {
-                Rate = 2;
-                float TotalMoney = Firstmoney + (Secondmoney * 3);
-                float TotalRate = ((Firstmoney + (Secondmoney * 3)) * (Rate / 100) * 90) / 365;
-                float Total = TotalMoney + TotalRate;
-                ViewBag.Earlysaving = Firstmoney.ToString("0.00");
-                ViewBag.Lastsaving = TotalMoney.ToString("0.00");
-                ViewBag.Ratesaving = TotalRate.ToString("0.00");
-                ViewBag.Totalsaving = Total.ToString("0.00");
+            {  
+                /* SCB */
+                Rate = 0.375;
+                double TotalMoney1 = Firstmoney + (Secondmoney * 3);
+                double TotalRate1 = ((Firstmoney + (Secondmoney * 3)) * (Rate / 100) * 90) / 365;
+                double Total1 = TotalMoney1 + TotalRate1;
+                ViewBag.Earlysaving1 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving1 = TotalMoney1.ToString("0.00");
+                ViewBag.Ratesaving1 = TotalRate1.ToString("0.00");
+                ViewBag.Rate1 = Rate.ToString("0.000");
+                ViewBag.Totalsaving1 = Total1.ToString("0.00");
+
+                /* KBANK */
+                Rate = 0.37;
+                double TotalMoney2 = Firstmoney + (Secondmoney * 3);
+                double TotalRate2 = ((Firstmoney + (Secondmoney * 3)) * (Rate / 100) * 90) / 365;
+                double Total2 = TotalMoney2 + TotalRate2;
+                ViewBag.Earlysaving2 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving2 = TotalMoney2.ToString("0.00");
+                ViewBag.Ratesaving2 = TotalRate2.ToString("0.00");
+                ViewBag.Rate2 = Rate.ToString("0.00");
+                ViewBag.Totalsaving2 = Total2.ToString("0.00");
+
+                /* Krungsri */
+                Rate = 0.375;
+                double TotalMoney3 = Firstmoney + (Secondmoney * 3);
+                double TotalRate3 = ((Firstmoney + (Secondmoney * 3)) * (Rate / 100) * 90) / 365;
+                double Total3 = TotalMoney3 + TotalRate3;
+                ViewBag.Earlysaving3 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving3 = TotalMoney3.ToString("0.00");
+                ViewBag.Ratesaving3 = TotalRate3.ToString("0.00");
+                ViewBag.Rate3 = Rate.ToString("0.000");
+                ViewBag.Totalsaving3 = Total3.ToString("0.00");
             }
             if (Term == 6)
             {
-                Rate = 3;
-                float TotalMoney = Firstmoney + (Secondmoney * 6);
-                float TotalRate = ((Firstmoney +(Secondmoney * 6)) * (Rate / 100) * 183) / 365;
-                float Total = TotalMoney + TotalRate;
-                ViewBag.Earlysaving = Firstmoney.ToString("0.00");
-                ViewBag.Lastsaving = TotalMoney.ToString("0.00");
-                ViewBag.Ratesaving = TotalRate.ToString("0.00");
-                ViewBag.Totalsaving = Total.ToString("0.00");
+                /* SCB */
+                Rate = 0.50;
+                double TotalMoney1 = Firstmoney + (Secondmoney * 6);
+                double TotalRate1 = ((Firstmoney +(Secondmoney * 6)) * (Rate / 100) * 183) / 365;
+                double Total1 = TotalMoney1 + TotalRate1;
+                ViewBag.Earlysaving1 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving1 = TotalMoney1.ToString("0.00");
+                ViewBag.Ratesaving1 = TotalRate1.ToString("0.00");
+                ViewBag.Rate1 = Rate.ToString("0.00");
+                ViewBag.Totalsaving1 = Total1.ToString("0.00");
+
+                /* KBANK */
+                Rate = 0.45;
+                double TotalMoney2 = Firstmoney + (Secondmoney * 6);
+                double TotalRate2 = ((Firstmoney + (Secondmoney * 6)) * (Rate / 100) * 183) / 365;
+                double Total2 = TotalMoney2 + TotalRate2;
+                ViewBag.Earlysaving2 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving2 = TotalMoney2.ToString("0.00");
+                ViewBag.Ratesaving2 = TotalRate2.ToString("0.00");
+                ViewBag.Rate2 = Rate.ToString("0.00");
+                ViewBag.Totalsaving2 = Total2.ToString("0.00");
+
+                /* Krungsri */
+                Rate = 0.50;
+                double TotalMoney3 = Firstmoney + (Secondmoney * 6);
+                double TotalRate3 = ((Firstmoney + (Secondmoney * 6)) * (Rate / 100) * 183) / 365;
+                double Total3 = TotalMoney3 + TotalRate3;
+                ViewBag.Earlysaving3 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving3 = TotalMoney3.ToString("0.00");
+                ViewBag.Ratesaving3 = TotalRate3.ToString("0.00");
+                ViewBag.Rate3 = Rate.ToString("0.00");
+                ViewBag.Totalsaving3 = Total3.ToString("0.00");
             }
         
             if (Term == 12)
             {
-                Rate = 4;
-                float TotalMoney = Firstmoney + (Secondmoney * 12);
-                float TotalRate = ((Firstmoney + (Secondmoney * 12)) * (Rate / 100) * 365) / 365;
-                float Total = TotalMoney + TotalRate;
-                ViewBag.Earlysaving = Firstmoney.ToString("0.00");
-                ViewBag.Lastsaving = TotalMoney.ToString("0.00");
-                ViewBag.Ratesaving = TotalRate.ToString("0.00");
-                ViewBag.Totalsaving = Total.ToString("0.00");
+                /* SCB */
+                Rate = 0.50;
+                double TotalMoney1 = Firstmoney + (Secondmoney * 12);
+                double TotalRate1 = ((Firstmoney + (Secondmoney * 12)) * (Rate / 100) * 365) / 365;
+                double Total1 = TotalMoney1 + TotalRate1;
+                ViewBag.Earlysaving1 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving1 = TotalMoney1.ToString("0.00");
+                ViewBag.Ratesaving1 = TotalRate1.ToString("0.00");
+                ViewBag.Rate1 = Rate.ToString("0.00");
+                ViewBag.Totalsaving1 = Total1.ToString("0.00");
+
+                /* KBANK */
+                Rate = 0.45;
+                double TotalMoney2 = Firstmoney + (Secondmoney * 12);
+                double TotalRate2 = ((Firstmoney + (Secondmoney * 12)) * (Rate / 100) * 365) / 365;
+                double Total2 = TotalMoney2 + TotalRate2;
+                ViewBag.Earlysaving2 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving2 = TotalMoney2.ToString("0.00");
+                ViewBag.Ratesaving2 = TotalRate2.ToString("0.00");
+                ViewBag.Rate2 = Rate.ToString("0.00");
+                ViewBag.Totalsaving2 = Total2.ToString("0.00");
+
+                /* Krungsri */
+                Rate = 0.50;
+                double TotalMoney3 = Firstmoney + (Secondmoney * 12);
+                double TotalRate3 = ((Firstmoney + (Secondmoney * 12)) * (Rate / 100) * 365) / 365;
+                double Total3 = TotalMoney3 + TotalRate3;
+                ViewBag.Earlysaving3 = Firstmoney.ToString("0.00");
+                ViewBag.Lastsaving3 = TotalMoney3.ToString("0.00");
+                ViewBag.Ratesaving3 = TotalRate3.ToString("0.00");
+                ViewBag.Rate3 = Rate.ToString("0.00");
+                ViewBag.Totalsaving3 = Total3.ToString("0.00");
             }
             return View("Index");
         }

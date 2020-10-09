@@ -10,14 +10,30 @@
     <input id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
     <input id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
     <input id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
-    <span>Rate : </span><input id="Frate" type="number" name="Frate" value="0" hidden/><br />
+    <input id="Frate" type="number" name="Frate" value="0" hidden/>
     <span>Second money : </span><input id="Smoney" type="number" name="Smoney" /><br />
-    <input id="cal" type="submit" value="Calculation" /><br />
-    <label>Result is <br />
-    First Money : @ViewBag.Earlysaving</label><br />
-    <label>Last Money : @ViewBag.Lastsaving</label><br />
-    <label>Total Rate : @ViewBag.Ratesaving</label><br />
-    <label>Total Money : @ViewBag.Totalsaving</label>
+    <input id="cal1" type="submit" value="Calculation" /><br />
+
+    <label>Result of SCB is <br />
+    First Money : @ViewBag.Earlysaving1</label><br />
+    <label>Last Money : @ViewBag.Lastsaving1</label><br />
+    <label>Total Rate : @ViewBag.Ratesaving1</label><br />
+    <label>Rate : @ViewBag.Rate1  %</label><br />
+    <label>Total Money : @ViewBag.Totalsaving1</label><br />
+
+    <label>Result of KBANK is <br />
+    First Money : @ViewBag.Earlysaving2</label><br />
+    <label>Last Money : @ViewBag.Lastsaving2</label><br />
+    <label>Total Rate : @ViewBag.Ratesaving2</label><br />
+    <label>Rate : @ViewBag.Rate2  %</label><br />
+    <label>Total Money : @ViewBag.Totalsaving2</label><br />
+
+    <label>Result of Krungsri is <br />
+    First Money : @ViewBag.Earlysaving3</label><br />
+    <label>Last Money : @ViewBag.Lastsaving3</label><br />
+    <label>Total Rate : @ViewBag.Ratesaving3</label><br />
+    <label>Rate : @ViewBag.Rate3  %</label><br />
+    <label>Total Money : @ViewBag.Totalsaving3</label>
 </form><br /><br />
 
 
@@ -25,10 +41,12 @@
 <form asp-controller="Home" asp-action="CalSaving" method="post">
     <span>First money : </span><input id="Smoney" type="number" name="Smoney" /><br />
     <span>Term : </span><input id="Sday" type="number" name="Sday" /><br />
-    <span>Rate : </span><input id="Srate" type="number" name="Srate" value="0" readonly /><br />
-    <input id="Cal" type="submit" value="Calculation" /><br />
+    <input id="Srate" type="number" name="Srate" value="0" hidden />
+    <input id="cal2" type="submit" value="Calculation" /><br />
+
     <label>Result is</label><br />
     <label>First Money : @ViewBag.Earlysaving</label><br />
     <label>Total Rate : @ViewBag.Ratesaving</label><br />
+    <label>Rate : @ViewBag.Rate  %</label><br />
     <label>Total Money : @ViewBag.Totalsaving</label>
 </form>
