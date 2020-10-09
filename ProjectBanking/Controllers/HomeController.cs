@@ -26,10 +26,11 @@ namespace ProjectBanking.Controllers
         [HttpPost]
         public IActionResult CalSaving()
         {
+
             double SFirstmoney = Convert.ToInt32(HttpContext.Request.Form["Smoney"].ToString());
             double SRate = Convert.ToInt32(HttpContext.Request.Form["Srate"].ToString());
             int STerm = Convert.ToInt32(HttpContext.Request.Form["Sday"].ToString());
-
+           
             /* SCB */
             SRate = 0.25;
             double TotalRate1 = (SFirstmoney * (SRate/100) * (STerm*30.5) / 365);
@@ -56,6 +57,14 @@ namespace ProjectBanking.Controllers
             ViewBag.Ratesaving3 = TotalRate1.ToString("0.00");
             ViewBag.Rate3 = SRate.ToString("0.00");
             ViewBag.Totalsaving3 = Total3.ToString("0.00");
+
+            List<string> rangS = new List<string>()
+                {
+                      ViewBag.Totalsaving1,ViewBag.Totalsaving2,ViewBag.Totalsaving3
+                };
+            List<string> liRate = rangS.OrderBy(number => number).ToList();
+            foreach (string number in liRate)
+                ViewBag.read = number;
             return View("Index");
         }
         public IActionResult CalFixed()
@@ -171,6 +180,14 @@ namespace ProjectBanking.Controllers
                 ViewBag.Rate6 = Rate.ToString("0.00");
                 ViewBag.Totalsaving6 = Total6.ToString("0.00");
             }
+
+            List<string> rangF = new List<string>()
+                {
+                      ViewBag.Totalsaving4,ViewBag.Totalsaving5,ViewBag.Totalsaving6
+                };
+            List<string> liRate = rangF.OrderBy(number => number).ToList();
+            foreach (string number in liRate)
+                ViewBag.readF = number;
             return View("Index");
         }
 
