@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectBanking.Models;
+using SelectPdf;
 
 namespace ProjectBanking.Controllers
 {
@@ -21,6 +22,21 @@ namespace ProjectBanking.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Pdf(string html)
+        {
+
+            html = html.Replace("srtTag", "<").Replace("EndTag", ">");
+
+            HtmlToPdf oHtmlToPdf = new HtmlToPdf();
+            PdfDocument opdfDocument = oHtmlToPdf.ConvertHtmlString(html);
+            byte[] pdf = opdfDocument.Save();
+            opdfDocument.Close();
+
+                return File(
+                    pdf,
+                    "application/pdf",
+                    "banklist.pdf");
         }
 
         [HttpPost]
@@ -180,14 +196,23 @@ namespace ProjectBanking.Controllers
                 ViewBag.Rate6 = Rate.ToString("0.00");
                 ViewBag.Totalsaving6 = Total6.ToString("0.00");
             }
-
             List<string> rangF = new List<string>()
                 {
                       ViewBag.Totalsaving4,ViewBag.Totalsaving5,ViewBag.Totalsaving6
                 };
-            List<string> liRate = rangF.OrderBy(number => number).ToList();
-            foreach (string number in liRate)
-                ViewBag.readF = number;
+            ViewBag.loop = rangF;
+            if (rangF != null)
+            {
+                List<string> liRate = rangF.OrderBy(number => number).ToList();
+                for (int i = 0; i < 3; i++)
+                {
+                    foreach (var number in liRate)  // Throws.
+                    {
+                        ViewBag.range = number;
+                    }
+                }
+            }
+
             return View("Index");
         }
 

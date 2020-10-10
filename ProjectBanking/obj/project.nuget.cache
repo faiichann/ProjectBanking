@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "injT3dVS76/O0OypoJDHd0EsudVBUavKR04u3FuER6HdJISwi6DhHQctUMIb04LHZoVKx426BzD/6TAoarrfkQ==",
+  "dgSpecHash": "nPb9OWS24JFKAvD4lAM7Wmv9JPAcEYKvlzSeagMxuKvxwDJDD2aS2/TNe+VWnzF0cf0LFJBjxf1IdSaHPLf+XQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\select.htmltopdf.netcore\\20.1.0\\select.htmltopdf.netcore.20.1.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.drawing.common\\4.5.1\\system.drawing.common.4.5.1.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.security.principal.windows\\4.5.1\\system.security.principal.windows.4.5.1.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
   "logs": []
 }
