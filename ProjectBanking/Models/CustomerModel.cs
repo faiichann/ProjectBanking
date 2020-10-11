@@ -15,7 +15,7 @@ namespace ProjectBanking.Models
         public string CustomerPhone { get; set; }
         public string CustomerImg{ get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime CustomerDate { get; set; }
     }
 }
