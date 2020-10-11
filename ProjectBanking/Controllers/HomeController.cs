@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectBanking.Models;
+using System.Configuration;
+using System.Data.SqlClient;
+using Microsoft.VisualBasic;
 
 namespace ProjectBanking.Controllers
 {
@@ -21,6 +24,12 @@ namespace ProjectBanking.Controllers
         public IActionResult Index()
         {
             ViewBag.listbank = AllBank();
+            Savings savings = new Savings();
+            return View();
+        }
+        public IActionResult Save()
+        {
+            Savings savings = new Savings();
             return View();
         }
 
@@ -36,15 +45,17 @@ namespace ProjectBanking.Controllers
 
             return listbank;
         }
-        public IActionResult CalSaving()
+        public IActionResult CalSaving(Savings savings)
         {
-            int Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Smoney"].ToString());
-            int Rate = Convert.ToInt32(HttpContext.Request.Form["Srate"].ToString());
-            int Term = Convert.ToInt32(HttpContext.Request.Form["Sday"].ToString());
+            
+            savings.SEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Smoney"].ToString());
+            savings.SInterestRate = Convert.ToDouble(HttpContext.Request.Form["Srate"].ToString());
+            savings.STerm = Convert.ToDouble(HttpContext.Request.Form["Sday"].ToString());
 
-            int TotalRate = (Firstmoney*(Rate/100)*Term)/365;
-            int Total = Firstmoney+TotalRate;
-            ViewBag.Earlysaving = Firstmoney.ToString();
+            double TotalRate = (savings.SEarlyDeposit * (savings.SInterestRate / 100) * savings.STerm) / 365;
+            double Total = savings.SEarlyDeposit+TotalRate;
+
+            ViewBag.Earlysaving = savings.SEarlyDeposit.ToString();
             ViewBag.Ratesaving = TotalRate.ToString();
             ViewBag.Totalsaving = Total.ToString();
             return View("saving");

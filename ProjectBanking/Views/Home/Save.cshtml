@@ -1,0 +1,48 @@
+﻿@model ProjectBanking.Models.Savings
+
+@{
+    ViewData["Title"] = "Save";
+}
+
+<h1>Save</h1>
+
+<h4>Savings</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Save">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SInterestRate" class="control-label"></label>
+                <input asp-for="SInterestRate" class="form-control" />
+                <span asp-validation-for="SInterestRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STerm" class="control-label"></label>
+                <input asp-for="STerm" class="form-control" />
+                <span asp-validation-for="STerm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SEarlyDeposit" class="control-label"></label>
+                <input asp-for="SEarlyDeposit" class="form-control" />
+                <span asp-validation-for="SEarlyDeposit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STotal" class="control-label"></label>
+                <input asp-for="STotal" class="form-control" />
+                <span asp-validation-for="STotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
