@@ -9,15 +9,15 @@ namespace ProjectBanking.Models
 {
     public class Savings
     {
-        public string SBankID { get; set; }
-        public string SInterestRate { get; set; }
-        public string STerm { get; set; }
-        public string SEarlyDeposit { get; set; }
-        public string STotal { get; set; }
+        public Bank SBankID { get; set; }
+        public double SInterestRate { get; set; }
+        public double STerm { get; set; }
+        public double SEarlyDeposit { get; set; }
+        public double STotal { get; set; }
     }
     public class FixedDeposit
     {
-        public string FBankID { get; set; }
+        public Bank FBankID { get; set; }
         public string FInterestRate { get; set; }
         public string FTermperMonth { get; set; }
         public string FEarlyDeposit { get; set; }
