@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project Web 20 oct 20\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+      "projectUniqueName": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
       "projectName": "ProjectBanking",
-      "projectPath": "D:\\Project Web 20 oct 20\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+      "projectPath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
       "packagesPath": "C:\\Users\\JB\\.nuget\\packages\\",
-      "outputPath": "D:\\Project Web 20 oct 20\\ProjectBanking\\ProjectBanking\\obj\\",
+      "outputPath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JB\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

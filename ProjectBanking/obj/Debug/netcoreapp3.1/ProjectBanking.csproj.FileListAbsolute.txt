@@ -73,3 +73,40 @@ D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\P
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.pdb
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.genruntimeconfig.cache
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CopyComplete
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.exe
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.deps.json
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.runtimeconfig.json
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.runtimeconfig.dev.json
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.pdb
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.Views.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\ProjectBanking.Views.pdb
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csprojAssemblyReference.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.AssemblyInfoInputs.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.AssemblyInfo.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CoreCompileInputs.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorAssemblyInfo.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorAssemblyInfo.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.TagHelpers.input.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.TagHelpers.output.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorCoreGenerate.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Homepage.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorTargetAssemblyInfo.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorTargetAssemblyInfo.cs
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.Views.pdb
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\staticwebassets\ProjectBanking.StaticWebAssets.Manifest.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\staticwebassets\ProjectBanking.StaticWebAssets.xml
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.pdb
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.genruntimeconfig.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CopyComplete
