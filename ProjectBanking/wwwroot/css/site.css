@@ -51,9 +51,58 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
+/* CSS ที่ส้มโอแก้
 -------------------------------------------------- */
-html {
+.ContactFont {
+    font-family: BaiJamjuree-Light;
+    color:gray;
+}
+
+.row {
+    width : auto;
+}
+.column1 {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.column2 {
+    float: right;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+.cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+.title {
+    color: grey;
+}
+
+    /* CSS ที่ส้มโอแก้
+-------------------------------------------------- */
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
   position: relative;
   min-height: 100%;
 }
