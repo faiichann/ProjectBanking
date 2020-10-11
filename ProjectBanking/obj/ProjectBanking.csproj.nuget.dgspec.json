@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {}
+    "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {
+    "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+        "projectUniqueName": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
         "projectName": "ProjectBanking",
-        "projectPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
-        "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\obj\\",
+        "projectPath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+        "packagesPath": "C:\\Users\\JB\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JB\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "jQuery.UI.Combined": {
+              "target": "Package",
+              "version": "[1.12.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

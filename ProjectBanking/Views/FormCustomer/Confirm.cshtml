@@ -1,0 +1,11 @@
+﻿@model ProjectBanking.Models.Customer
+@{
+    ViewData["Title"] = "Confirm";
+}
+
+<h1>Confirm Information</h1>
+<p>ID : @Html.DisplayFor(id => id.CustomerID)</p>
+<p>Name : @Html.DisplayFor(name => name.CustomerName)</p>
+<p>Address : @Html.DisplayFor(address => address.CustomerAddress)</p>
+<p>Phone Number : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
+<p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
