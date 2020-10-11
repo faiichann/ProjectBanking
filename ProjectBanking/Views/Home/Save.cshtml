@@ -7,38 +7,43 @@
 <h1>Save</h1>
 
 <h4>Savings</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Save">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="SInterestRate" class="control-label"></label>
-                <input asp-for="SInterestRate" class="form-control" />
-                <span asp-validation-for="SInterestRate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="STerm" class="control-label"></label>
-                <input asp-for="STerm" class="form-control" />
-                <span asp-validation-for="STerm" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SEarlyDeposit" class="control-label"></label>
-                <input asp-for="SEarlyDeposit" class="form-control" />
-                <span asp-validation-for="SEarlyDeposit" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="STotal" class="control-label"></label>
-                <input asp-for="STotal" class="form-control" />
-                <span asp-validation-for="STotal" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+<div>
+    <p>ฝากออมทรัพย์</p>
+    @using (Html.BeginForm("Save", "Home", FormMethod.Post))
+    {
+        <span>เงินฝากต้น: </span>@Html.TextBoxFor(m => m.SEarlyDeposit)
+        <span>ระยะฝาก : </span>@Html.TextBoxFor(m => m.STerm)
+        <span>อัตราดอกเบี้ย : </span>@Html.TextBoxFor(m => m.SInterestRate)
+        <input id="cal2" type="submit" value="Calculation2" /><br />
 
+
+        @foreach (var item in ViewBag.orderRank)
+        {
+            <label>Result of SCB is</label><br />
+            <label>เงินฝาก : @item.SEarlyDeposit บาท</label><br />
+            <label>ดอกเบี้ยที่ได้ : @item.SInterestRate บาท</label><br />
+            <label>เงินที่ได้รับทั้งหมด : @item.STotal บาท</label><br />
+        }
+    }
+
+    <form asp-controller="Home" asp-action="CalSaving" method="post">
+        <span>เงินฝากต้น: </span><input step="0.01" type="number" name="Smoney" /><br />
+        <span>ระยะฝาก : </span><input step="0.01" type="number" name="Sday" /><br />
+        <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
+        <input id="cal2" type="submit" value="Calculation2" /><br />
+
+
+        @foreach (var item in ViewBag.orderRank)
+        {
+            <label>Result of SCB is</label><br />
+            <label>เงินฝาก : @item.SEarlyDeposit บาท</label><br />
+            <label>ดอกเบี้ยที่ได้ : @item.SInterestRate บาท</label><br />
+            <label>เงินที่ได้รับทั้งหมด : @item.STotal บาท</label><br />
+        }
+
+
+    </form>
+</div>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

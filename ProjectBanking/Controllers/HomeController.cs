@@ -24,12 +24,13 @@ namespace ProjectBanking.Controllers
         public IActionResult Index()
         {
             ViewBag.listbank = AllBank();
-            Savings savings = new Savings();
             return View();
         }
         public IActionResult Save()
         {
             Savings savings = new Savings();
+            ViewBag.listbank = AllBank();
+
             return View();
         }
 
@@ -45,20 +46,41 @@ namespace ProjectBanking.Controllers
 
             return listbank;
         }
-        public IActionResult CalSaving(Savings savings)
+        public async Task<ActionResult> CalSaving(Savings savings,Bank bank)
         {
-            
+            ViewBag.SyncOrAsync = "Asynchronous";
+
+            ViewBag.listbank = AllBank();
             savings.SEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Smoney"].ToString());
             savings.SInterestRate = Convert.ToDouble(HttpContext.Request.Form["Srate"].ToString());
             savings.STerm = Convert.ToDouble(HttpContext.Request.Form["Sday"].ToString());
 
-            double TotalRate = (savings.SEarlyDeposit * (savings.SInterestRate / 100) * savings.STerm) / 365;
-            double Total = savings.SEarlyDeposit+TotalRate;
+            double[] rank = ViewBag.orderRate;
 
-            ViewBag.Earlysaving = savings.SEarlyDeposit.ToString();
-            ViewBag.Ratesaving = TotalRate.ToString();
-            ViewBag.Totalsaving = Total.ToString();
-            return View("saving");
+            double[] Rate = { 1.1, 2, 0.8 };
+
+           
+            if (rank != null)
+            {
+                for (int i=0; i < rank.Length ; i++)
+                {
+                    double TotalRate = (savings.SEarlyDeposit * (rank[i] / 100) * (savings.STerm * 30.5)) / 365;
+                    double Total = savings.SEarlyDeposit + TotalRate;
+
+                    ViewBag.Earlysaving = savings.SEarlyDeposit.ToString("0.00");
+                    ViewBag.Ratesaving = TotalRate.ToString("0.00");
+                    ViewBag.Totalsaving = Total.ToString("0.00");
+                    
+                    List<Savings> listsave = new List<Savings>();
+                    listsave.Add(new Savings { SEarlyDeposit = ViewBag.Earlysaving, SInterestRate = ViewBag.Ratesaving, STotal = ViewBag.Totalsaving });
+                    _ = listsave[i];
+
+                    ViewBag.orderRank = listsave.OrderByDescending(r => r.SInterestRate);
+                }
+
+            }
+
+            return View("Save",rank);
         }
         public IActionResult CalFixed()
         {
