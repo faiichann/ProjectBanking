@@ -29,8 +29,10 @@ namespace ProjectBanking.Controllers
         {
             List<Bank> listbank = new List<Bank>();
             listbank.Add(new Bank { BankID = "001", BankName = "Bank1", BankAddress = "Bankok" , BankInterestRate = 1.1});
-            listbank.Add(new Bank { BankID = "002", BankName = "Bank2", BankAddress = "Bankok", BankInterestRate = 0.75 });
+            listbank.Add(new Bank { BankID = "002", BankName = "Bank2", BankAddress = "Bankok", BankInterestRate = 2 });
             listbank.Add(new Bank { BankID = "003", BankName = "Bank3", BankAddress = "Bankok", BankInterestRate = 0.8 });
+
+            ViewBag.orderRate = listbank.OrderByDescending(r => r.BankInterestRate);
 
             return listbank;
         }
