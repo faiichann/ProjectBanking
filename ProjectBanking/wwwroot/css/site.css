@@ -114,6 +114,10 @@ button.accept-policy {
     color: grey;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
     /* CSS ที่ส้มโอแก้
 -------------------------------------------------- */
     /* Sticky footer styles
