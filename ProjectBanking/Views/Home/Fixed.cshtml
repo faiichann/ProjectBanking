@@ -7,26 +7,23 @@
 }
 
 <h1>Fixed</h1>
-
-<h4>Savings</h4>
 <div>
-    <p>ฝากออมทรัพย์</p>
+    <p>ฝากประจำ</p>
 
     <form asp-controller="Home" asp-action="CalFixed" method="post">
+
         <span>เงินฝากต้น: </span><input step="0.01" type="number" name="Fmoney" /><br />
-        <span>ระยะฝากต่อเดือน : </span><input step="0.01" type="number" name="Fday" /><br />
-        <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Frate" hidden /><br />
+        <span>ระยะฝากต่อเดือน : </span>
+        <input id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
+        <input id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
+        <input id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
+        <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Frate" /><br />
         <input id="cal2" type="submit" value="Calculation" /><br />
 
-
-        @foreach (var item in ViewBag.orderRank)
-        {
             <label>Result of SCB is</label><br />
-            <label>เงินฝาก : @item.SEarlyDeposit บาท</label><br />
-            <label>ดอกเบี้ยที่ได้ : @item.SInterestRate บาท</label><br />
-            <label>เงินที่ได้รับทั้งหมด : @item.STotal บาท</label><br />
-        }
-
+            <label>เงินฝาก : @ViewBag.Earlyfixsaving บาท</label><br />
+            <label>ดอกเบี้ยที่ได้ : @ViewBag.Ratefixsaving บาท</label><br />
+            <label>เงินที่ได้รับทั้งหมด : @ViewBag.Totalfixsaving บาท</label><br />
 
     </form>
 </div>

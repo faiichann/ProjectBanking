@@ -111,27 +111,27 @@ namespace ProjectBanking.Controllers
             {
                 double TotalRate = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 90) / 365;
                 double Total = fixedDeposit.FEarlyDeposit + TotalRate;
-                ViewBag.Earlysaving = fixedDeposit.FEarlyDeposit.ToString();
-                ViewBag.Ratesaving = TotalRate.ToString();
-                ViewBag.Totalsaving = Total.ToString();
+                ViewBag.Earlyfixsaving = fixedDeposit.FEarlyDeposit.ToString("0.00");
+                ViewBag.Ratesfixaving = TotalRate.ToString("0.00");
+                ViewBag.Totalfixsaving = Total.ToString("0.00");
             }
             if (fixedDeposit.FTermperMonth == 6)
             {
                 double TotalRate = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 183) / 365;
                 double Total = fixedDeposit.FEarlyDeposit + TotalRate;
-                ViewBag.Earlysaving = fixedDeposit.FEarlyDeposit.ToString();
-                ViewBag.Ratesaving = TotalRate.ToString();
-                ViewBag.Totalsaving = Total.ToString();
+                ViewBag.Earlyfixsaving = fixedDeposit.FEarlyDeposit.ToString("0.00");
+                ViewBag.Ratefixsaving = TotalRate.ToString("0.00");
+                ViewBag.Totalfixsaving = Total.ToString("0.00");
             }
             if (fixedDeposit.FTermperMonth == 12)
             {
                 double TotalRate = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 365) / 365;
                 double Total = fixedDeposit.FEarlyDeposit + TotalRate;
-                ViewBag.Earlysaving = fixedDeposit.FEarlyDeposit.ToString();
-                ViewBag.Ratesaving = TotalRate.ToString();
-                ViewBag.Totalsaving = Total.ToString();
+                ViewBag.Earlyfixsaving = fixedDeposit.FEarlyDeposit.ToString("0.00");
+                ViewBag.Ratefixsaving = TotalRate.ToString("0.00");
+                ViewBag.Totalfixsaving = Total.ToString("0.00");
             }
-            return View("fixeddeposit");
+            return View("Fixed",fixedDeposit);
         }
 
 
