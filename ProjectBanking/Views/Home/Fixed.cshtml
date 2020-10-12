@@ -1,0 +1,39 @@
+﻿
+
+@model ProjectBanking.Models.FixedDeposit
+
+@{
+    ViewData["Title"] = "Fixed";
+}
+
+<h1>Fixed</h1>
+
+<h4>Savings</h4>
+<div>
+    <p>ฝากออมทรัพย์</p>
+
+    <form asp-controller="Home" asp-action="CalFixed" method="post">
+        <span>เงินฝากต้น: </span><input step="0.01" type="number" name="Fmoney" /><br />
+        <span>ระยะฝากต่อเดือน : </span><input step="0.01" type="number" name="Fday" /><br />
+        <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Frate" hidden /><br />
+        <input id="cal2" type="submit" value="Calculation" /><br />
+
+
+        @foreach (var item in ViewBag.orderRank)
+        {
+            <label>Result of SCB is</label><br />
+            <label>เงินฝาก : @item.SEarlyDeposit บาท</label><br />
+            <label>ดอกเบี้ยที่ได้ : @item.SInterestRate บาท</label><br />
+            <label>เงินที่ได้รับทั้งหมด : @item.STotal บาท</label><br />
+        }
+
+
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -9,12 +9,16 @@ using ProjectBanking.Models;
 using System.Configuration;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic;
+using System.Net;
+using System.Data.Entity;
+using System.Web;
 
 namespace ProjectBanking.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private MyDB db = new MyDB();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -26,15 +30,25 @@ namespace ProjectBanking.Controllers
             ViewBag.listbank = AllBank();
             return View();
         }
-        public IActionResult Save()
+        public ActionResult Fixed()
         {
-            Savings savings = new Savings();
-            ViewBag.listbank = AllBank();
+            FixedDeposit fixedDeposit = new FixedDeposit();
 
             return View();
         }
 
+
+        [HttpGet]
+        public ActionResult Save() 
+        {
+            Savings savings = new Savings();
+            ViewBag.listbank = AllBank();
+            return View(db.Saving);
+        }
+        
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public List<Bank> AllBank()
         {
             List<Bank> listbank = new List<Bank>();
@@ -46,69 +60,74 @@ namespace ProjectBanking.Controllers
 
             return listbank;
         }
-        public async Task<ActionResult> CalSaving(Savings savings,Bank bank)
-        {
-            ViewBag.SyncOrAsync = "Asynchronous";
-
-            ViewBag.listbank = AllBank();
-            savings.SEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Smoney"].ToString());
-            savings.SInterestRate = Convert.ToDouble(HttpContext.Request.Form["Srate"].ToString());
-            savings.STerm = Convert.ToDouble(HttpContext.Request.Form["Sday"].ToString());
-
-            double[] rank = ViewBag.orderRate;
-
-            double[] Rate = { 1.1, 2, 0.8 };
-
-           
-            if (rank != null)
+            public async Task<ActionResult> CalSaving(Savings savings)
             {
-                for (int i=0; i < rank.Length ; i++)
+                if (ModelState.IsValid)
                 {
-                    double TotalRate = (savings.SEarlyDeposit * (rank[i] / 100) * (savings.STerm * 30.5)) / 365;
-                    double Total = savings.SEarlyDeposit + TotalRate;
-
-                    ViewBag.Earlysaving = savings.SEarlyDeposit.ToString("0.00");
-                    ViewBag.Ratesaving = TotalRate.ToString("0.00");
-                    ViewBag.Totalsaving = Total.ToString("0.00");
-                    
-                    List<Savings> listsave = new List<Savings>();
-                    listsave.Add(new Savings { SEarlyDeposit = ViewBag.Earlysaving, SInterestRate = ViewBag.Ratesaving, STotal = ViewBag.Totalsaving });
-                    _ = listsave[i];
-
-                    ViewBag.orderRank = listsave.OrderByDescending(r => r.SInterestRate);
+                    db.Saving.Add(savings);
+                    await db.SaveChangesAsync();
+                    return RedirectToAction("Save");
                 }
 
+                savings.SEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Smoney"].ToString());
+                savings.SInterestRate = Convert.ToDouble(HttpContext.Request.Form["Srate"].ToString());
+                savings.STerm = Convert.ToDouble(HttpContext.Request.Form["Sday"].ToString());
+
+                double[] rank = ViewBag.orderRate;
+
+                double[] Rate = { 1.1, 2, 0.8 };
+
+
+                if (rank != null)
+                {
+                    for (int i = 0; i < rank.Length; i++)
+                    {
+                        double TotalRate = (savings.SEarlyDeposit * (rank[i] / 100) * (savings.STerm * 30.5)) / 365;
+                        double Total = savings.SEarlyDeposit + TotalRate;
+
+                        ViewBag.Earlysaving = savings.SEarlyDeposit.ToString("0.00");
+                        ViewBag.Ratesaving = TotalRate.ToString("0.00");
+                        ViewBag.Totalsaving = Total.ToString("0.00");
+
+                        List<Savings> listsave = new List<Savings>();
+                        listsave.Add(new Savings { SEarlyDeposit = ViewBag.Earlysaving, SInterestRate = ViewBag.Ratesaving, STotal = ViewBag.Totalsaving });
+                        _ = listsave[i];
+
+                        ViewBag.orderRank = listsave.OrderByDescending(r => r.SInterestRate);
+                    }
+
+                }
+
+                return View(savings);
             }
 
-            return View("Save",rank);
-        }
-        public IActionResult CalFixed()
+        public IActionResult CalFixed(FixedDeposit fixedDeposit)
         {
-            int Firstmoney = Convert.ToInt32(HttpContext.Request.Form["Fmoney"].ToString());
-            int Rate = Convert.ToInt32(HttpContext.Request.Form["Frate"].ToString());
-            int Term = Convert.ToInt32(HttpContext.Request.Form["Fday"].ToString());
+            fixedDeposit.FEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Fmoney"].ToString());
+            fixedDeposit.FInterestRate = Convert.ToDouble(HttpContext.Request.Form["Frate"].ToString());
+            fixedDeposit.FTermperMonth = Convert.ToDouble(HttpContext.Request.Form["Fday"].ToString());
 
-            if (Term == 3)
+            if (fixedDeposit.FTermperMonth == 3)
             {
-                int TotalRate = (Firstmoney * (Rate / 100) * 90) / 365;
-                int Total = Firstmoney + TotalRate;
-                ViewBag.Earlysaving = Firstmoney.ToString();
+                double TotalRate = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 90) / 365;
+                double Total = fixedDeposit.FEarlyDeposit + TotalRate;
+                ViewBag.Earlysaving = fixedDeposit.FEarlyDeposit.ToString();
                 ViewBag.Ratesaving = TotalRate.ToString();
                 ViewBag.Totalsaving = Total.ToString();
             }
-            if (Term == 6)
+            if (fixedDeposit.FTermperMonth == 6)
             {
-                int TotalRate = (Firstmoney * (Rate / 100) * 183) / 365;
-                int Total = Firstmoney + TotalRate;
-                ViewBag.Earlysaving = Firstmoney.ToString();
+                double TotalRate = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 183) / 365;
+                double Total = fixedDeposit.FEarlyDeposit + TotalRate;
+                ViewBag.Earlysaving = fixedDeposit.FEarlyDeposit.ToString();
                 ViewBag.Ratesaving = TotalRate.ToString();
                 ViewBag.Totalsaving = Total.ToString();
             }
-            if (Term == 12)
+            if (fixedDeposit.FTermperMonth == 12)
             {
-                int TotalRate = (Firstmoney * (Rate / 100) * 365) / 365;
-                int Total = Firstmoney + TotalRate;
-                ViewBag.Earlysaving = Firstmoney.ToString();
+                double TotalRate = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 365) / 365;
+                double Total = fixedDeposit.FEarlyDeposit + TotalRate;
+                ViewBag.Earlysaving = fixedDeposit.FEarlyDeposit.ToString();
                 ViewBag.Ratesaving = TotalRate.ToString();
                 ViewBag.Totalsaving = Total.ToString();
             }
