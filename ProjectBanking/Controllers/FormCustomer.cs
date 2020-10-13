@@ -22,5 +22,7 @@ namespace ProjectBanking.Controllers
             }
             return View("info");
         }
+        
+
     }
 }
