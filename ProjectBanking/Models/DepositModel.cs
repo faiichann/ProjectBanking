@@ -36,10 +36,28 @@ namespace ProjectBanking.Models
     public class FixedDeposit
     {
         [Key]
+        [Display(Name = "ลำดับ")]
         public Bank FBankID { get; set; }
+
+        [Display(Name = "ชื่อธนาคาร")]
+        public string FBankName { get; set; }
+
+        [Display(Name = "อัตราดอกเบี้ย/ปี")]
         public double FInterestRate { get; set; }
+
+        [Display(Name = "ดอกเบี้ยที่ได้รับ")]
+        public double FRate { get; set; }
+
+        [Display(Name = "ระยะฝาก/เดือน")]
         public double FTermperMonth { get; set; }
+
+        [Display(Name = "เงินฝากต้น")]
         public double FEarlyDeposit { get; set; }
+
+        [Display(Name = "เงินฝากรวม")]
+        public double FMonthDeposit { get; set; }
+
+        [Display(Name = "เงินฝากทั้งหมด")]
         public double FTotal { get; set; }
     }
 }

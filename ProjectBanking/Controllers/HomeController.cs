@@ -108,88 +108,122 @@ namespace ProjectBanking.Controllers
         public IActionResult CalFixed(FixedDeposit fixedDeposit)
         {
             fixedDeposit.FEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Fmoney"].ToString());
-            fixedDeposit.FInterestRate = Convert.ToDouble(HttpContext.Request.Form["Frate"].ToString());
+            fixedDeposit.FMonthDeposit = Convert.ToDouble(HttpContext.Request.Form["Fmonth"].ToString());
             fixedDeposit.FTermperMonth = Convert.ToDouble(HttpContext.Request.Form["Fday"].ToString());
+            ViewBag.Fterm = fixedDeposit.FTermperMonth;
 
             if (fixedDeposit.FTermperMonth == 3)
             {
+                double Sum3month = fixedDeposit.FMonthDeposit * 3;
+                ViewBag.Monthfixsaving1 = Sum3month.ToString("0.00");
+                double Summoney1 = fixedDeposit.FEarlyDeposit + Sum3month;
+
                 //SCB
                 fixedDeposit.FInterestRate = 0.375;
-                double TotalRateb1 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 90) / 365;
-                double Totalb1 = fixedDeposit.FEarlyDeposit + TotalRateb1;
+                
+                double TotalRateb1 = (Summoney1 * (fixedDeposit.FInterestRate / 100) * 90) / 365;
+                double Totalb1 = Summoney1 + TotalRateb1;
                 ViewBag.Earlyfixsavingb1 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb1 = TotalRateb1.ToString("0.00");
                 ViewBag.Totalfixsavingb1 = Totalb1.ToString("0.00");
+                ViewBag.Summoneyb1 = Summoney1;
 
                 //KBANK 
                 fixedDeposit.FInterestRate = 0.87;
-                double TotalRateb2 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 90) / 365;
-                double Totalb2 = fixedDeposit.FEarlyDeposit + TotalRateb2;
+         
+                double TotalRateb2 = (Summoney1 * (fixedDeposit.FInterestRate / 100) * 90) / 365;
+                double Totalb2 = Summoney1 + TotalRateb2;
                 ViewBag.Earlyfixsavingb2 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb2 = TotalRateb2.ToString("0.00");
                 ViewBag.Totalfixsavingb2 = Totalb2.ToString("0.00");
+                ViewBag.Summoneyb2 = Summoney1;
 
                 //Krungsri
                 fixedDeposit.FInterestRate = 1.1;
-                double TotalRateb3 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 90) / 365;
-                double Totalb3 = fixedDeposit.FEarlyDeposit + TotalRateb3;
+
+                double TotalRateb3 = (Summoney1 * (fixedDeposit.FInterestRate / 100) * 90) / 365;
+                double Totalb3 = Summoney1 + TotalRateb3;
                 ViewBag.Earlyfixsavingb3 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb3 = TotalRateb3.ToString("0.00");
                 ViewBag.Totalfixsavingb3 = Totalb3.ToString("0.00");
+                ViewBag.Summoneyb3 = Summoney1;
 
             }
+
             if (fixedDeposit.FTermperMonth == 6)
             {
+                double Sum6month = fixedDeposit.FMonthDeposit * 6;
+                ViewBag.Monthfixsaving2 = Sum6month.ToString("0.00");
+                double Summoney2 = fixedDeposit.FEarlyDeposit + Sum6month;
+
                 //SCB
                 fixedDeposit.FInterestRate = 0.375;
-                double TotalRateb1 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 183) / 365;
-                double Totalb1 = fixedDeposit.FEarlyDeposit + TotalRateb1;
+                
+                double TotalRateb1 = (Summoney2 * (fixedDeposit.FInterestRate / 100) * 183) / 365;
+                double Totalb1 = Summoney2 + TotalRateb1;
                 ViewBag.Earlyfixsavingb1 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb1 = TotalRateb1.ToString("0.00");
                 ViewBag.Totalfixsavingb1 = Totalb1.ToString("0.00");
+                ViewBag.Summoneyb1 = Summoney2;
 
                 //KBANK 
                 fixedDeposit.FInterestRate = 0.87;
-                double TotalRateb2 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 183) / 365;
-                double Totalb2 = fixedDeposit.FEarlyDeposit + TotalRateb2;
+
+                double TotalRateb2 = (Summoney2 * (fixedDeposit.FInterestRate / 100) * 183) / 365;
+                double Totalb2 = Summoney2 + TotalRateb2;
                 ViewBag.Earlyfixsavingb2 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb2 = TotalRateb2.ToString("0.00");
                 ViewBag.Totalfixsavingb2 = Totalb2.ToString("0.00");
+                ViewBag.Summoneyb2 = Summoney2;
 
                 //Krungsri
                 fixedDeposit.FInterestRate = 1.1;
-                double TotalRateb3 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 183) / 365;
-                double Totalb3 = fixedDeposit.FEarlyDeposit + TotalRateb3;
+
+                double TotalRateb3 = (Summoney2 * (fixedDeposit.FInterestRate / 100) * 183) / 365;
+                double Totalb3 = Summoney2 + TotalRateb3;
                 ViewBag.Earlyfixsavingb3 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb3 = TotalRateb3.ToString("0.00");
                 ViewBag.Totalfixsavingb3 = Totalb3.ToString("0.00");
+                ViewBag.Summoneyb3 = Summoney2;
             }
+
             if (fixedDeposit.FTermperMonth == 12)
             {
+                double Sum12month = fixedDeposit.FMonthDeposit * 12;
+                ViewBag.Monthfixsaving2 = Sum12month.ToString("0.00");
+                double Summoney3 = fixedDeposit.FEarlyDeposit + Sum12month;
+
                 //SCB
                 fixedDeposit.FInterestRate = 0.375;
-                double TotalRateb1 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 365) / 365;
-                double Totalb1 = fixedDeposit.FEarlyDeposit + TotalRateb1;
+
+                double TotalRateb1 = (Summoney3 * (fixedDeposit.FInterestRate / 100) * 365) / 365;
+                double Totalb1 = Summoney3 + TotalRateb1;
                 ViewBag.Earlyfixsavingb1 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb1 = TotalRateb1.ToString("0.00");
                 ViewBag.Totalfixsavingb1 = Totalb1.ToString("0.00");
+                ViewBag.Summoney1 = Summoney3;
 
                 //KBANK 
                 fixedDeposit.FInterestRate = 0.87;
-                double TotalRateb2 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 365) / 365;
-                double Totalb2 = fixedDeposit.FEarlyDeposit + TotalRateb2;
+
+                double TotalRateb2 = (Summoney3 * (fixedDeposit.FInterestRate / 100) * 365) / 365;
+                double Totalb2 = Summoney3 + TotalRateb2;
                 ViewBag.Earlyfixsavingb2 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb2 = TotalRateb2.ToString("0.00");
                 ViewBag.Totalfixsavingb2 = Totalb2.ToString("0.00");
+                ViewBag.Summoney2 = Summoney3;
 
                 //Krungsri
                 fixedDeposit.FInterestRate = 1.1;
-                double TotalRateb3 = (fixedDeposit.FEarlyDeposit * (fixedDeposit.FInterestRate / 100) * 365) / 365;
-                double Totalb3 = fixedDeposit.FEarlyDeposit + TotalRateb3;
+
+                double TotalRateb3 = (Summoney3 * (fixedDeposit.FInterestRate / 100) * 236) / 365;
+                double Totalb3 = Summoney3 + TotalRateb3;
                 ViewBag.Earlyfixsavingb3 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb3 = TotalRateb3.ToString("0.00");
                 ViewBag.Totalfixsavingb3 = Totalb3.ToString("0.00");
+                ViewBag.Summoney3 = Summoney3;
             }
+
             return View("Fixed",fixedDeposit);
         }
 
