@@ -16,16 +16,96 @@
         <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
         <input id="cal2" type="submit" value="Calculation2" /><br />
 
+                                                              <a asp-action="Save">
+                                                                  <table class="table">
+                                                                      <thead>
+                                                                          <tr>
+                                                                              <th>
+                                                                                  @Html.DisplayNameFor(model => model.SBankName)
+                                                                              </th>
+                                                                              <th>
+                                                                                  @Html.DisplayNameFor(model => model.SRate)
+                                                                              </th>
+                                                                              <th>
+                                                                                  @Html.DisplayNameFor(model => model.STerm)
+                                                                              </th>
+                                                                              <th>
+                                                                                  @Html.DisplayNameFor(model => model.SEarlyDeposit)
+                                                                              </th>
+                                                                              <th>
+                                                                                  @Html.DisplayNameFor(model => model.SInterestRate)
+                                                                              </th>
+                                                                              <th>
+                                                                                  @Html.DisplayNameFor(model => model.STotal)
+                                                                              </th>
+                                                                          </tr>
+                                                                      </thead>
+                                                                      <tbody>
 
-        @foreach (var item in ViewBag.orderRank)
-        {
-            <label>Result of SCB is</label><br />
-            <label>เงินฝาก : @item.SEarlyDeposit บาท</label><br />
-            <label>ดอกเบี้ยที่ได้ : @item.SInterestRate บาท</label><br />
-            <label>เงินที่ได้รับทั้งหมด : @item.STotal บาท</label><br />
-        }
-
-
+                                                                          <tr>
+                                                                              <td>
+                                                                                  กรุงศรี
+                                                                              </td>
+                                                                              <td>
+                                                                                  1.1
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Sterm
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Earlysavingb2
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Ratesavingb2
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Totalsavingb2
+                                                                              </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                  กสิกรไทย
+                                                                              </td>
+                                                                              <td>
+                                                                                  0.865
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Sterm
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Earlysavingb3
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Ratesavingb3
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Totalsavingb3
+                                                                              </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                              <td>
+                                                                                  ไทยพสณิชย์
+                                                                              </td>
+                                                                              <td>
+                                                                                  0.375
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Sterm
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Earlysavingb1
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Ratesavingb1
+                                                                              </td>
+                                                                              <td>
+                                                                                  @ViewBag.Totalsavingb1
+                                                                              </td>
+                                                                          </tr>
+                                                                      </tbody>
+                                                                  </table>
+                                                                  <hr />
+                                                       </a>
     </form>
 </div>
 <div>

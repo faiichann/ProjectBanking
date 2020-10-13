@@ -122,3 +122,4 @@ C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Save.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Fixed.cshtml.g.cs
+C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\saveasync.cshtml.g.cs

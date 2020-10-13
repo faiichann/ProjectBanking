@@ -1,0 +1,94 @@
+﻿
+
+
+@model ProjectBanking.Models.Savings
+@{
+    ViewData["Title"] = "saveasync";
+}
+
+<h1>saveasync</h1>
+
+<h4>Savings</h4>
+<div>
+    <p>ฝากออมทรัพย์</p>
+
+    <form asp-controller="Home" asp-action="CalSaving" method="post">
+        <span>เงินฝากต้น: </span><input step="0.01" type="number" name="Smoney" /><br />
+        <span>ระยะฝาก : </span><input step="0.01" type="number" name="Sday" /><br />
+        <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
+        <input id="cal2" type="submit" value="Calculation2" /><br />
+
+        <a asp-action="Save">
+
+            <hr />
+                    <h1>แบบใช้ Async await</h1>
+                    <div class="table">
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    @Html.DisplayNameFor(model => model.SBankName)
+                                </div>
+                                <div class="col">
+                                    @Html.DisplayNameFor(model => model.SRate)
+                                </div>
+                                <div class="col">
+                                    @Html.DisplayNameFor(model => model.STerm)
+                                </div>
+                                <div class="col">
+                                    @Html.DisplayNameFor(model => model.SEarlyDeposit)
+                                </div>
+                                <div class="col">
+                                    @Html.DisplayNameFor(model => model.SInterestRate)
+                                </div>
+                                <div class="col">
+                                    @Html.DisplayNameFor(model => model.STotal)
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-4">
+                                    @foreach (var item in ViewBag.orderRate)
+                                    {
+                                        <div class="row">
+                                            <div class="col">
+                                                @item.BankName
+                                            </div>
+                                            <div class="col">
+                                                @item.BankInterestRate
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-8">
+                                    @foreach (var i in ViewBag.SaveRank)
+                                    {
+                                        <div class="row">
+                                            <div class="col">
+                                                @i.STerm เดือน
+                                            </div>
+                                            <div class="col">
+                                                @i.SEarlyDeposit บาท
+                                            </div>
+                                            <div class="col">
+                                                @i.SRate บาท
+                                            </div>
+                                            <div class="col">
+                                                @i.STotal บาท
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </a>
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
