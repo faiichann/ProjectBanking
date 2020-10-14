@@ -115,7 +115,8 @@ button.accept-policy {
 }
 
 #myBtn {
-    display: none;
+    float : right;
+
     position: fixed;
     bottom: 20px;
     right: 30px;

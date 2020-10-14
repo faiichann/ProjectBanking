@@ -23,6 +23,11 @@ namespace ProjectBanking.Controllers
             ViewBag.listbank = AllBank();
             return View();
         }
+        public IActionResult Saving()
+        {
+            ViewBag.listbank = AllBank();
+            return View();
+        }
 
         [HttpPost]
         public List<Bank> AllBank()
