@@ -13,14 +13,10 @@ namespace ProjectBanking.Models
         public string CustomerName { get; set; }
         public string CustomerAddress { get; set; }
         public string CustomerPhone { get; set; }
+        public string CustomerImg{ get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd-MM-yy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime CustomerDate { get; set; }
-        public partial class Image
-        {
-            public int ID { get; set; }
-            public string Imagepath { get; set; }
-        }
     }
-
 }

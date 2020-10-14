@@ -1,5 +1,4 @@
 ﻿@model ProjectBanking.Models.Customer
-@model ProjectBanking.Models.Image
 
 @{
     ViewData["Title"] = "Index";
@@ -9,7 +8,7 @@
 <h4>Customer</h4>
 <hr />
 
-<div id="Select" style="display:none">
+
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Index">
@@ -44,7 +43,6 @@
             </form>
         </div>
     </div>
-</div>
 
 <div>
     <a asp-action="Index">Back to List</a>
@@ -59,7 +57,7 @@
 <script type="text/javascript">
     $(function () {
         $(".date-picker").datepicker({
-            dateFormat: 'dd-mm-yy',
+            dateFormat: 'dd-MM-yy',
             changeMonth: true,
             changeYear: true,
             minDate: new Date(1, 1, 2019),
