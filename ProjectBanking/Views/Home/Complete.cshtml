@@ -1,0 +1,31 @@
+﻿@model ProjectBanking.Models.Customer
+@{
+    ViewData["Title"] = "Complete";
+}
+
+<h1>KComplete</h1>
+
+<div id="pdfcontainer">
+    <h1 style="margin-top:30px;">Confirm Information</h1>
+    <p style="margin-left:800px;">@DateTime.Now</p>
+    <p>ID : @Html.DisplayFor(id => id.CustomerID)</p>
+    <p>Name : @Html.DisplayFor(name => name.CustomerName)</p>
+    <p>Address : @Html.DisplayFor(address => address.CustomerAddress)</p>
+    <p>Phone Number : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
+    <p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
+    <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />
+</div>
+<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
+    <input asp-for="CustomerImg" class="form-control" type="file" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple />
+</form>
+
+<button id="btnPdf">PrintPDF</button>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#btnPdf").click(function () {
+        var sHtml = $("#pdfcontainer").html();
+        sHtml = sHtml.replace(/</g, "StrTag").replace(/>/g, "EndTag");
+        window.open('../Home/Pdf?html=' + sHtml, '_blank');
+    });
+</script>

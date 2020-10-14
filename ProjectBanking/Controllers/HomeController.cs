@@ -12,13 +12,13 @@ using Microsoft.VisualBasic;
 using System.Net;
 using System.Data.Entity;
 using System.Web;
+using SelectPdf;
 
 namespace ProjectBanking.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private MyDB db = new MyDB();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -32,21 +32,50 @@ namespace ProjectBanking.Controllers
         }
         public ActionResult Fixed()
         {
-            FixedDeposit fixedDeposit = new FixedDeposit();
             ViewBag.listbank = AllBank();
             return View();
         }
 
         public ActionResult Save() 
         {
-            Savings savings = new Savings();
             ViewBag.listbank = AllBank();
             return View();
         }
-        
+
+        public IActionResult Formbank()
+        {
+            ViewBag.listbank = AllBank();
+            return View();
+        }
+
+        public IActionResult Pdf(string html)
+        {
+
+            html = html.Replace("StrTag", "<").Replace("EndTag", ">");
+
+            HtmlToPdf oHtmlToPdf = new HtmlToPdf();
+            PdfDocument opdfDocument = oHtmlToPdf.ConvertHtmlString(html);
+            byte[] pdf = opdfDocument.Save();
+            opdfDocument.Close();
+
+            return File(
+                pdf,
+                "application/pdf",
+                "InformationForBank.pdf");
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public IActionResult Formbank(Customer info)
+        {
+            if (ModelState.IsValid)
+            {
+
+                return View("Complete", info);
+            }
+            return View("info");
+        }
+
         public List<Bank> AllBank()
         {
             List<Bank> listbank = new List<Bank>();
