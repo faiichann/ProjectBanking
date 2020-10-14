@@ -5,15 +5,15 @@
 }
 
 <h1>Index</h1>
+<h3>คำนวณดอกเบี้ย</h3>
 <div>
     <a asp-action="Save">Saving</a>
 </div>
 <div>
     <a asp-action="Fixed">FixedSaving</a>
 </div>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h3>ลงทุน</h3>
+
 <a asp-action="Index" >
     <table class="table">
         <thead>
@@ -50,11 +50,6 @@
                     </td>
                     <td>
                         @item.BankInterestRate
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                     </td>
                 </tr>
             }
