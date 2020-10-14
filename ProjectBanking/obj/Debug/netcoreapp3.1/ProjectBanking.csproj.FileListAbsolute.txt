@@ -185,4 +185,6 @@ D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\P
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Saving.cshtml.g.cs
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Fixed.cshtml.g.cs
-D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Invest.cshtml.g.cs
+D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\SCB.cshtml.g.cs
+D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\KBank.cshtml.g.cs
+D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Krungsri.cshtml.g.cs

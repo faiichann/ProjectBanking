@@ -8,19 +8,22 @@
 
 <ul class="menu2">
     <li><a href="#Home">หน้าหลัก</a></li>
-    <li><a href="#SavingAccount">บัญชีออมทรัพย์</a></li>
+    <li><a asp-action="Saving">บัญชีออมทรัพย์</a></li>
     <li><a href="#FixedDespositAccount">บัญชีฝากประจำ</a></li>
-    <li><a href="#invest">ลงทุนกับเรา</a></li>
+    <li><a href="#SCB">ธ.ไทยพาณิชย์</a></li>
+    <li><a href="#KBank">ธ.กสิกรไทย</a></li>
+    <li><a href="#Krungsri">ธ.กรุงศรีอยุธยา</a></li>
     <li><a href="#info">ข้อมูล</a></li>
     <li><a href="#howto">เครื่องมือ</a></li>
     <li><a href="#About">ติดต่อ</a></li>
 </ul>
 <hr />
-<div id="info"><h3>ข้อมูล</h3>
-    <img src="~/lib/Pictures/kbank.jpg" />
-    <img src="~/lib/Pictures/krungsri.png" />
-    <img src="~/lib/Pictures/scb.jpg" />
-    </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon name="chevron-up-outline"></ion-icon></button>
+
+<div id="info">
+    <h3>ข้อมูล</h3>
+
+</div>
 
 <ul class="menu2">
 
@@ -28,24 +31,10 @@
 
 </ul>
 <hr />
-<div id="howto"><h3 >เครื่องมือ</h3>
-                <p class="ContactFont">
-                    คู่มือการใช้งานเว็บไซต์ <br />
-                    เมื่อต้องการคำนวณอัตราดอกเบี้ย <br />
-                    -กดเลือกไปที่หน้าคำนวณ <br />
-                    -เลือกประเภทบัญชีที่ต้องการฝาก <br />
-                    -กรอกเงินต้นที่ต้องการฝาก <br />
-                    -เลือกระยะเวลาในการฝากเงิน (ในกรณีฝากออมทรัพย์ พิมพ์ระยะเวลาเป็นเดือนที่ต้องการฝากได้เลย) <br />
-                    -กรอกจำนวนเงินที่ต้องการฝากต่อเดือน <br />
-                    -กดคำนวณ <br />
-                    หากต้องการลงทุน <br />
-                    -กดเลือกไปที่การลงทุน <br />
-                    -เลือกธนาคารที่ต้องการฝาก <br />
-                    -เลือกประเภทบัญชีเงินฝาก <br />
-                    -กรอกข้อมูลส่วนตัวให้ครบ <br />
-                    -กด  submit และจะได้ไฟล์ pdf สามารถปริ้นและไปที่ธนาคารได้เลย <br />
-                </p>
-    </div>
+<div id="howto">
+    <h3>เครื่องมือ</h3>
+
+</div>
 
 <ul class="menu2">
 
@@ -53,59 +42,8 @@
 
 </ul>
 <hr />
-<div class="ContactFont" id="About">
-    <h3>ติดต่อ</h3>
-    <div class="container">
-        <div class="row">
-            <div class="column0">
-                <div class="cards">
-                    <img src="~/lib/Pictures/2.jpg" style="width:100%" />
+<div id="About">
 
-                    <h4 class="ContactFont">Me</h4>
-                    <p class="title">Ceo & Pr</p>
-                    <p class="ContactFont">adasdsakodkasopkdposakdo</p>
-                    <p class="ContactFont">example@email.com</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column1">
-                <div class="cards">
-                    <img src="~/lib/Pictures/1.jpg" style="width: 100%; height: 300px">
-
-                    <h4 class="ContactFont">Me</h4>
-                    <p class="title">Ceo & Pr</p>
-                    <p class="ContactFont">adasdsakodkasopkdposakdo</p>
-                    <p class="ContactFont">example@email.com</p>
-
-                </div>
-            </div>
-            <div class="column2">
-                <div class="cards">
-                    <img src="~/lib/Pictures/3.jpg" style="width: 100%;height: 300px">
-
-                    <h4 class="ContactFont">Me</h4>
-                    <p class="title">Ceo & Pr</p>
-                    <p class="ContactFont">adasdsakodkasopkdposakdo</p>
-                    <p class="ContactFont">example@email.com</p>
-
-                </div>
-            </div>
-
-            <div class="column3">
-                <div class="cards">
-                    <img src="~/lib/Pictures/4.jpg" style="width:100% ; height:300px">
-
-                    <h4 class="ContactFont">Me</h4>
-                    <p class="title">Ceo & Pr</p>
-                    <p class="ContactFont">adasdsakodkasopkdposakdo</p>
-                    <p class="ContactFont">example@email.com</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <ul class="menu2">
