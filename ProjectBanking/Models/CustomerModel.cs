@@ -15,5 +15,7 @@ namespace ProjectBanking.Models
         public string CustomerPhone { get; set; }
         public string CustomerImg{ get; set; }
         public string CustomerDate { get; set; }
+        public string BankSelect { get; set; }
+        
     }
 }

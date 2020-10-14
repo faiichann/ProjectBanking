@@ -1,0 +1,22 @@
+﻿@model ProjectBanking.Models.Customer
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form asp-action="Index">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label id="Select" name="Select" asp-for="BankSelect">Select choice : </label>
+        <select asp-for="BankSelect">
+            <option value="ออมทรัพย์">ออมทรัพย์</option>
+            <option value="ฝากประจำ">ฝากประจำ</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="submit" />
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
