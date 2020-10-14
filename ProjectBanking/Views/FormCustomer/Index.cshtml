@@ -57,12 +57,16 @@
 <script type="text/javascript">
     $(function () {
         $(".date-picker").datepicker({
-            dateFormat: 'dd-MM-yy',
+            dateFormat: 'd MM,y',
             changeMonth: true,
             changeYear: true,
             minDate: new Date(1, 1, 2019),
             maxDate: new Date(1, 1, 2022),
             ShowOn: "both",
+            monthNames: ['Januar', 'Februar', 'M&auml;rz', 'April', 'Mai', 'Juni',
+                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+            monthNamesShort: ['Jan', 'Feb', 'M&auml;r', 'Apr', 'Mai', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
             buttonText: "<i class='fa fa-calendar'>"
         });
 
