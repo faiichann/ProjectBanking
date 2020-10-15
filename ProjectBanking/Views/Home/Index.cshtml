@@ -15,9 +15,20 @@
 <br />
 <hr />
 <h3>ลงทุน</h3>
-<div>
-    <a asp-action="Formbank">กรอกใบลทุน</a>
-</div>
+@*<div>
+    <a asp-action="Formbank">FixedSaving</a>
+</div>*@
+<form asp-controller="Home" asp-action="Page" method="post">
+        <div>
+            <input type="submit" name="bank" value="1" />กรอกใบลทุนธนาคารไทยฑาณิชย์
+        </div>
+        <div>
+            <input type="submit" name="bank" value="2" />กรอกใบลทุนธนาคารกรงศรีอยุธยา
+        </div>
+        <div>
+            <input type="submit" name="bank" value="3" />กรอกใบลทุนธนาคารกสิกรไทย
+        </div>
+    </form>
 
 <br />
 <hr />

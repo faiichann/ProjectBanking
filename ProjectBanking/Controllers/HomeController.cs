@@ -28,6 +28,7 @@ namespace ProjectBanking.Controllers
         public IActionResult Index()
         {
             ViewBag.listbank = AllBank();
+            ViewBag.getbank = Formbank();
             return View();
         }
         public ActionResult Fixed()
@@ -47,7 +48,11 @@ namespace ProjectBanking.Controllers
             ViewBag.listbank = AllBank();
             return View();
         }
-
+        public IActionResult Complete()
+        {
+            ViewBag.bankpage = Page();
+            return View();
+        }
         public IActionResult Pdf(string html)
         {
 
@@ -68,20 +73,40 @@ namespace ProjectBanking.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Formbank(Customer info)
         {
+
             if (ModelState.IsValid)
             {
-
                 return View("Complete", info);
             }
             return View("info");
         }
 
+        public IActionResult Page()
+        {
+                int bank = Convert.ToInt32(HttpContext.Request.Form["bank"].ToString());
+
+                if (bank == 1)
+                {
+                    ViewBag.bank = "ธนาคารไทยพาณิชย์".ToString();
+            }
+                if (bank == 2)
+                {
+                    ViewBag.bank = "ธนาคารกรุงศรีอยุธยา".ToString();
+            }
+                if (bank == 3)
+                {
+                    ViewBag.bank = "ธนาคารกสิกรไทย".ToString();
+            }
+
+            return View("Formbank");
+        }
+
         public List<Bank> AllBank()
         {
             List<Bank> listbank = new List<Bank>();
-            listbank.Add(new Bank { BankID = "001", BankName = "SCB", BankAddress = "Bankok" , BankInterestRate = 0.375});
-            listbank.Add(new Bank { BankID = "002", BankName = "Krungsri", BankAddress = "Bankok", BankInterestRate = 1.1 });
-            listbank.Add(new Bank { BankID = "003", BankName = "KBank", BankAddress = "Bankok", BankInterestRate = 0.865 });
+            listbank.Add(new Bank { BankID = "001", BankName = "ธนาคารไทยพาณิชย์", BankAddress = "Bankok" , BankInterestRate = 0.375});
+            listbank.Add(new Bank { BankID = "002", BankName = "ธนาคารกรุงศรีอยุธยา", BankAddress = "Bankok", BankInterestRate = 1.1 });
+            listbank.Add(new Bank { BankID = "003", BankName = "ธนาคารกสิกรไทย", BankAddress = "Bankok", BankInterestRate = 0.865 });
 
             ViewBag.orderRate = listbank.OrderByDescending(r => r.BankInterestRate);
 
