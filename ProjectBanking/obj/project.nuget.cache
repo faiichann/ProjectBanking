@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LCtX94LFTgp3S7mpmX2SVR1XN+4NFfwkw9vvOY46kvf4jqR6inI/TFJlc3GALsOj2z+y6yTiAEMWIyir+aOnFQ==",
+  "dgSpecHash": "pbstLK4yt1EieASFn21HSPE4mvwEMjilakrUExX0hwh0Z8mPqohtCAs/S3yPRmeyTyh92M4L7bKo8ioJaMdGGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\win10\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\evopdf\\8.0.0\\evopdf.8.0.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\grpc.core\\2.32.0\\grpc.core.2.32.0.nupkg.sha512",
+    "C:\\Users\\win10\\.nuget\\packages\\grpc.core.api\\2.32.0\\grpc.core.api.2.32.0.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

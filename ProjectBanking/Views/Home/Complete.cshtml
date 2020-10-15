@@ -19,7 +19,7 @@
     <input asp-for="CustomerImg" class="form-control" type="file" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple />
 </form>
 
-<button id="btnPdf">PrintPDF</button>
+<button id="btnPdf" onclick="filepreview">PrintPDF</button>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">

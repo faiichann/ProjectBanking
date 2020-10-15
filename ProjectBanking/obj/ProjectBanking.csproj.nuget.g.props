@@ -26,6 +26,17 @@
       <Link>Select.Html.dep</Link>
     </Content>
   </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <None Include="$(NuGetPackageRoot)evopdf\8.0.0\contentFiles\any\any\evointernal.dat" Condition="Exists('$(NuGetPackageRoot)evopdf\8.0.0\contentFiles\any\any\evointernal.dat')">
+      <NuGetPackageId>evopdf</NuGetPackageId>
+      <NuGetPackageVersion>8.0.0</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>evointernal.dat</TargetPath>
+      <Private>True</Private>
+      <Link>evointernal.dat</Link>
+    </None>
+  </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
   </ImportGroup>

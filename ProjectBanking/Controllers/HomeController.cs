@@ -13,6 +13,8 @@ using System.Net;
 using System.Data.Entity;
 using System.Web;
 using SelectPdf;
+using System.Drawing.Imaging;
+using Grpc.Core;
 
 namespace ProjectBanking.Controllers
 {
@@ -53,14 +55,29 @@ namespace ProjectBanking.Controllers
             ViewBag.bankpage = Page();
             return View();
         }
-        public IActionResult Pdf(string html)
+        /*public class PdfImageElement : PdfElement
         {
 
+        }*/
+        public IActionResult Pdf(string html)
+        {
             html = html.Replace("StrTag", "<").Replace("EndTag", ">");
 
             HtmlToPdf oHtmlToPdf = new HtmlToPdf();
             PdfDocument opdfDocument = oHtmlToPdf.ConvertHtmlString(html);
+
+            // get image path
+            //string imgFile = Server.MapPath("~/files/logo.png");
+
+            // define a rendering result object
+           // PdfRenderingResult result;
+
+            // create image element from file path with real image size
+            //PdfImageElement img1 = new PdfImageElement(0, 0, imgFile);
+            //result = opdfDocument.AddPage(img1);
+
             byte[] pdf = opdfDocument.Save();
+
             opdfDocument.Close();
 
             return File(
