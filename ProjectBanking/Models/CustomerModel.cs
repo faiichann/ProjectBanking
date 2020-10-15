@@ -22,9 +22,9 @@ namespace ProjectBanking.Models
         [StringLength(10 , ErrorMessage = "กรุณากรอกเบอร์ติดต่อให้ถูกต้อง" , MinimumLength = 9)]
         public string CustomerPhone { get; set; }
 
+        [Required(ErrorMessage = "กรุณาใส่วันที่")]
         [DisplayFormat(DataFormatString = "{0:MMMM-dd-yy}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
-        [Required(ErrorMessage = "กรุณาใส่วันที่")]
         public DateTime CustomerDate { get; set; }
 
         [DataType(DataType.ImageUrl)]

@@ -228,8 +228,6 @@ C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csprojAssemblyReference.cache
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.AssemblyInfoInputs.cache
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.AssemblyInfo.cs
-C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CoreCompileInputs.cache
-C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorAssemblyInfo.cache
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.RazorAssemblyInfo.cs
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.TagHelpers.input.cache
@@ -256,3 +254,12 @@ C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.dll
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.pdb
 C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.genruntimeconfig.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\itextsharp.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Mvc.Abstractions.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CoreCompileInputs.cache
+C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache

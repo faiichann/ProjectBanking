@@ -42,6 +42,14 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "Microsoft.AspNet.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0-rc1-final, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -49,6 +57,10 @@
             "Select.HtmlToPdf.NetCore": {
               "target": "Package",
               "version": "[20.1.0, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.2, )"
             }
           },
           "imports": [

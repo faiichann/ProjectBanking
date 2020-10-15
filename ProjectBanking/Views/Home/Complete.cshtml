@@ -14,11 +14,17 @@
     <p>Address : @Html.DisplayFor(address => address.CustomerAddress)</p>
     <p>Phone Number : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
     <p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
-    <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />
+    <img src="@ViewData["FileLocation"]" width="500" height="350" />
+    @*<img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />*@
 </div>
-<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
+@*<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
     <input asp-for="CustomerImg" class="form-control" type="file" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple />
-</form>
+</form>*@
+
+
+
+
+
 
 <button id="btnPdf">PrintPDF</button>
 
