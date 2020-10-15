@@ -20,5 +20,6 @@ namespace ProjectBanking.Models
 
         [DataType(DataType.ImageUrl)]
         public string CustomerImg { get; set; }
+        public string BankSelect { get; set; }
     }
 }

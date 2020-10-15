@@ -8,6 +8,7 @@
 <div id="pdfcontainer">
     <h1 style="margin-top:30px;">Confirm Information</h1>
     <p style="margin-left:800px;">@DateTime.Now</p>
+    <p>Your choice : @Html.DisplayFor(Select => Select.BankSelect)</p>
     <p>ID : @Html.DisplayFor(id => id.CustomerID)</p>
     <p>Name : @Html.DisplayFor(name => name.CustomerName)</p>
     <p>Address : @Html.DisplayFor(address => address.CustomerAddress)</p>
