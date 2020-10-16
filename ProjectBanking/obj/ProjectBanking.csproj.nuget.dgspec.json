@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GP62M\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {}
+    "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\GP62M\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {
+    "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GP62M\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+        "projectUniqueName": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
         "projectName": "ProjectBanking",
-        "projectPath": "C:\\Users\\GP62M\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
-        "packagesPath": "C:\\Users\\GP62M\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GP62M\\source\\repos\\ProjectBanking\\ProjectBanking\\obj\\",
+        "projectPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+        "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GP62M\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
