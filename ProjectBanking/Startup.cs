@@ -50,7 +50,7 @@ namespace ProjectBanking
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Home1}/{id?}");
+                    pattern: "{controller=Home}/{action=Confirm}/{id?}");
             });
         }
     }
