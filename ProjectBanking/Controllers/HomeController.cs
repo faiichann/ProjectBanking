@@ -23,7 +23,10 @@ namespace ProjectBanking.Controllers
 {
     public class HomeController : Controller
     {
+        [Obsolete]
         IHostingEnvironment _env;
+
+        [Obsolete]
         public HomeController(IHostingEnvironment environment)
         {
             _env = environment;
@@ -275,7 +278,7 @@ namespace ProjectBanking.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-
+        [Obsolete]
         public async Task<IActionResult> ImageUpload(IFormFile file)
         {
             if(file !=null && file.Length > 0)
@@ -302,7 +305,9 @@ namespace ProjectBanking.Controllers
 
                 ViewData["FileLocation"] = filePath;
             }
-            return View("../Home/Complete");
+            return View("../Home/Complete", "Formbank");
         }
+
+
     }
 }

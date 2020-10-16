@@ -13,4 +13,8 @@
     <PackageReference Include="Select.HtmlToPdf.NetCore" Version="20.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\Images\" />
+  </ItemGroup>
+
 </Project>
