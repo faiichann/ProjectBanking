@@ -11,101 +11,104 @@
     <p>ฝากออมทรัพย์</p>
 
     <form asp-controller="Home" asp-action="CalSaving" method="post">
-        <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit"  step="0.01" type="number" name="Smoney" /><br />
-        <span>ระยะฝาก : </span><input asp-for="STerm" step="0.01" type="number" name="Sday" /><br />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit" step="0.01" type="number" name="Smoney" /><br />
+        <span asp-validation-for="SEarlyDeposit" class="text-danger"></span><br />
+        <span>ระยะฝาก : </span><input asp-for="STerm" type="number" name="Sday" /><br />
+        <span asp-validation-for="STerm" class="text-danger"></span><br />
         <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
         <input id="cal2" type="submit" value="Calculation2" /><br />
 
-                                                              <a asp-action="Save">
-                                                                  <table class="table">
-                                                                      <thead>
-                                                                          <tr>
-                                                                              <th>
-                                                                                  @Html.DisplayNameFor(model => model.SBankName)
-                                                                              </th>
-                                                                              <th>
-                                                                                  @Html.DisplayNameFor(model => model.SRate)
-                                                                              </th>
-                                                                              <th>
-                                                                                  @Html.DisplayNameFor(model => model.STerm)
-                                                                              </th>
-                                                                              <th>
-                                                                                  @Html.DisplayNameFor(model => model.SEarlyDeposit)
-                                                                              </th>
-                                                                              <th>
-                                                                                  @Html.DisplayNameFor(model => model.SInterestRate)
-                                                                              </th>
-                                                                              <th>
-                                                                                  @Html.DisplayNameFor(model => model.STotal)
-                                                                              </th>
-                                                                          </tr>
-                                                                      </thead>
-                                                                      <tbody>
+        <a asp-action="Save">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SBankName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SRate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.STerm)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SEarlyDeposit)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.SInterestRate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.STotal)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                                                                          <tr>
-                                                                              <td>
-                                                                                  กรุงศรี
-                                                                              </td>
-                                                                              <td>
-                                                                                  1.1
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Sterm
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Earlysavingb2
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Ratesavingb2
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Totalsavingb2
-                                                                              </td>
-                                                                          </tr>
-                                                                          <tr>
-                                                                              <td>
-                                                                                  กสิกรไทย
-                                                                              </td>
-                                                                              <td>
-                                                                                  0.865
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Sterm
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Earlysavingb3
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Ratesavingb3
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Totalsavingb3
-                                                                              </td>
-                                                                          </tr>
-                                                                          <tr>
-                                                                              <td>
-                                                                                  ไทยพสณิชย์
-                                                                              </td>
-                                                                              <td>
-                                                                                  0.375
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Sterm
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Earlysavingb1
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Ratesavingb1
-                                                                              </td>
-                                                                              <td>
-                                                                                  @ViewBag.Totalsavingb1
-                                                                              </td>
-                                                                          </tr>
-                                                                      </tbody>
-                                                                  </table>
-                                                                  <hr />
-                                                       </a>
+                    <tr>
+                        <td>
+                            กรุงศรี
+                        </td>
+                        <td>
+                            1.1
+                        </td>
+                        <td>
+                            @ViewBag.Sterm
+                        </td>
+                        <td>
+                            @ViewBag.Earlysavingb2
+                        </td>
+                        <td>
+                            @ViewBag.Ratesavingb2
+                        </td>
+                        <td>
+                            @ViewBag.Totalsavingb2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            กสิกรไทย
+                        </td>
+                        <td>
+                            0.865
+                        </td>
+                        <td>
+                            @ViewBag.Sterm
+                        </td>
+                        <td>
+                            @ViewBag.Earlysavingb3
+                        </td>
+                        <td>
+                            @ViewBag.Ratesavingb3
+                        </td>
+                        <td>
+                            @ViewBag.Totalsavingb3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ไทยพสณิชย์
+                        </td>
+                        <td>
+                            0.375
+                        </td>
+                        <td>
+                            @ViewBag.Sterm
+                        </td>
+                        <td>
+                            @ViewBag.Earlysavingb1
+                        </td>
+                        <td>
+                            @ViewBag.Ratesavingb1
+                        </td>
+                        <td>
+                            @ViewBag.Totalsavingb1
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+        </a>
     </form>
 </div>
 <div>

@@ -25,6 +25,7 @@ namespace ProjectBanking.Models
         public double SInterestRate { get; set; }
 
         [Display(Name = "ระยะฝาก(เดือน)")]
+        [Range(0,12,ErrorMessage = "กรุณาใส่จำนวนเดือน")]
         public double STerm { get; set; }
         [Required(ErrorMessage = "กรุณาใส่เงินฝากต้น")]
         [Display(Name = "เงินฝากต้น")]
