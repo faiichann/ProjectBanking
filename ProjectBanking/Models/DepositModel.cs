@@ -26,10 +26,8 @@ namespace ProjectBanking.Models
 
         [Display(Name = "ระยะฝาก(เดือน)")]
         public double STerm { get; set; }
-
-        [Display(Name = "เงินฝากต้น")]
         [Required(ErrorMessage = "กรุณาใส่เงินฝากต้น")]
-        [Range(1000 , 100000000 , ErrorMessage = "กรุณาใส่เงินฝากขั้นต่ำ 1,000 บาท และไม่เกิน 100,000,000 บาท")]
+        [Display(Name = "เงินฝากต้น")]
         public double SEarlyDeposit { get; set; }
 
         [Display(Name = "เงินฝากทั้งหมด")]
