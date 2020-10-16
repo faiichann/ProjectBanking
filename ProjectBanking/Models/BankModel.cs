@@ -13,5 +13,6 @@ namespace ProjectBanking.Models
         public string BankName { get; set; }
         public string BankAddress { get; set; }
         public double BankInterestRate { get; set; }
+        
     }
 }
