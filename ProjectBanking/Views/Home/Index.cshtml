@@ -3,32 +3,46 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i style='font-size:24px' class='fas'>&#xf106;</i></button>
 <h1>Index</h1>
 <h3>คำนวณดอกเบี้ย</h3>
 <div>
-    <a asp-action="Save">Saving</a>
+    <ul class="menu2">
+        <li><a href="#Home">Home</a></li>
+        <li><a asp-action="Save">Saving</a></li>
+        <li><a asp-action="Fixed">FixedSaving</a></li>
+        <li><a href="#SCB">ธ.ไทยพาณิชย์</a></li>
+        <li><a href="#KBank">ธ.กสิกรไทย</a></li>
+        <li><a href="#Krungsri">ธ.กรุงศรีอยุธยา</a></li>
+        <li><a href="#info">ข้อมูล</a></li>
+        <li><a href="#howto">เครื่องมือ</a></li>
+        <li><a href="#About">ติดต่อ</a></li>
+    </ul>
+
+    @*<a asp-action="Save">Saving</a>*@
 </div>
-<div>
-    <a asp-action="Fixed">FixedSaving</a>
-</div>
+
+@*<div>
+        <a asp-action="Fixed">FixedSaving</a>
+    </div> *@
 <br />
 <hr />
+
 <h3>ลงทุน</h3>
 @*<div>
-    <a asp-action="Formbank">FixedSaving</a>
-</div>*@
+        <a asp-action="Formbank">FixedSaving</a>
+    </div>*@
 <form asp-controller="Home" asp-action="Page" method="post">
-        <div>
-            <input type="submit" name="bank" value="1" />กรอกใบลทุนธนาคารไทยฑาณิชย์
-        </div>
-        <div>
-            <input type="submit" name="bank" value="2" />กรอกใบลทุนธนาคารกรงศรีอยุธยา
-        </div>
-        <div>
-            <input type="submit" name="bank" value="3" />กรอกใบลทุนธนาคารกสิกรไทย
-        </div>
-    </form>
+    <div>
+        <input type="submit" name="bank" value="1" />กรอกใบลทุนธนาคารไทยฑาณิชย์
+    </div>
+    <div>
+        <input type="submit" name="bank" value="2" />กรอกใบลทุนธนาคารกรงศรีอยุธยา
+    </div>
+    <div>
+        <input type="submit" name="bank" value="3" />กรอกใบลทุนธนาคารกสิกรไทย
+    </div>
+</form>
 
 <br />
 <hr />
@@ -74,3 +88,75 @@
         </tbody>
     </table>
 </a>
+<div id="info">
+    <h3>ข้อมูล</h3>
+    <h1>
+        Lorem Ipsum is simply d
+        ummy text of the printing and
+        typesetting industry. Lorem Ipsum ha
+        s been the industry's standard dummy
+        text ever since the 1500s, when an unknow
+        n printer took a galley of type and scramb
+        led it to make a type specimen book. It has
+        survived not only five centuries, but also
+        the leap into electronic typesetting, remainin
+        g essentially unchanged. It was popularised in
+        the 1960s with the release of Letraset sheets co
+        ntaining Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMa
+        ker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply d
+        ummy text of the printing and
+        typesetting industry. Lorem Ipsum ha
+        s been the industry's standard dummy
+        text ever since the 1500s, when an unknow
+        n printer took a galley of type and scramb
+        led it to make a type specimen book. It has
+        survived not only five centuries, but also
+        the leap into electronic typesetting, remainin
+        g essentially unchanged. It was popularised in
+        the 1960s with the release of Letraset sheets co
+        ntaining Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMa
+        ker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply d
+        ummy text of the printing and
+        typesetting industry. Lorem Ipsum ha
+        s been the industry's standard dummy
+        text ever since the 1500s, when an unknow
+        n printer took a galley of type and scramb
+        led it to make a type specimen book. It has
+        survived not only five centuries, but also
+        the leap into electronic typesetting, remainin
+        g essentially unchanged. It was popularised in
+        the 1960s with the release of Letraset sheets co
+        ntaining Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMa
+        ker including versions of Lorem Ipsum.
+    </h1>
+</div>
+
+<ul class="menu2">
+
+    <li><a href="#Home">กลับไปที่หน้าหลัก</a></li>
+
+</ul>
+<hr />
+<div id="howto">
+    <h3>เครื่องมือ</h3>
+
+</div>
+
+<ul class="menu2">
+
+    <li><a href="#Home">กลับไปที่หน้าหลัก</a></li>
+
+</ul>
+<hr />
+
+<ul class="menu2">
+
+    <li><a href="#Home">กลับไปที่หน้าหลัก</a></li>
+
+</ul>
+<hr />

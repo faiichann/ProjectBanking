@@ -16,3 +16,23 @@ filepreview.generate('InformationForBank.pdf', 'InformationForBank.png', functio
     }
     console.log('File preview is test_preview.png');
 });
+
+//ใส่ Button
+var mybutton = document.getElementById("myBtn");
+
+// เมื่อเลื่อนลงมา 20 px โชว์ button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// เมื่อคลิกปุ่ม จะเลื่อนไปด้านบน
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
