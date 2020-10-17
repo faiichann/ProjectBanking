@@ -765,15 +765,46 @@ a:hover{
             border-radius: .7em;
             background: #EFF0F6;
         }
+.cardinvest {
+    position: center;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .5rem;
+    transition: 0.3s;
+    width: 30%;
+    margin-left:550px;
+}
+.input {
+    margin-left: 20px;
+    padding-right: 180px;
+    border-radius: .5rem;
+    border: 0px;
+    background-color: #E0E0E4;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.submit {
+    border-radius: .7rem;
+    background-color: #7AF381;
+    color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:30px;
+    padding-right:30px;
+    border: 0px transparent;
+    margin-left:150px;
+}
 /*---Select---*/
-.select-selected:after {
+.select-selected{
     position: absolute;
-    content: "";
-    top: 14px;
+    top: 10px;
     right: 10px;
-    width: 0;
-    height: 0;
     background-color: #ACB3FE;
+    border-radius:0.7rem;
 }
 
 /*---Select---*/

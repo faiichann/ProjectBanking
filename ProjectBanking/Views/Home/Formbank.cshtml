@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Formbank";
 }
+<link rel="stylesheet" href="~/css/StyleSheet.css" />
 <body style="background-color:#F9F4FB">
 
     <div class="container">
@@ -64,72 +65,59 @@
     <h4 class="text-center">กรอกข้อมูลเพื่อสมัครการลงทุน</h4>
     <h5>@ViewBag.bank</h5>
     <hr />
-    <div class="card" style="        width: 30%;
-        margin-left: 525px;
-        border-radius: .5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        border: 1px solid transparent;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;">
-        <div class="card-body" style=" background-color:white;
-        border-radius: .5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width:450px;
-        background-color:aqua;">
+    <div class="cardinvest" style="">
+        <div class="card-body">
             <div class="row" style="">
                 <div class="col-md-4">
                     <form asp-action="Formbank" method="post" style="" enctype="multipart/form-data" asp-controller="Home">
                         <div asp-validation-summary="ModelOnly"></div>
                         <div class="form-group">
-                            <label id="Select" name="Select" asp-for="BankSelect" class="control-label" style="margin-left:-80px;">ประเภทบัญชี </label>
-                            <br />
-                            <select asp-for="BankSelect" style="padding-top: 5px;padding-bottom: 5px;margin-left: -80px;" class="select-selected">
-                                <option value="ออมทรัพย์">ออมทรัพย์</option>
-                                <option value="ฝากประจำ">ฝากประจำ</option>
+                            <label id="Select" name="Select" asp-for="BankSelect" class="control-label" style="">ประเภทบัญชี </label>
+                            <br /> <br /><br />
+
+                            <select asp-for="BankSelect" style="padding-top: 5px;padding-bottom: 5px; margin-top:25px;" class="select-selected">
+                                <option style="border-radius:.7rem;" value="ออมทรัพย์">ออมทรัพย์</option>
+                                <option style="border-radius:.7rem;" value="ฝากประจำ">ฝากประจำ</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label asp-for="CustomerID" class="control-label"  >เลขบัตรประชาชน</label>
-                            <input asp-for="CustomerID" class="form-box" style="margin-left: 20px;padding-right: 180px;border-radius: .5rem;border: 0px;background-color: #E0E0E4;" placeholder="x xxxx xxxxx xx x" />
+                            <label asp-for="CustomerID" class="control-label">เลขบัตรประชาชน</label>
+                            <input asp-for="CustomerID" class="input" style="" placeholder="x xxxx xxxxx xx x" />
                             <span asp-validation-for="CustomerID" class="text-danger" style="margin-left:-80px;"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="CustomerName" class="control-label" style="margin-left:-80px;">ชื่อ-สกุล</label>
-                            <input placeholder="ชื่อ-สกุล" asp-for="CustomerName" class="form-control" style="margin-left:-80px;" />
+                            <label asp-for="CustomerName" class="control-label" style="">ชื่อ-สกุล</label>
+                            <input placeholder="ชื่อ-สกุล" asp-for="CustomerName" class="input" style="" />
                             <span asp-validation-for="CustomerName" class="text-danger" style="margin-left:-80px;"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="CustomerAddress" class="control-label" style="margin-left:-80px;">ที่อยู่</label>
-                            <input placeholder="ที่อยู่" asp-for="CustomerAddress" class="form-control" style="margin-left:-80px;" />
+                            <label asp-for="CustomerAddress" class="control-label" style="">ที่อยู่</label>
+                            <input placeholder="ที่อยู่" asp-for="CustomerAddress" class="input" style="" />
                             <span asp-validation-for="CustomerAddress" class="text-danger" style="margin-left:-80px;"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="CustomerPhone" class="control-label" style="margin-left:-80px;">เบอร์โทรศัพท์</label>
-                            <input placeholder="+66xxxxxxxx" asp-for="CustomerPhone" class="form-control" style="margin-left:-80px;" />
+                            <label asp-for="CustomerPhone" class="control-label" style="">เบอร์โทรศัพท์</label>
+                            <input placeholder="+66xxxxxxxx" asp-for="CustomerPhone" class="input" style="" />
                             <span asp-validation-for="CustomerPhone" class="text-danger" style="margin-left:-80px;"></span>
                         </div>
 
                         <div class="form-group">
-                            <input class="form-control date-picker text-box single-line" data-val="true" data-val-required="The CustomerDate field is required." id="CustomerDate" name="CustomerDate" type="date" value="" style="margin-left:-80px;">
+                            <label class="control-label" style="">วันที่ฝาก</label>
+                            <input class="input date-picker text-box single-line" data-val="true" data-val-required="The CustomerDate field is required." id="CustomerDate" name="CustomerDate" type="date" value="">
                         </div>
                         <br />
                         <div class="form-group">
-                            <input type="submit" value="ยืนยัน" />
+                            <input class="submit" type="submit" value="ยืนยัน" />
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
+    <br /><br /><br />
+    @*<div>
+            <a asp-action="Index">Back to List</a>
+        </div>*@
 
     @section Scripts {
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
