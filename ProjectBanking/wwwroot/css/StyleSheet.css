@@ -617,6 +617,20 @@ body {
         margin-bottom:20px;
 }
 /*---css ที่ส้มโอแก้---*/
+.form-box {
+    display: flex;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #E0E0E4;
+    border: 0px solid transparent;
+    border-radius: .75rem;
+    
+}
 .card {
     background-color: #D3CFCF;
 }
@@ -687,7 +701,7 @@ a:hover{
 }
 
 #myBtn {
-    display:none;
+    display:block;
     float: right;
     position: fixed;
     bottom: 20px;
@@ -701,7 +715,7 @@ a:hover{
     cursor: pointer;
     padding: 30px;
     border-radius: 100px;
-    opacity:0.5;
+    opacity:0.7;
 }
 
 #myBtn:hover {
