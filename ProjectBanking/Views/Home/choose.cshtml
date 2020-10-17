@@ -1,0 +1,156 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #E5E5E5;
+        }
+    </style>
+    <header class="main_menu home_menu">
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"> <img src="~/img/semicolon-01.png" alt="logo" width="140px" height="40px"> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">หน้าหลัก</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_1"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                คำนวณดอกเบี้ย
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                <a class="dropdown-item" href="...">บัญชีออมทรัพย์</a>
+                                <a class="dropdown-item" href="...">บัญชีฝากประจำ</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_3"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ธนาคาร
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                <a class="dropdown-item" href="...">
+                                    ธนาคารไทยพาณิชย์
+                                </a>
+                                <a class="dropdown-item" href="...">
+                                    ธนาคารกสิกรไทย
+                                </a>
+                                <a class="dropdown-item" href="...">
+                                    ธนาคารกรุงศรีอยุธยา
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">ข้อมูล</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">เครื่องมือ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">ติดต่อ</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var window_top = $(window).scrollTop() + 1;
+            if (window_top > 50) {
+                $('.main_menu').addClass('menu_fixed animated fadeInDown');
+            } else {
+                $('.main_menu').removeClass('menu_fixed animated fadeInDown');
+            }
+        });
+
+        $('.counter').counterUp({
+            time: 2000
+        });
+
+        $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            speed: 300,
+            infinite: true,
+            asNavFor: '.slider-nav-thumbnails',
+            autoplay: true,
+            pauseOnFocus: true,
+            dots: true,
+        });
+
+        $('.slider-nav-thumbnails').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider',
+            focusOnSelect: true,
+            infinite: true,
+            prevArrow: false,
+            nextArrow: false,
+            centerMode: true,
+            responsive: [{
+                breakpoint: 480,
+                settings: {
+                    centerMode: false,
+                }
+            }]
+        });
+
+    </script>
+
+    <section>
+        <div class="choose-sec1">
+            <div class="container">
+                <div class="text-choose">
+                    <h1 class="textbanner">
+                        คำนวณดอกเบี้ยเเต่ละธนาคาร
+                    </h1>
+                    <p>เลือกประเภทเงินฝากที่ท่านต้องการ</p>
+                </div>
+                <div class="card-choose">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="~/img/Calculated1.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        ฝากออมทรัพย์
+                                    </p>                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="~/img/Calculated1.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        ฝากประจำ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

@@ -4,6 +4,8 @@ body {
     padding: 0;
     margin: 0;
     font-size: 14px;
+    justify-content:center;
+    align-items:center;
 }
 
 .main_menu .navbar-brand {
@@ -616,3 +618,57 @@ body {
         padding:2px 10px;
         margin-bottom:20px;
 }
+
+/*----------choose ออมทรัพย์,ประจำ----------*/
+.choose-sec1 .text-choose {
+        padding: 100px 0 0 0;
+}
+
+.choose-sec1 .text-choose h1 {
+    text-align:center;
+    font-size: 50px;
+    font-family: 'Kanit', sans-serif;
+    color: #000;
+}
+.choose-sec1 .text-choose p {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+}
+
+.choose-sec1 .card-choose {
+        justify-content: center;
+        margin-top: 130px;
+}
+
+.choose-sec1 .card-choose .card-body {
+            text-align: center;
+}
+
+.choose-sec1 .card-choose .card-body p {
+   padding: 20px;
+   font-size: 20px;
+   font-family: 'Kanit', sans-serif;
+   color: #000;
+}
+
+.choose-sec1 .card-choose .card {
+    border-radius: 2em;
+    display:grid;
+    box-shadow:5px 5px 8px rgba(0,0,0,0.3);
+    transition:0.5s ease;
+    cursor:pointer;
+
+}
+
+.choose-sec1 .card-choose .card img {
+        margin: 40px auto auto auto;
+        width: 50%;
+    }
+.card:hover {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+}
+
+

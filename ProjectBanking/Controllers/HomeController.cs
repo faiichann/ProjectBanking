@@ -60,6 +60,11 @@ namespace ProjectBanking.Controllers
         
             return View();
         }
+        public IActionResult choose()
+        {
+
+            return View();
+        }
         /*public class PdfImageElement : PdfElement
         {
 

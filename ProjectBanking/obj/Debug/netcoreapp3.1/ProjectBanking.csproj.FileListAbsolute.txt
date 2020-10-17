@@ -273,3 +273,4 @@ C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.
 C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.pdb
 C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.genruntimeconfig.cache
 C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Home1.cshtml.g.cs
+C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\choose.cshtml.g.cs
