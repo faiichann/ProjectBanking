@@ -3,23 +3,88 @@
 @{
     ViewData["Title"] = "Formbank";
 }
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"> <img src="~/img/semicolon-01.png" alt="logo" width="140px" height="40px"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu_icon"><i class="fas fa-bars"></i></span>
+        </button>
 
-<h1>Kbank</h1>
+        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">หน้าหลัก</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_1"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        คำนวณดอกเบี้ย
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                        <a class="dropdown-item" href="...">บัญชีออมทรัพย์</a>
+                        <a class="dropdown-item" href="...">บัญชีฝากประจำ</a>
 
-<h4>กรอกฟอร์มลงทุนกับธนาคาร</h4>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_3"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ธนาคาร
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                        <a class="dropdown-item" href="...">
+                            ธนาคารไทยพาณิชย์
+                        </a>
+                        <a class="dropdown-item" href="...">
+                            ธนาคารกสิกรไทย
+                        </a>
+                        <a class="dropdown-item" href="...">
+                            ธนาคารกรุงศรีอยุธยา
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="...">ข้อมูล</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="...">เครื่องมือ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="...">ติดต่อ</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<h4 class="text-center">กรอกข้อมูลเพื่อสมัครการลงทุน</h4>
 <h5>@ViewBag.bank</h5>
 <hr />
-<div class="card">
-    <div class="card-body">
-        <div class="row" style="margin-left:-100px">
+<div class="card" style="        width: 30%;
+        margin-left: 500px;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        border: 3px solid green;">
+    <div class="card-body" style="        background-color: aqua;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width:auto;">
+        <div class="row" style="">
             <div class="col-md-4">
-
-                <form asp-action="Formbank" method="post" style="margin-left:200px;" enctype="multipart/form-data" asp-controller="Home">
+                <form asp-action="Formbank" method="post" style="" enctype="multipart/form-data" asp-controller="Home">
                     <div asp-validation-summary="ModelOnly"></div>
                     <div class="form-group">
                         <label id="Select" name="Select" asp-for="BankSelect" class="control-label">ประเภทบัญชี </label>
                         <br />
-                        <select asp-for="BankSelect" style="padding-right: 208px;background-color: #ACB3FE;" class="select-selected">
+                        <select asp-for="BankSelect" style="padding-top:5px;padding-top:5px;" class="select-selected">
                             <option value="ออมทรัพย์">ออมทรัพย์</option>
                             <option value="ฝากประจำ">ฝากประจำ</option>
                         </select>
@@ -31,7 +96,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="CustomerName" class="control-label">ชื่อ-สกุล</label>
-                        <input placeholder="ชื่อ-สกุล" asp-for="CustomerName" class="form-control"/>
+                        <input placeholder="ชื่อ-สกุล" asp-for="CustomerName" class="form-control" />
                         <span asp-validation-for="CustomerName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -44,8 +109,10 @@
                         <input placeholder="+66xxxxxxxx" asp-for="CustomerPhone" class="form-control" />
                         <span asp-validation-for="CustomerPhone" class="text-danger"></span>
                     </div>
-                    @Html.EditorFor(model => model.CustomerDate, new { htmlAttributes = new { @class = "form-control date-picker" } })
 
+                    <div class="form-group">
+                        <input class="form-control date-picker text-box single-line" data-val="true" data-val-required="The CustomerDate field is required." id="CustomerDate" name="CustomerDate" type="date" value="">
+                    </div>
                     <br />
                     <div class="form-group">
                         <input type="submit" value="Create" />
