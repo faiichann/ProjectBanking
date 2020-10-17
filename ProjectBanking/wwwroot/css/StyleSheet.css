@@ -617,23 +617,7 @@ body {
         margin-bottom:20px;
 }
 /*---css ที่ส้มโอแก้---*/
-.form-box {
-    display: flex;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #E0E0E4;
-    border: 0px solid transparent;
-    border-radius: .75rem;
-    
-}
-.card {
-    background-color: #D3CFCF;
-}
+  
 html {
     scroll-behavior: smooth;
     font-family:Kanit;
@@ -642,10 +626,6 @@ html {
 a:hover{
     text-decoration:none;
 }
-.row {
-    width: 100%;
-}
-
 .column0 {
     float: left;
     width: 33%;
@@ -725,49 +705,9 @@ a:hover{
     display:block;
     padding-right:300px;
 }
-.cal-sec1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.cal-sec1 .text-cal {
-        padding: 100px 0 0 0;
-    }
-
-.cal-sec1 .text-cal h1 {
-            text-align: center;
-            font-size: 50px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-        }
-.cal-sec1 .text-cal p {
-            text-align: center;
-            font-size: 20px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-        }
-
-.cal-sec1 .card-cal {
-        display: grid;
-        border-radius: 2em;
-        width: 40%;
-        background: #fff;
-        box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-        text-align: left;
-        font-size: 20px;
-        font-family: 'Kanit', sans-serif;
-        color: #000;
-        margin-top: 50px;
-    }
-
-.cal-sec1 .card-cal .card-body .form-group input {
-            border-radius: .7em;
-            background: #EFF0F6;
-        }
 .cardinvest {
     position: center;
-    display: flex;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
@@ -776,7 +716,7 @@ a:hover{
     border-radius: .5rem;
     transition: 0.3s;
     width: 30%;
-    margin-left:550px;
+    /*margin-left:550px;*/
 }
 .input {
     margin-left: 20px;
@@ -798,6 +738,12 @@ a:hover{
     border: 0px transparent;
     margin-left:150px;
 }
+.upfile {
+    background-image: url('file:///D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\wwwroot\img\upfile.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 15px;
+}
 /*---Select---*/
 .select-selected{
     position: absolute;
@@ -812,4 +758,3 @@ a:hover{
     font-family: Kanit;
 }
 /*---css ที่ส้มโอแก้---*/
-

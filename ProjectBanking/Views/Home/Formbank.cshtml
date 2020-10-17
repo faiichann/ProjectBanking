@@ -62,59 +62,12 @@
 
         </nav>
     </div>
-    <h4 class="text-center">กรอกข้อมูลเพื่อสมัครการลงทุน</h4>
-    <h5>@ViewBag.bank</h5>
-    <hr />
-    <div class="cardinvest" style="">
-        <div class="card-body">
-            <div class="row" style="">
-                <div class="col-md-4">
-                    <form asp-action="Formbank" method="post" style="" enctype="multipart/form-data" asp-controller="Home">
-                        <div asp-validation-summary="ModelOnly"></div>
-                        <div class="form-group">
-                            <label id="Select" name="Select" asp-for="BankSelect" class="control-label" style="">ประเภทบัญชี </label>
-                            <br /> <br /><br />
+<section>
+    <div class="">
 
-                            <select asp-for="BankSelect" style="padding-top: 5px;padding-bottom: 5px; margin-top:25px;" class="select-selected">
-                                <option style="border-radius:.7rem;" value="ออมทรัพย์">ออมทรัพย์</option>
-                                <option style="border-radius:.7rem;" value="ฝากประจำ">ฝากประจำ</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="CustomerID" class="control-label">เลขบัตรประชาชน</label>
-                            <input asp-for="CustomerID" class="input" style="" placeholder="x xxxx xxxxx xx x" />
-                            <span asp-validation-for="CustomerID" class="text-danger" style="margin-left:-80px;"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="CustomerName" class="control-label" style="">ชื่อ-สกุล</label>
-                            <input placeholder="ชื่อ-สกุล" asp-for="CustomerName" class="input" style="" />
-                            <span asp-validation-for="CustomerName" class="text-danger" style="margin-left:-80px;"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="CustomerAddress" class="control-label" style="">ที่อยู่</label>
-                            <input placeholder="ที่อยู่" asp-for="CustomerAddress" class="input" style="" />
-                            <span asp-validation-for="CustomerAddress" class="text-danger" style="margin-left:-80px;"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="CustomerPhone" class="control-label" style="">เบอร์โทรศัพท์</label>
-                            <input placeholder="+66xxxxxxxx" asp-for="CustomerPhone" class="input" style="" />
-                            <span asp-validation-for="CustomerPhone" class="text-danger" style="margin-left:-80px;"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label" style="">วันที่ฝาก</label>
-                            <input class="input date-picker text-box single-line" data-val="true" data-val-required="The CustomerDate field is required." id="CustomerDate" name="CustomerDate" type="date" value="">
-                        </div>
-                        <br />
-                        <div class="form-group">
-                            <input class="submit" type="submit" value="ยืนยัน" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
-    <br /><br /><br />
+</section>
+    
     @*<div>
             <a asp-action="Index">Back to List</a>
         </div>*@
