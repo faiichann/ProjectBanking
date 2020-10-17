@@ -144,8 +144,6 @@ namespace ProjectBanking.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CalSaving(Savings savings)
             {
-            if (ModelState.IsValid)
-            {
                 savings.SEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Smoney"].ToString());
                 savings.STerm = Convert.ToDouble(HttpContext.Request.Form["Sday"].ToString());
                 ViewBag.Sterm = savings.STerm.ToString("0");
@@ -177,18 +175,13 @@ namespace ProjectBanking.Controllers
             ViewBag.Ratesavingb3 = TotalRates3.ToString("0.00");
             ViewBag.Totalsavingb3 = Totals3.ToString("0.00");
 
-            
-                return View("Save", savings);
-            }
-            return View("savings");
+                return View("Save", savings);    
             }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult CalFixed(FixedDeposit fixedDeposit)
         {
-            if (ModelState.IsValid)
-            {
                 fixedDeposit.FEarlyDeposit = Convert.ToDouble(HttpContext.Request.Form["Fmoney"].ToString());
                 fixedDeposit.FMonthDeposit = Convert.ToDouble(HttpContext.Request.Form["Fmonth"].ToString());
                 fixedDeposit.FTermperMonth = Convert.ToDouble(HttpContext.Request.Form["Fday"].ToString());
@@ -231,8 +224,7 @@ namespace ProjectBanking.Controllers
                     ViewBag.Summoneyb3 = Summoney1;
 
                 }
-            }
-
+            
             if (fixedDeposit.FTermperMonth == 6)
             {
                 double Sum6month = fixedDeposit.FMonthDeposit * 6;
@@ -305,9 +297,10 @@ namespace ProjectBanking.Controllers
                 ViewBag.Ratesfixavingb3 = TotalRateb3.ToString("0.00");
                 ViewBag.Totalfixsavingb3 = Totalb3.ToString("0.00");
                 ViewBag.Summoney3 = Summoney3;
-            }
 
-            return View("Fixed",fixedDeposit);
+
+            }
+                return View("Fixed",fixedDeposit);
         }
 
 
