@@ -25,9 +25,12 @@ namespace ProjectBanking.Models
         public double SInterestRate { get; set; }
 
         [Display(Name = "ระยะฝาก(เดือน)")]
-        [Range(0,12,ErrorMessage = "กรุณาใส่จำนวนเดือน")]
+        [Required(ErrorMessage = "กรุณาใส่จำนวนเดือน")]
+        [Range(1,12,ErrorMessage = "กรุณาใส่จำนวนเดือนให้ถูกต้อง")]
         public double STerm { get; set; }
-        [Required(ErrorMessage = "กรุณาใส่เงินฝากต้น")]
+
+        [Required(ErrorMessage = "กรุณาใส่เงินฝาก")]
+        [Range(1000,999999999,ErrorMessage = "กรุณาใส่เงินขั้นต่ำ1,000 บาท")]
         [Display(Name = "เงินฝากต้น")]
         public double SEarlyDeposit { get; set; }
 
@@ -50,12 +53,17 @@ namespace ProjectBanking.Models
         public double FRate { get; set; }
 
         [Display(Name = "ระยะฝาก/เดือน")]
+        [Required(ErrorMessage = "กรุณาเลือกระยะเวลาฝากประจำ")]
         public double FTermperMonth { get; set; }
 
+        [Required(ErrorMessage = "กรุณาใส่เงินฝาก")]
+        [Range(1000, 999999999, ErrorMessage = "กรุณาใส่จำนวนเงินขั้นต่ำ 1,000 บาท")]
         [Display(Name = "เงินฝากต้น")]
         public double FEarlyDeposit { get; set; }
 
         [Display(Name = "เงินฝากรวม")]
+        [Required(ErrorMessage = "กรุณาใส่เงินฝากประจำ")]
+        [Range(1000,999999999, ErrorMessage = "กรุณาใส่จำนวนเงินขั้นต่ำ 1,000 บาท")]
         public double FMonthDeposit { get; set; }
 
         [Display(Name = "เงินฝากทั้งหมด")]

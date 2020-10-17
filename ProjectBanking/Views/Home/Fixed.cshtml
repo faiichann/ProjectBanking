@@ -11,116 +11,126 @@
     <p>ฝากประจำ</p>
 
     <form asp-controller="Home" asp-action="CalFixed" method="post">
-
-        <span>เงินฝากต้น: </span><input step="0.01" type="number" name="Fmoney" /><br />
-        <span>ระยะฝากต่อเดือน : </span>
-        <input id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
-        <input id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
-        <input id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
-        <span>เงินฝากต่อเดือน : </span><input step="0.01" type="number" name="Fmonth" /><br />
-        <input id="cal2" type="submit" value="Calculation" /><br />
-        <hr />
-        <a asp-action="Fixed">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FBankName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FInterestRate)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FTermperMonth)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FEarlyDeposit)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FMonthDeposit)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FRate)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FTotal)
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            กรุงศรี
-                        </td>
-                        <td>
-                            1.1
-                        </td>
-                        <td>
-                            @ViewBag.Fterm
-                        </td>
-                        <td>
-                            @ViewBag.Earlyfixsavingb3
-                        </td>
-                        <td>
-                            @ViewBag.Summoneyb3
-                        </td>
-                        <td>
-                            @ViewBag.Ratesfixavingb3
-                        </td>
-                        <td>
-                            @ViewBag.Totalfixsavingb3
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            กสิกรไทย
-                        </td>
-                        <td>
-                            0.865
-                        </td>
-                        <td>
-                            @ViewBag.Fterm
-                        </td>
-                        <td>
-                            @ViewBag.Earlyfixsavingb2
-                        </td>
-                        <td>
-                            @ViewBag.Summoneyb2
-                        </td>
-                        <td>
-                            @ViewBag.Ratesfixavingb2
-                        </td>
-                        <td>
-                            @ViewBag.Totalfixsavingb2
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            ไทยพาณิชย์
-                        </td>
-                        <td>
-                            0.375
-                        </td>
-                        <td>
-                            @ViewBag.Fterm
-                        </td>
-                        <td>
-                            @ViewBag.Earlyfixsavingb1
-                        </td>
-                        <td>
-                            @ViewBag.Summoneyb1
-                        </td>
-                        <td>
-                            @ViewBag.Ratesfixavingb1
-                        </td>
-                        <td>
-                            @ViewBag.Totalfixsavingb1
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <span>เงินฝากต้น: </span>
+            <input asp-for="FEarlyDeposit" step="0.01" type="number" name="Fmoney" /><br />
+            <span asp-validation-for="FEarlyDeposit" class="text-danger"></span><br />
+        </div>
+        <div class="form-group">
+            <span>ระยะฝากต่อเดือน : </span>
+            <input asp-for="FTermperMonth" id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
+            <input asp-for="FTermperMonth" id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
+            <input asp-for="FTermperMonth" id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
+            <span asp-validation-for="FTermperMonth" class="text-danger"></span><br />
+        </div>
+        <div class="form-group">
+            <span>เงินฝากต่อเดือน : </span><input asp-for="FMonthDeposit" step="0.01" type="number" name="Fmonth" /><br />
+            <span asp-validation-for="FMonthDeposit" class="text-danger"></span><br />
+        </div>
+            <input id="cal2" type="submit" value="Calculation" /><br />
             <hr />
-        </a>
+            <a asp-action="Fixed">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FBankName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FInterestRate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FTermperMonth)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FEarlyDeposit)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FMonthDeposit)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FRate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FTotal)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                กรุงศรี
+                            </td>
+                            <td>
+                                1.1
+                            </td>
+                            <td>
+                                @ViewBag.Fterm
+                            </td>
+                            <td>
+                                @ViewBag.Earlyfixsavingb3
+                            </td>
+                            <td>
+                                @ViewBag.Summoneyb3
+                            </td>
+                            <td>
+                                @ViewBag.Ratesfixavingb3
+                            </td>
+                            <td>
+                                @ViewBag.Totalfixsavingb3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                กสิกรไทย
+                            </td>
+                            <td>
+                                0.865
+                            </td>
+                            <td>
+                                @ViewBag.Fterm
+                            </td>
+                            <td>
+                                @ViewBag.Earlyfixsavingb2
+                            </td>
+                            <td>
+                                @ViewBag.Summoneyb2
+                            </td>
+                            <td>
+                                @ViewBag.Ratesfixavingb2
+                            </td>
+                            <td>
+                                @ViewBag.Totalfixsavingb2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ไทยพาณิชย์
+                            </td>
+                            <td>
+                                0.375
+                            </td>
+                            <td>
+                                @ViewBag.Fterm
+                            </td>
+                            <td>
+                                @ViewBag.Earlyfixsavingb1
+                            </td>
+                            <td>
+                                @ViewBag.Summoneyb1
+                            </td>
+                            <td>
+                                @ViewBag.Ratesfixavingb1
+                            </td>
+                            <td>
+                                @ViewBag.Totalfixsavingb1
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+            </a>
 
     </form>
 </div>

@@ -12,11 +12,16 @@
 
     <form asp-controller="Home" asp-action="CalSaving" method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit" step="0.01" type="number" name="Smoney" /><br />
-        <span asp-validation-for="SEarlyDeposit" class="text-danger"></span><br />
-        <span>ระยะฝาก : </span><input asp-for="STerm" type="number" name="Sday" /><br />
-        <span asp-validation-for="STerm" class="text-danger"></span><br />
+        <div class="form-group">
+            <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit" step="0.01" type="number" name="Smoney" />
+            <span asp-validation-for="SEarlyDeposit" class="text-danger"></span><br />
+        </div>
+        <div class="form-group">
+            <span>ระยะฝาก : </span><input asp-for="STerm" type="number" name="Sday" />
+            <span asp-validation-for="STerm" class="text-danger"></span><br />
+        </div>
         <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
+
         <input id="cal2" type="submit" value="Calculation2" /><br />
 
         <a asp-action="Save">
