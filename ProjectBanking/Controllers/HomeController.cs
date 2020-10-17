@@ -272,7 +272,7 @@ namespace ProjectBanking.Controllers
                 ViewBag.Earlyfixsavingb1 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb1 = TotalRateb1.ToString("0.00");
                 ViewBag.Totalfixsavingb1 = Totalb1.ToString("0.00");
-                ViewBag.Summoney1 = Summoney3;
+                ViewBag.Summoneyb1 = Summoney3;
 
                 //KBANK 
                 fixedDeposit.FInterestRate = 0.87;
@@ -282,7 +282,7 @@ namespace ProjectBanking.Controllers
                 ViewBag.Earlyfixsavingb2 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb2 = TotalRateb2.ToString("0.00");
                 ViewBag.Totalfixsavingb2 = Totalb2.ToString("0.00");
-                ViewBag.Summoney2 = Summoney3;
+                ViewBag.Summoneyb2 = Summoney3;
 
                 //Krungsri
                 fixedDeposit.FInterestRate = 1.1;
@@ -292,7 +292,7 @@ namespace ProjectBanking.Controllers
                 ViewBag.Earlyfixsavingb3 = fixedDeposit.FEarlyDeposit.ToString("0.00");
                 ViewBag.Ratesfixavingb3 = TotalRateb3.ToString("0.00");
                 ViewBag.Totalfixsavingb3 = Totalb3.ToString("0.00");
-                ViewBag.Summoney3 = Summoney3;
+                ViewBag.Summoneyb3 = Summoney3;
             }
 
             return View("Fixed",fixedDeposit);
