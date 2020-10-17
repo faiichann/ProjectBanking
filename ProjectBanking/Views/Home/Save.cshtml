@@ -10,20 +10,20 @@
 <div>
     <p>ฝากออมทรัพย์</p>
 
-    <form asp-controller="Home" asp-action="CalSaving" method="post">
+    <form asp-controller="Home" asp-action="ActionSave" method="post" onsubmit="return submitForm(this);">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
-            <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit" step="0.01" type="number" name="Smoney" placeholder="ฝากขั้นต่ำ 1,000 บาท"/>
+            <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit" step="0.01" type="number" name="Smoney" placeholder="ฝากขั้นต่ำ 1,000 บาท" />
             <span asp-validation-for="SEarlyDeposit" class="text-danger"></span><br />
         </div>
         <div class="form-group">
-            <span>ระยะฝาก : </span><input asp-for="STerm" type="number" name="Sday" placeholder="สูงสุด 12 เดือน"/>
+            <span>ระยะฝาก : </span><input asp-for="STerm" type="number" name="Sday" placeholder="สูงสุด 12 เดือน" />
             <span asp-validation-for="STerm" class="text-danger"></span><br />
         </div>
         <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
 
         <input id="cal2" type="submit" value="Calculation" /><br />
-
+    </form>
         <a asp-action="Save">
             <table class="table">
                 <thead>
@@ -114,7 +114,7 @@
             </table>
             <hr />
         </a>
-    </form>
+    
 </div>
 <div>
     <a asp-action="Index">Back to List</a>

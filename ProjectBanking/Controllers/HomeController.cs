@@ -309,5 +309,14 @@ namespace ProjectBanking.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult ActionSave(Savings saving)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Save", saving);
+            }
+            return View("saving");
+        }
     }
 }
