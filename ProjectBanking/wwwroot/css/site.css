@@ -57,6 +57,7 @@ html {
     position: relative;
     min-height: 100%;
     font-family: Kanit;
+    scroll-behavior: smooth;
 }
 
 body {
