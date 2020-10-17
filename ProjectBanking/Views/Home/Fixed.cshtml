@@ -14,19 +14,19 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
             <span>เงินฝากต้น: </span>
-            <input asp-for="FEarlyDeposit" step="0.01" type="number" name="Fmoney" placeholder="ฝากขั้นต่ำ 1,000 บาท"/><br />
-            <span asp-validation-for="FEarlyDeposit" class="text-danger"></span><br />
+            <input asp-for="Fmoney" step="0.01" type="number" name="Fmoney" placeholder="ฝากขั้นต่ำ 1,000 บาท"/><br />
+            <span asp-validation-for="Fmoney" class="text-danger"></span><br />
         </div>
         <div class="form-group">
             <span>ระยะฝากต่อเดือน : </span>
-            <input asp-for="FTermperMonth" id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
-            <input asp-for="FTermperMonth" id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
-            <input asp-for="FTermperMonth" id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
-            <span asp-validation-for="FTermperMonth" class="text-danger"></span><br />
+            <input asp-for="Fday" id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
+            <input asp-for="Fday" id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
+            <input asp-for="Fday" id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
+            <span asp-validation-for="Fday" class="text-danger"></span><br />
         </div>
         <div class="form-group">
-            <span>เงินฝากต่อเดือน : </span><input asp-for="FMonthDeposit" step="0.01" type="number" name="Fmonth" /><br />
-            <span asp-validation-for="FMonthDeposit" class="text-danger"></span><br />
+            <span>เงินฝากต่อเดือน : </span><input asp-for="Fmonth" step="0.01" type="number" name="Fmonth" /><br />
+            <span asp-validation-for="Fmonth" class="text-danger"></span><br />
         </div>
             <input id="cal2" type="submit" value="Calculation" /><br />
             <hr />
@@ -41,13 +41,13 @@
                                 @Html.DisplayNameFor(model => model.FInterestRate)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.FTermperMonth)
+                                @Html.DisplayNameFor(model => model.Fday)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.FEarlyDeposit)
+                                @Html.DisplayNameFor(model => model.Fmoney)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.FMonthDeposit)
+                                @Html.DisplayNameFor(model => model.Fmonth)
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.FRate)

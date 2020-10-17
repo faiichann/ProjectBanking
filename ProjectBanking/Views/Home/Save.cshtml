@@ -10,16 +10,17 @@
 <div>
     <p>ฝากออมทรัพย์</p>
 
-    <form asp-controller="Home" asp-action="ActionSave" method="post" onsubmit="return submitForm(this);">
+    <form asp-controller="Home" asp-action="CalSaving" method="post" enctype="multipart/form-data" onsubmit="return submitForm(this);">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <span>เงินฝากต้น: </span><input asp-for="SEarlyDeposit" step="0.01" type="number" name="Smoney" placeholder="ฝากขั้นต่ำ 1,000 บาท" />
-            <span asp-validation-for="SEarlyDeposit" class="text-danger"></span><br />
-        </div>
-        <div class="form-group">
-            <span>ระยะฝาก : </span><input asp-for="STerm" type="number" name="Sday" placeholder="สูงสุด 12 เดือน" />
-            <span asp-validation-for="STerm" class="text-danger"></span><br />
-        </div>
+        <span>เงินฝากต้น : </span><input class="text-box single-line input-validation-error" data-val="true" data-val-number=""
+               data-val-range="กรุณาใส่เงินขั้นต่ำ500บาท" data-val-range-max="1.7976931348623157E+308" data-val-range-min="500"
+               data-val-required="กรุณาใส่เงินฝาก" id="Smoney" name="Smoney" type="number" value="" aria-describedby="Smoney-error"
+               aria-invalid="true">
+        @Html.ValidationMessageFor(m => m.Smoney, "", new { @class = "text-danger" })<br />
+        <span>ระยะฝาก :  </span><input type="number" name="Sday" placeholder="สูงสุด 12 เดือน" data-val="true" data-val-number="The field ระยะฝาก(เดือน) must be a number."
+               data-val-range="กรุณาใส่ไม่เกิน12เดือน" data-val-range-max="12" data-val-range-min="1" data-val-required="กรุณาใส่จำนวนเดือน" id="Sday"
+               value="" class="input-validation-error" aria-describedby="Sday-error" aria-invalid="true">
+        @Html.ValidationMessageFor(m => m.Sday, "", new { @class = "text-danger" })<br />
         <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
 
         <input id="cal2" type="submit" value="Calculation" /><br />
@@ -35,10 +36,10 @@
                             @Html.DisplayNameFor(model => model.SRate)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.STerm)
+                            @Html.DisplayNameFor(model => model.Sday)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.SEarlyDeposit)
+                            @Html.DisplayNameFor(model => model.Smoney)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.SInterestRate)

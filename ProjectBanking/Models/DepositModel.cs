@@ -12,6 +12,7 @@ namespace ProjectBanking.Models
     public class Savings
     {
         [Key]
+
         [Display(Name ="ลำดับ")]
         public Bank SBankID { get; set; }
 
@@ -24,15 +25,16 @@ namespace ProjectBanking.Models
         [Display(Name = "ดอกเบี้ยที่ได้รับ")]
         public double SInterestRate { get; set; }
 
+        
         [Display(Name = "ระยะฝาก(เดือน)")]
         [Required(ErrorMessage = "กรุณาใส่จำนวนเดือน")]
-        [Range(1,12)]
-        public double STerm { get; set; }
+        [Range(1.00,12.00,ErrorMessage = "กรุณาใส่ไม่เกิน12เดือน")]
+        public double Sday { get; set; }
 
         [Required(ErrorMessage = "กรุณาใส่เงินฝาก")]
-        [Range(1000,999999999)]
+        [Range(500.00,double.MaxValue,ErrorMessage = "กรุณาใส่เงินขั้นต่ำ500บาท")]
         [Display(Name = "เงินฝากต้น")]
-        public double SEarlyDeposit { get; set; }
+        public double Smoney { get; set; }
 
         [Display(Name = "เงินฝากทั้งหมด")]
         public double STotal { get; set; }
@@ -54,17 +56,17 @@ namespace ProjectBanking.Models
 
         [Display(Name = "ระยะฝาก/เดือน")]
         [Required(ErrorMessage = "กรุณาเลือกระยะเวลาฝากประจำ")]
-        public double FTermperMonth { get; set; }
+        public double Fday { get; set; }
 
         [Required(ErrorMessage = "กรุณาใส่เงินฝาก")]
-        [Range(1000, 999999999)]
+        [Range(500.00, double.MaxValue, ErrorMessage = "กรุณาใส่เงินฝากเริ่มต้น ขั้นต่ำ500บาท")]
         [Display(Name = "เงินฝากต้น")]
-        public double FEarlyDeposit { get; set; }
+        public double Fmoney { get; set; }
 
         [Display(Name = "เงินฝากรวม")]
         [Required(ErrorMessage = "กรุณาใส่เงินฝากประจำ")]
-        [Range(1000,999999999)]
-        public double FMonthDeposit { get; set; }
+        [Range(500.0,double.MaxValue, ErrorMessage = "กรุณาใส่เงินฝากประจำ ขั้นต่ำ500บาท")]
+        public double Fmonth { get; set; }
 
         [Display(Name = "เงินฝากทั้งหมด")]
         public double FTotal { get; set; }
