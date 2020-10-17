@@ -773,7 +773,29 @@ a:hover{
     border: none;
 }
 /*---responsive---*/
-@media only screen{
+@media (max-width:767px){
+    .mycol{
+        width:40%;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+        flex-direction:column;
+    }
+    .cardinvest{
+        width:180%;
+        margin-left:100px;
+    }
+    .submit {
+        border-radius: .7rem;
+        background-color: #7AF381;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: 0px transparent;
+        margin-left: 150px;
+    }
 
 }
 
