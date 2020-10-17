@@ -642,7 +642,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 2px 2px;
+    margin: 2px 10px;
     border-radius: 25px;
 }
     .btn-white:hover {
@@ -662,7 +662,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 2px 2px;
+    margin: 2px 10px;
     border-radius: 25px;
 }
     .btn-pdf:hover {
@@ -671,22 +671,65 @@ body {
         text-decoration: none;
     }
 
+.btn-img {
+    background-color: #5A38FD;
+    border: none;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    border-radius: 25px;
+}
+
+    .btn-img:hover {
+        background-color: #c6c3c3;
+        color: #5A38FD;
+        text-decoration: none;
+    }
+
+.btn-edit {
+    background-color: #fafafa;
+    border: none;
+    color: #ff3513;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    border-radius: 25px;
+}
+
+    .btn-edit:hover {
+        background-color: #ff3513;
+        color: #fafafa;
+        text-decoration: none;
+    }
+
 .showcard {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     margin-top: 20px;
     border-radius: 30px;
-    max-width: 50%;
+    width: 70%;
+    background-color: #f4f7f8;
 }
     .showcard:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
 
 .formcomplete {
-    margin: 10px auto;
-    padding: 10px 20px;
+    margin: 10px 20px;
+    padding: 10px 10px;
     background: #f4f7f8;
-    border-radius: 8px;
+    border-radius: 30px;
 }
 
 fieldset {
@@ -701,9 +744,11 @@ legend {
 .labelconfirm {
     display: block;
     margin-bottom: 8px;
+    margin-left: 10px;
+    font-size: 20px;
 }
 .number {
-    background-color: #5fcf80;
+    background-color: #5A38FD;
     color: #fff;
     height: 30px;
     width: 30px;
@@ -717,12 +762,13 @@ legend {
 }
 input[type=text]:disabled {
     background: #F9F4FB;
-    border-radius: 10%;
+    border-radius: 15px;
     display: inline-block;
     font-size: 16px;
     margin: 2px 2px;
+    height:45px;
+    width:80%;
 }
-
 
 @media (max-width:767px) {
     .colbtn {
@@ -733,7 +779,10 @@ input[type=text]:disabled {
         flex-direction: column;
     }
     .formcomplete {
-        max-width: 480px;
+        max-width: 80%;
+    }
+    .showcard {
+        width: 80%;
     }
 }
 @media (min-width:768px) and (max-width:1023px) {
@@ -744,10 +793,16 @@ input[type=text]:disabled {
         display: flex;
         flex-direction: row;
     }
+    .formcomplete {
+        max-width: 80%;
+    }
+
+    .showcard {
+        width: 80%;
+    }
 }
 @media (min-width:1024px) {
     .colbtn {
-        width: 20%;
         justify-content: center;
         align-items: center;
         display: flex;
