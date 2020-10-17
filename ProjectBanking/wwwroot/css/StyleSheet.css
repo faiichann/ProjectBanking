@@ -620,6 +620,12 @@ body {
 .card {
     background-color: #D3CFCF;
 }
+html {
+    scroll-behavior: smooth;
+}
+a:hover{
+    text-decoration:none;
+}
 /*---Select---*/
 .select-selected:after {
     position: absolute;
