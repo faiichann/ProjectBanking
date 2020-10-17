@@ -84,14 +84,14 @@
                     <div class="form-group">
                         <label id="Select" name="Select" asp-for="BankSelect" class="control-label">ประเภทบัญชี </label>
                         <br />
-                        <select asp-for="BankSelect" style="padding-top:5px;padding-top:5px;" class="select-selected">
+                        <select asp-for="BankSelect" style="padding-top:5px;padding-bottom:5px;" class="select-selected">
                             <option value="ออมทรัพย์">ออมทรัพย์</option>
                             <option value="ฝากประจำ">ฝากประจำ</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label asp-for="CustomerID" class="control-label">ชื่อบัญชี</label>
-                        <input placeholder="ชื่อบัญชี" asp-for="CustomerID" class="form-control" />
+                        <input  asp-for="CustomerID" class="form-control" style="padding-right: 100px" placeholder="ชื่อบัญชี"/>
                         <span asp-validation-for="CustomerID" class="text-danger"></span>
                     </div>
                     <div class="form-group">

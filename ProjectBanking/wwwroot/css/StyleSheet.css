@@ -622,9 +622,94 @@ body {
 }
 html {
     scroll-behavior: smooth;
+    font-family:Kanit;
 }
+
 a:hover{
     text-decoration:none;
+}
+.row {
+    width: 100%;
+}
+
+.column0 {
+    float: left;
+    width: 33%;
+    margin-left: 356px;
+    margin-bottom: 20px;
+    padding: 0 8px;
+}
+
+.column1 {
+    float: left;
+    width: 33%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.column2 {
+    float: right;
+    width: 33%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.column3 {
+    float: right;
+    width: 33%;
+    margin-bottom: 30px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+.title {
+    color: grey;
+}
+
+#myBtn {
+    display:none;
+    float: right;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 100px;
+    opacity:0.5;
+}
+
+#myBtn:hover {
+        background-color: #555;
+    }
+.form-id{
+    display:block;
+    padding-right:300px;
 }
 /*---Select---*/
 .select-selected:after {
