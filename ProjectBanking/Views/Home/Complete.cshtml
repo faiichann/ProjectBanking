@@ -2,32 +2,177 @@
 @{
     ViewData["Title"] = "Complete";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <header class="main_menu home_menu">
 
-<h1>KComplete</h1>
-<h4>คุณได้ลงทุนกับธนาคาร</h4>
-<div id="pdfcontainer">
-    <h1 style="margin-top:30px;">Confirm Information</h1>
-    <p style="margin-left:800px;">@DateTime.Now</p>
-    <p>ประเภท : @Html.DisplayFor(Select => Select.BankSelect)</p>
-    <p>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</p>
-    <p>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</p>
-    <p>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</p>
-    <p>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</p>
-    <p>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
-    <p>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</p>
-    <p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
-    <img src="@ViewData["FileLocation"]" width="500" height="350" />
-    @*<img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />*@
-</div>
-@*<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
-    <input asp-for="CustomerImg" class="form-control" type="file" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple />
-</form>
-<asp:FileUpload ID="FileUpload1" runat="server" />
-<asp:Button Text="Upload" runat="server" OnClick="Upload" />
-</form>*@
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background-color: #F9F4FB ">
+                <a class="navbar-brand" href="index.html"> <img src="~/img/semicolon-01.png" alt="logo" width=140 height=40> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="menu_icon"><i class="fas fa-bars"></i></span>
+                </button>
 
-<button id="btnPdf" onclick="filepreview" accept="image/*">PrintPDF</button><br />
-<button onclick="goBack()">กลับไปแก้ไขข้อมูล</button>
+                <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">หน้าหลัก</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_1"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                คำนวณดอกเบี้ย
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                <a class="dropdown-item" href="...">บัญชีออมทรัพย์</a>
+                                <a class="dropdown-item" href="...">บัญชีฝากประจำ</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_3"
+                               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ธนาคาร
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                <a class="dropdown-item" href="...">
+                                    ธนาคารไทยพาณิชย์
+                                </a>
+                                <a class="dropdown-item" href="...">
+                                    ธนาคารกสิกรไทย
+                                </a>
+                                <a class="dropdown-item" href="...">
+                                    ธนาคารกรุงศรีอยุธยา
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">ข้อมูล</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">เครื่องมือ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">ติดต่อ</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="headcomplete">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 class="display-5 Ctitle">การลงทุนเสร็จเรียบร้อย</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="img-fluid">
+                    <img src="~/img/completepage.png" class="picconfirm">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="colbtn">
+                    <a href="#cardshow" class="btn-white" onclick="showform()">ตรวจสอบข้อมูล</a>
+                </div>
+                <div class="colbtn">
+                    <a  href="#" class="btn-pdf" id="btnPdf" onclick="filepreview" accept="image/*">ดาวน์โหลดPDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showform" class="bodycomplete">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div id="pdfcontainer">
+                    <div class="showcard" id="cardshow">
+                        <div class="card-header " style="background:none; text-align:center ;color:blue"><h3>ข้อมูลการลงทุน</h3></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="formcomplete align-items-center justify-content-center ">
+
+                                    <fieldset>
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-8"><legend><span class="number">1</span> ธนาคารไทยพาณิชย์</legend></div>
+                                            <div class="col-4" style="justify-content:flex-end"><p>@DateTime.Now</p></div>
+                                        </div>
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">ประเภท :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(Select => Select.BankSelect)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">ชื่อบัญชี :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(BN => BN.CustomerBN)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">ชื่อผู้ฝาก :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(name => name.CustomerName)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">เลขบัตรประชาชน :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(id => id.CustomerID)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">ที่อยู่ :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(address => address.CustomerAddress)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">เบอร์ติดต่อ :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(phone => phone.CustomerPhone)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">จำนวนเงินฝาก :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(demoney => demoney.CustomerMoney)"></div>
+                                        </div>
+
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="col-4"><label class="labelconfirm">วันที่สมัครลงทุน :</label></div>
+                                            <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(date => date.CustomerDate)"></div>
+                                        </div>
+                                        <div class="row" style="margin-top:50px;">
+                                            <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" width="500" height="350" />
+                                            @*<img src="@ViewData["FileLocation"]" width="500" height="350" />*@
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="row justify-content-center">
+                                        <div class="colbtn">
+                                            <a onclick="goBack()" class="btn-edit">แก้ไขข้อมูล</a>
+                                        </div>
+                                        <div class="colbtn">
+                                            <form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
+                                                <a asp-for="CustomerImg" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple class="btn-img form-control">Upload Card</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+</body>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     $("#btnPdf").click(function () {
@@ -40,3 +185,31 @@
         window.history.back();
     }
 </script>
+</html>
+
+@*<h1>KComplete</h1>
+    <h4>คุณได้ลงทุนกับธนาคาร</h4>
+    <div id="pdfcontainer">
+        <h1 style="margin-top:30px;">Confirm Information</h1>
+        <p style="margin-left:800px;">@DateTime.Now</p>
+        <p>ประเภท : @Html.DisplayFor(Select => Select.BankSelect)</p>
+        <p>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</p>
+        <p>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</p>
+        <p>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</p>
+        <p>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</p>
+        <p>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
+        <p>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</p>
+        <p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
+        <img src="@ViewData["FileLocation"]" width="500" height="350" /></div>*@
+@*<img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />*@
+
+@*<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
+        <input asp-for="CustomerImg" class="form-control" type="file" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple />
+    </form>
+    <asp:FileUpload ID="FileUpload1" runat="server" />
+    <asp:Button Text="Upload" runat="server" OnClick="Upload" />
+    </form>*@
+
+@*<button id="btnPdf" onclick="filepreview" accept="image/*">PrintPDF</button>
+    <br />
+    <button onclick="goBack()">กลับไปแก้ไขข้อมูล</button>*@

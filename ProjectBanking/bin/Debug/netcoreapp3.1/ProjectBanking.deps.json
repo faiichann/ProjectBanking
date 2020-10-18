@@ -24,7 +24,6 @@
     ".NETCoreApp,Version=v3.1": {
       "ProjectBanking/1.0.0": {
         "dependencies": {
-          "BouncyCastle": "1.8.6.1",
           "EntityFramework": "6.4.4",
           "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-final",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
@@ -318,17 +317,6 @@
           "ProjectBanking.dll": {}
         }
       },
-      "BouncyCastle/1.8.6.1": {
-        "runtime": {
-          "lib/BouncyCastle.Crypto.dll": {
-            "assemblyVersion": "1.8.6.0",
-            "fileVersion": "1.8.20052.1"
-          }
-        },
-        "compile": {
-          "lib/BouncyCastle.Crypto.dll": {}
-        }
-      },
       "EntityFramework/6.4.4": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -353,9 +341,6 @@
         }
       },
       "iTextSharp/5.5.13.2": {
-        "dependencies": {
-          "BouncyCastle": "1.8.6.1"
-        },
         "runtime": {
           "lib/itextsharp.dll": {
             "assemblyVersion": "5.5.13.2",
@@ -3516,13 +3501,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "BouncyCastle/1.8.6.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rkqpuKmJkdcfTMBkIj1b5nMdBAWKwAyh+I/BQYeqqSD2jkIlhwc9qBNKmSbnpmmm5c29qHZGLpvBSTNWvDLtQA==",
-      "path": "bouncycastle/1.8.6.1",
-      "hashPath": "bouncycastle.1.8.6.1.nupkg.sha512"
     },
     "EntityFramework/6.4.4": {
       "type": "package",
