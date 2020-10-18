@@ -7496,19 +7496,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\win10\\.nuget\\packages\\": {}
+    "C:\\Users\\JB\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+      "projectUniqueName": "D:\\Project Web 20 oct 20\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
       "projectName": "ProjectBanking",
-      "projectPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
-      "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\obj\\",
+      "projectPath": "D:\\Project Web 20 oct 20\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+      "packagesPath": "C:\\Users\\JB\\.nuget\\packages\\",
+      "outputPath": "D:\\Project Web 20 oct 20\\ProjectBanking\\ProjectBanking\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JB\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7587,7 +7587,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   },
