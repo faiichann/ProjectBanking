@@ -213,9 +213,41 @@ body {
         background-color: #3A25A1;
         color: #F7F7FC;
     }
+@media (min-width:768px ) and (max-width: 1023px) {
+    .banner_part .single_banner_slider .banner_text h1 {
+        font-size: 30px;
+    }
+
+    .btn_1 {
+        transform: scale(0.8);
+    }
+}
+@media (max-width:768px ) and (max-width: 1023px) {
+    .banner_part .single_banner_slider .banner_text .banner_text_iner img {
+        width: 80%;
+    }
+}
+/*-------phone--------*/
+}
+@media (max-width:767px ) {
+    .banner_part .single_banner_slider .banner_text h1 {
+        font-size: 20px;
+    }
+
+    .btn_1 {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width:767px ) {
+    .banner_part .single_banner_slider .banner_text .banner_text_iner img {
+        width: 50%;
+    }
+}
+
+}
 
 /*-------slider show--------*/
-
 .slide-show {
     padding: 40px;
     background-color: #fff;
@@ -681,6 +713,8 @@ body {
     display:;
     margin-bottom: 100px;
     margin-top: 100px;
+    text-align:center;
+    font-family:Kanit,sans-serif;
 }
     .rank-cal .card, img div {
         box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
@@ -701,7 +735,25 @@ body {
         margin-bottom:10px;
         width: 80%;
     }
-
+    /*----------table----------*/
+.table-cal {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: Kanit,sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
+        .table-cal table {
+            background-color: #fff;
+            border-radius: 2em;         
+        }
+    .table-cal tr th,td{
+        padding:40px 40px;
+    }
+.table-cal table img {
+    width:70%;
+}
  
 
 
