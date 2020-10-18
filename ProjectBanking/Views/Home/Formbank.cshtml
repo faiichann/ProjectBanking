@@ -3,71 +3,131 @@
 @{
     ViewData["Title"] = "Formbank";
 }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<header class="main_menu home_menu">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg" style="background-color: #F9F4FB ">
+            <a class="navbar-brand" href="index.html"> <img src="~/img/semicolon-01.png" alt="logo" width=140 height=40> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="menu_icon"><i class="fas fa-bars"></i></span>
+            </button>
 
-<h1>Kbank</h1>
+            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_1"
+                           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            คำนวณดอกเบี้ย
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                            <a class="dropdown-item" href="...">บัญชีออมทรัพย์</a>
+                            <a class="dropdown-item" href="...">บัญชีฝากประจำ</a>
 
-<h4>กรอกฟอร์มลงทุนกับธนาคาร</h4><h5>@ViewBag.bank</h5>
-<hr />
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="..." id="navbarDropdown_3"
+                           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ธนาคาร
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                            <a class="dropdown-item" href="...">
+                                ธนาคารไทยพาณิชย์
+                            </a>
+                            <a class="dropdown-item" href="...">
+                                ธนาคารกสิกรไทย
+                            </a>
+                            <a class="dropdown-item" href="...">
+                                ธนาคารกรุงศรีอยุธยา
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="...">ข้อมูล</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="...">เครื่องมือ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="...">ติดต่อ</a>
+                    </li>
+                </ul>
+            </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Formbank" method="post" enctype="multipart/form-data" asp-controller="Home">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label id="Select" name="Select" asp-for="BankSelect">Select choice : </label>
-                <select asp-for="BankSelect">
-                    <option value="ออมทรัพย์">ออมทรัพย์</option>
-                    <option value="ฝากประจำ">ฝากประจำ</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerBN" class="control-label"></label>
-                <input asp-for="CustomerBN" class="form-control" />
-                <span asp-validation-for="CustomerBN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerName" class="control-label"></label>
-                <input asp-for="CustomerName" class="form-control" />
-                <span asp-validation-for="CustomerName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerID" class="control-label"></label>
-                <input type="number" asp-for="CustomerID" class="form-control" />
-                <span asp-validation-for="CustomerID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerAddress" class="control-label"></label>
-                <input asp-for="CustomerAddress" class="form-control" />
-                <span asp-validation-for="CustomerAddress" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerPhone" class="control-label"></label>
-                <input asp-for="CustomerPhone" class="form-control" />
-                <span asp-validation-for="CustomerPhone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerMoney" class="control-label"></label>
-                <input type="number" asp-for="CustomerMoney" class="form-control" data-val-number="กรุณาใส่ตัวเลขเท่านั้น"/>
-                <span asp-validation-for="CustomerMoney" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                @Html.EditorFor(model => model.CustomerDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
-            </div>
-            <br />
-            <div class="custom-file">
-                <input class="form-control custom-file-input" type="file" name="file" />
-                <label class="custom-file-label">Browse...</label>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </nav>
     </div>
-</div>
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</header>
 
+<section>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top:20px;">
+            <h4 class="text-center">กรอกข้อมูลเพื่อสมัครการลงทุน</h4>
+        </div>
+        <div class="row justify-content-center" style="margin-top:20px;">
+            <form asp-action="Formbank" method="post" enctype="multipart/form-data" asp-controller="Home">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label id="Select" name="Select" asp-for="BankSelect">Select choice : </label>
+                    <select asp-for="BankSelect">
+                        <option value="ออมทรัพย์">ออมทรัพย์</option>
+                        <option value="ฝากประจำ">ฝากประจำ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerBN" class="control-label"></label>
+                    <input asp-for="CustomerBN" class="form-control" />
+                    <span asp-validation-for="CustomerBN" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerName" class="control-label"></label>
+                    <input asp-for="CustomerName" class="form-control" />
+                    <span asp-validation-for="CustomerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerID" class="control-label"></label>
+                    <input type="number" asp-for="CustomerID" class="form-control" />
+                    <span asp-validation-for="CustomerID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerAddress" class="control-label"></label>
+                    <input asp-for="CustomerAddress" class="form-control" />
+                    <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerPhone" class="control-label"></label>
+                    <input asp-for="CustomerPhone" class="form-control" />
+                    <span asp-validation-for="CustomerPhone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CustomerMoney" class="control-label"></label>
+                    <input type="number" asp-for="CustomerMoney" class="form-control" data-val-number="กรุณาใส่ตัวเลขเท่านั้น" />
+                    <span asp-validation-for="CustomerMoney" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    @Html.EditorFor(model => model.CustomerDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                </div>
+                <br />
+                <div class="custom-file">
+                    <input class="form-control custom-file-input" type="file" name="file" />
+                    <label class="custom-file-label">Browse...</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
@@ -83,11 +143,8 @@
             ShowOn: "both",
             buttonText: "<i class='fa fa-calendar'>"
         });
-
     });
-</script>
 
-<script type="text/javascript">
     $(document).ready(function () {
         $(".custom-file-input").on("change", function () {
             var fileName = $(this).val().split("\\").pop();
@@ -95,3 +152,78 @@
         })
     });
 </script>
+
+@*<div class="cardform">
+    <fieldset>
+        <form class="align-items-center justify-content-center " asp-action="Formbank" method="post" enctype="multipart/form-data" asp-controller="Home" />
+        <div class="formdata">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="row form-group" style="margin-top:10px;">
+                <div class="row"><legend> ธนาคาร</legend></div>
+                <div class="row" style="justify-content:flex-end"><input class="forminput" type="text" disabled="disabled" value="@ViewBag.bank"></div>
+            </div>
+            <div class="row form-group" style="margin-top:10px; flex-direction:column;">
+                <div class="row"><label id="Select" name="Select" asp-for="BankSelect">ประเภทบัญชี </label></div>
+                <div class="row" style="justify-content:flex-end">
+                    <select asp-for="BankSelect" style="padding-top: 5px;padding-bottom: 5px;" class="select-selected">
+                        <option style="border-radius:.7rem;" value="ออมทรัพย์">ออมทรัพย์</option>
+                        <option style="border-radius:.7rem;" value="ฝากประจำ">ฝากประจำ</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group" style="margin-top:10px;flex-direction:column;">
+                <div class="row"><label asp-for="CustomerName" class="control-label">ชื่อผู้ฝาก</label></div>
+                <div class="row" style="justify-content:flex-end">
+                    <input asp-for="CustomerName" class="form-control forminput" placeholder="ชื่อ-นามสกุล" />
+                    <span asp-validation-for="CustomerName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group" style="margin-top:10px;flex-direction:column;">
+                <div class="row"> <label asp-for="CustomerID" class="control-label">เลขบัตรประชาชน</label></div>
+                <div class="row" style="justify-content:flex-end">
+                    <input type="number" asp-for="CustomerID" class="form-control forminput" placeholder="xxx-xxxxxxx-xxx" />
+                    <span asp-validation-for="CustomerID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group" style="margin-top:10px;flex-direction:column;">
+                <div class="row"><label asp-for="CustomerAddress" class="control-label">ที่อยู่ผู้ฝาก</label></div>
+                <div class="row" style="justify-content:flex-end">
+                    <input asp-for="CustomerAddress" class="form-control forminput" placeholder="ที่อยู่" />
+                    <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group" style="margin-top:10px; flex-direction:column;">
+                <div class="row"> <label asp-for="CustomerPhone" class="control-label">เบอร์โทรศัพท์</label></div>
+                <div class="row" style="justify-content:flex-end">
+                    <input asp-for="CustomerPhone" class="form-control forminput" placeholder="0xx-xxxx-xxx" />
+                    <span asp-validation-for="CustomerPhone" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group" style="margin-top:10px; flex-direction:column;">
+                <div class="row"> <label asp-for="CustomerMoney" class="control-label">จำนวนเงินฝาก</label></div>
+                <div class="row" style="justify-content:flex-end" placeholder="500บาทขึ้นไป">
+                    <input type="number" asp-for="CustomerMoney" class="form-control forminput" data-val-number="กรุณาใส่ตัวเลขเท่านั้น" />
+                    <span asp-validation-for="CustomerMoney" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row form-group" style="margin-top:10px;  flex-direction:column;" ">
+                <div class="row"><label class="form-id" style="">วันที่ฝาก</label></div>
+                <div class="row" style="justify-content:flex-end">
+                    <input class="input date-picker text-box single-line forminput" data-val="true" data-val-required="The CustomerDate field is required." id="CustomerDate" name="CustomerDate" type="date" value="">
+                </div>
+            </div>
+            <div class="custom-file">
+                <input class="" type="file" name="file" />
+                <label class="file-box ">Browse...</label>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <form method="post">
+                        <input class="confirmbtn" type="submit" asp-controller="Home" asp-action="Formbank" value="ยืนยัน" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>*@

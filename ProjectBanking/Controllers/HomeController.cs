@@ -16,7 +16,7 @@ using System.Web;
 using SelectPdf;
 using System.Drawing.Imaging;
 //using Grpc.Core;
-using iTextSharp.text;
+//using iTextSharp.text;
 //using iTextSharp.text.pdf;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,14 +33,6 @@ namespace ProjectBanking.Controllers
         {
             _env = environment;
         }
-
-
-        /*private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }*/
 
         public IActionResult Index()
         {
@@ -159,8 +151,6 @@ namespace ProjectBanking.Controllers
 
             return listsave;
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult CalSaving(Savings savings)
             {
 
@@ -198,9 +188,6 @@ namespace ProjectBanking.Controllers
 
             return View("Save");
         }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult CalFixed(FixedDeposit fixedDeposit)
         {
                 fixedDeposit.Fmoney = Convert.ToDouble(HttpContext.Request.Form["Fmoney"].ToString());
