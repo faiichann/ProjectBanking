@@ -14,15 +14,12 @@ using System.Net;
 using System.Data.Entity;
 using System.Web;
 using SelectPdf;
-<<<<<<< HEAD
 using System.Drawing.Imaging;
-using Grpc.Core;
-=======
+//using Grpc.Core;
 using iTextSharp.text;
-using iTextSharp.text.pdf;
+//using iTextSharp.text.pdf;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
->>>>>>> model-form-required
 
 namespace ProjectBanking.Controllers
 {
@@ -75,13 +72,8 @@ namespace ProjectBanking.Controllers
         }
         /*public class PdfImageElement : PdfElement
         {
-
-<<<<<<< HEAD
         }*/
         public IActionResult Pdf(string html)
-=======
-        /*public IActionResult Pdf(string html)
->>>>>>> model-form-required
         {
             html = html.Replace("StrTag", "<").Replace("EndTag", ">");
 
@@ -106,7 +98,7 @@ namespace ProjectBanking.Controllers
                 pdf,
                 "application/pdf",
                 "InformationForBank.pdf");
-        }*/
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
