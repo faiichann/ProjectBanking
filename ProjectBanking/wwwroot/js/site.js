@@ -9,3 +9,4 @@ var loadFile = function (event) {
         URL.revokeObjectURL(show.src)
     }
 };
+
