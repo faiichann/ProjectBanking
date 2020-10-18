@@ -10,11 +10,11 @@ using System.Configuration;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic;
 using System.Net;
-using System.Data.Entity;
+//using System.Data.Entity;
 using System.Web;
-using SelectPdf;
+//using SelectPdf;
 using System.Drawing.Imaging;
-using Grpc.Core;
+//using Grpc.Core;
 
 namespace ProjectBanking.Controllers
 {
@@ -50,6 +50,11 @@ namespace ProjectBanking.Controllers
             ViewBag.listbank = AllBank();
             return View();
         }
+        public IActionResult Formbank2()
+        {
+            ViewBag.listbank = AllBank();
+            return View();
+        }
         public IActionResult Complete()
         {
             ViewBag.bankpage = Page();
@@ -64,7 +69,7 @@ namespace ProjectBanking.Controllers
         {
 
         }*/
-        public IActionResult Pdf(string html)
+       /* public IActionResult Pdf(string html)
         {
             html = html.Replace("StrTag", "<").Replace("EndTag", ">");
 
@@ -89,7 +94,7 @@ namespace ProjectBanking.Controllers
                 pdf,
                 "application/pdf",
                 "InformationForBank.pdf");
-        }
+        }*/
 
         [HttpPost]
         [ValidateAntiForgeryToken]

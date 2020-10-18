@@ -412,3 +412,7 @@ D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\s
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.dll
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.pdb
 D:\Project Web 20 oct 20\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.genruntimeconfig.cache
+C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CoreCompileInputs.cache
+C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Formbank2.cshtml.g.cs
+C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Home1.cshtml.g.cs
