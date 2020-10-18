@@ -1,4 +1,10 @@
-﻿
+﻿<link rel="stylesheet" href="~/css/StyleSheet.css" />
+<body>
+    <style>
+        body {
+            background-color: #E5E5E5;
+        }
+    </style>
 
     <section>
         <div class="cal-sec1">
@@ -24,116 +30,117 @@
                                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="กรอกจำนวนเดือน">
                                     </div>
                                 </form>
-                                <a href="#toggle-rank" class="btn-cal1" onclick="showrank1()">คำนวณ</a>
+                                <a href="#toggle-rank" class="btn-cal1" onclick="myWellshow()">คำนวณ</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><hr>
-              <div >
-                  <section class="rank-cal">
-                      <div class="container">
-                          <div class="text-cal">
-                              <h1 class="textbanner">
-                                  ผลการจัดอันดับ
-                              </h1>
-                          </div>
-                          <div class="row justify-content-md-center">
-                              <div class="col-md-auto">
-                                  <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
-                                  <div class="card" style="width: 10rem;">
-                                      <div class="card-body">
-                                          <h1 class="card-title">2</h1>
-                                          <p>ธนาคารไทยพาณิชย์</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-auto">
-                                  <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
-                                  <div class="card" style="width: 18rem;">
-                                      <div class="card-body">
-                                          <h1 class="card-title">1</h1>
-                                          <p>ธนาคารไทยพาณิชย์</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-auto">
-                                  <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
-                                  <div class="card" style="width: 10rem;">
-                                      <div class="card-body">
-                                          <h1 class="card-title">3</h1>
-                                          <p>ธนาคารไทยพาณิชย์</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </section>
+    </section>
+    <div id="toggle-rank" class="toggle-rt">
+        <section class="rank-cal">
+            <div class="container">
+                <div class="text-cal">
+                    <h1 class="textbanner">
+                        ผลการจัดอันดับ
+                    </h1>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">2</h1>
+                                <p>ธนาคารไทยพาณิชย์</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-auto">
+                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">1</h1>
+                                <p>ธนาคารไทยพาณิชย์</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-auto">
+                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">3</h1>
+                                <p>ธนาคารไทยพาณิชย์</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                  <section class="table-cal">
-                      <div class="container">
-                          <div class="text-cal">
-                              <h1 class="textbanner">
-                                  ตารางเปรียบเทียบอัตราดอกเบี้ย
-                              </h1>
-                          </div>
-                          <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th scope="col"></th>
-                                      <th scope="col"> <img class="card-img-top" src="~/img/bank1.png" alt="Card image cap"></th>
-                                      <th scope="col"><img class="card-img-top" src="~/img/bank2.png" alt="Card image cap"></th>
-                                      <th scope="col"><img class="card-img-top" src="~/img/bank3.png" alt="Card image cap"></th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <th scope="row">เงินต้น</th>
-                                      <td>Mark</td>
-                                      <td>Otto</td>
-                                      <td>1</td>
-                                  </tr>
-                                  <tr>
-                                      <th scope="row">จำนวนเงินฝาก</th>
-                                      <td>Jacob</td>
-                                      <td>Thornton</td>
-                                      <td>1</td>
-                                  </tr>
-                                  <tr>
-                                      <th scope="row">จำนวนดอกเบี้ย</th>
-                                      <td>Larry</td>
-                                      <td>the Bird</td>
-                                      <td>1</td>
-                                  </tr>
-                                  <tr>
-                                      <th scope="row">ดอกเบี้ย</th>
-                                      <td>Larry</td>
-                                      <td>the Bird</td>
-                                      <td>1</td>
-                                  </tr>
-                                  <tr>
-                                      <th scope="row">จำนวนเงินที่ได้</th>
-                                      <td>Larry</td>
-                                      <td>the Bird</td>
-                                      <td>1</td>
-                                  </tr>
+        <section class="table-cal">
+            <div class="container">
+                <div class="text-cal">
+                    <h1 class="textbanner">
+                        ตารางเปรียบเทียบอัตราดอกเบี้ย
+                    </h1>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"> <img class="card-img-top" src="~/img/bank1.png" alt="Card image cap"></th>
+                            <th scope="col"><img class="card-img-top" src="~/img/bank2.png" alt="Card image cap"></th>
+                            <th scope="col"><img class="card-img-top" src="~/img/bank3.png" alt="Card image cap"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">เงินต้น</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">จำนวนเงินฝาก</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">จำนวนดอกเบี้ย</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ดอกเบี้ย</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">จำนวนเงินที่ได้</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>1</td>
+                        </tr>
 
-                              </tbody>
-                          </table>
+                    </tbody>
+                </table>
 
-                      </div>
-                  </section>
-              </div>
-    <script>
-        function showrank1() {
-            var x = ducument.getElementById("toggle-rank");
-            if (x.style.display == "block") {
-                x.style.display = "none";
-            }
-            else {
-                x.style.display = "block";
-            }
-        }
-    </script>
+            </div>
+        </section>
+    </div>
+            <script type="text/javascript">
+                function myWellshow() {
+                    var x = document.getElementById("toggle-rank");
+                    if (x.style.display == "block") {
+                        x.style.display = "none";
+                    }
+                    else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
+</body>

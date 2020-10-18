@@ -913,6 +913,7 @@ input[type=text]:disabled {
     display:flex;
     justify-content:center;
     align-items:center;
+    margin-bottom:100px;
 
 }
 .cal-sec1 .card-cal .card-body form {
@@ -975,14 +976,15 @@ input[type=text]:disabled {
         color: #F7F7FC;
     }
 
-
+.toggle-rt{
+    display:none;
+}
 /*----------ranking---------*/
 .rank-cal {
-    display:none;
     margin-bottom: 100px;
     margin-top: 100px;
-    text-align:center;
-    font-family:Kanit,sans-serif;
+    text-align: center;
+    font-family: Kanit,sans-serif;
 }
     .rank-cal .card, img div {
         box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
@@ -1005,7 +1007,6 @@ input[type=text]:disabled {
     }
     /*----------table----------*/
 .table-cal {
-    display: none;
     margin-top: 50px;
     justify-content: center;
     align-items: center;
