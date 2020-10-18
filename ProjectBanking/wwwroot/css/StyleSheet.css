@@ -772,7 +772,7 @@ a:hover{
 /*---responsive---*/
 @media (max-width:767px){
     .mycol{
-        width:40%;
+        width:30%;
         justify-content:center;
         align-items:center;
         display:flex;
@@ -780,7 +780,7 @@ a:hover{
     }
     .cardinvest{
         width:180%;
-        margin-left:100px;
+        margin-left:300px;
     }
     .submit {
        
