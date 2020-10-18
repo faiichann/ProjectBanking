@@ -14,19 +14,26 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
             <span>เงินฝากต้น: </span>
-            <input asp-for="Fmoney" step="0.01" type="number" name="Fmoney" placeholder="ฝากขั้นต่ำ 1,000 บาท"/><br />
-            <span asp-validation-for="Fmoney" class="text-danger"></span><br />
+            <input class="text-box single-line input-validation-error" step="0.01" data-val="true" data-val-number=""
+                   data-val-range="กรุณาใส่เงินขั้นต่ำ500บาท" data-val-range-max="1.7976931348623157E+308" data-val-range-min="500"
+                   data-val-required="กรุณาใส่เงินฝาก" id="Fmoney" name="Fmoney" type="number" value="" aria-describedby="Fmoney-error"
+                   aria-invalid="true"><br />
+            <span asp-validation-for="Fmoney" class="text-danger"></span>
         </div>
         <div class="form-group">
             <span>ระยะฝากต่อเดือน : </span>
             <input asp-for="Fday" id="Fday" type="radio" name="Fday" value="3" /><span>  3  </span>
             <input asp-for="Fday" id="Fday" type="radio" name="Fday" value="6" /><span>  6  </span>
             <input asp-for="Fday" id="Fday" type="radio" name="Fday" value="12" /><span>  12  </span><br />
-            <span asp-validation-for="Fday" class="text-danger"></span><br />
+            <span asp-validation-for="Fday" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <span>เงินฝากต่อเดือน : </span><input asp-for="Fmonth" step="0.01" type="number" name="Fmonth" /><br />
-            <span asp-validation-for="Fmonth" class="text-danger"></span><br />
+            <span>เงินฝากต่อเดือน : </span>
+            <input class="text-box single-line input-validation-error" step="0.01" data-val="true" data-val-number=""
+                   data-val-range="กรุณาใส่เงินขั้นต่ำ500บาท" data-val-range-max="1.7976931348623157E+308" data-val-range-min="500"
+                   data-val-required="กรุณาใส่เงินฝาก" id="Fmonth" name="Fmonth" type="number" value="" aria-describedby="Fmonth-error"
+                   aria-invalid="true"><br />
+            <span asp-validation-for="Fmonth" class="text-danger"></span>
         </div>
             <input id="cal2" type="submit" value="Calculation" /><br />
             <hr />
