@@ -26,8 +26,8 @@
 <asp:Button Text="Upload" runat="server" OnClick="Upload" />
 </form>*@
 
-<button id="btnPdf" onclick="filepreview" accept="image/*">PrintPDF</button>
-
+<button id="btnPdf" onclick="filepreview" accept="image/*">PrintPDF</button><br />
+<button onclick="goBack()">กลับไปแก้ไขข้อมูล</button>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     $("#btnPdf").click(function () {
@@ -35,4 +35,8 @@
         sHtml = sHtml.replace(/</g, "StrTag").replace(/>/g, "EndTag");
         window.open('../Home/Pdf?html=' + sHtml, '_blank');
     });
+
+    function goBack() {
+        window.history.back();
+    }
 </script>
