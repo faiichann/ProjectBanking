@@ -75,11 +75,6 @@ namespace ProjectBanking.Controllers
         
             return View();
         }
-        public IActionResult Confirm()
-        {
-
-            return View();
-        }
         /*public class PdfImageElement : PdfElement
         {
         }*/
