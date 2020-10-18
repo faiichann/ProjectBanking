@@ -28,8 +28,8 @@ namespace ProjectBanking.Models
         
         [Display(Name = "ระยะฝาก(เดือน)")]
         [Required(ErrorMessage = "กรุณาใส่จำนวนเดือน")]
-        [Range(1.00,12.00,ErrorMessage = "กรุณาใส่ไม่เกิน12เดือน")]
-        public double Sday { get; set; }
+        [Range(1,12,ErrorMessage = "กรุณาใส่ไม่เกิน12เดือน")]
+        public Int32 Sday { get; set; }
 
         [Required(ErrorMessage = "กรุณาใส่เงินฝาก")]
         [Range(500.00,double.MaxValue,ErrorMessage = "กรุณาใส่เงินขั้นต่ำ500บาท")]

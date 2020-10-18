@@ -146,7 +146,7 @@ namespace ProjectBanking.Controllers
             {
 
             savings.Smoney = Convert.ToDouble(HttpContext.Request.Form["Smoney"].ToString());
-                savings.Sday = Convert.ToDouble(HttpContext.Request.Form["Sday"].ToString());
+                savings.Sday = Convert.ToInt32(HttpContext.Request.Form["Sday"].ToString());
                 ViewBag.Sterm = savings.Sday.ToString("0");
 
             //SCB

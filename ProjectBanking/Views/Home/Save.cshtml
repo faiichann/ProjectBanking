@@ -17,8 +17,8 @@
                data-val-required="กรุณาใส่เงินฝาก" id="Smoney" name="Smoney" type="number" value="" aria-describedby="Smoney-error"
                aria-invalid="true">
         @Html.ValidationMessageFor(m => m.Smoney, "", new { @class = "text-danger" })<br />
-        <span>ระยะฝาก :  </span><input type="number" name="Sday" placeholder="สูงสุด 12 เดือน" data-val="true" data-val-number="The field ระยะฝาก(เดือน) must be a number."
-               data-val-range="กรุณาใส่ไม่เกิน12เดือน" data-val-range-max="12" data-val-range-min="1" data-val-required="กรุณาใส่จำนวนเดือน" id="Sday"
+        <span>ระยะฝาก :  </span><input type="number" name="Sday" placeholder="สูงสุด 12 เดือน" data-val="true" data-val-number="จำนวนเดือนต้องเป็นตัวเลขเท่านั้น."
+               data-val-range="กรุณาใส่ไม่เกิน12เดือน" data-val-range-max="12" data-val-range-min="1" step="1" data-val-required="กรุณาใส่จำนวนเดือน" id="Sday"
                value="" class="input-validation-error" aria-describedby="Sday-error" aria-invalid="true">
         @Html.ValidationMessageFor(m => m.Sday, "", new { @class = "text-danger" })<br />
         <span>อัตราดอกเบี้ย : </span><input step="0.01" type="number" name="Srate" hidden /><br />
