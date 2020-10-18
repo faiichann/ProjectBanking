@@ -195,7 +195,7 @@ using ProjectBanking.Models;
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n    </header>\r\n    <div class=\"container\">\r\n        <main role=\"main\" class=\"pb-3\">\r\n            ");
+                WriteLiteral("\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n    </header>\r\n    <div>\r\n        <main role=\"main\" class=\"pb-3\">\r\n            ");
 #nullable restore
 #line 36 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Shared\_Layout.cshtml"
        Write(RenderBody());

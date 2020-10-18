@@ -4,7 +4,6 @@
   "success": true,
   "projectFilePath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\win10\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\itextsharp\\5.5.13.2\\itextsharp.5.5.13.2.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\microsoft.aspnet.mvc.abstractions\\6.0.0-rc1-final\\microsoft.aspnet.mvc.abstractions.6.0.0-rc1-final.nupkg.sha512",
