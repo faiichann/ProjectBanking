@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -78,7 +78,7 @@ using ProjectBanking.Models;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Formbank.cshtml"
+#line 3 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Formbank.cshtml"
   
     ViewData["Title"] = "Formbank";
 
@@ -87,7 +87,7 @@ using ProjectBanking.Models;
 #nullable disable
             WriteLiteral("\r\n<h1>Kbank</h1>\r\n\r\n<h4>กรอกฟอร์มลงทุนกับธนาคาร</h4><h5>");
 #nullable restore
-#line 9 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Formbank.cshtml"
+#line 9 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Formbank.cshtml"
                                Write(ViewBag.bank);
 
 #line default
@@ -102,7 +102,7 @@ using ProjectBanking.Models;
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper);
 #nullable restore
-#line 15 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Formbank.cshtml"
+#line 15 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Formbank.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSummary = global::Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary.ModelOnly;
 
 #line default

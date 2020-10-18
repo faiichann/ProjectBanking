@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {}
+    "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {
+    "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+        "projectUniqueName": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
         "projectName": "ProjectBanking",
-        "projectPath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
-        "packagesPath": "C:\\Users\\JB\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\obj\\",
+        "projectPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+        "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,9 +69,6 @@
             "iTextSharp": {
               "target": "Package",
               "version": "[5.5.13.2, )"
-            "evopdf": {
-              "target": "Package",
-              "version": "[8.0.0, )"
             }
           },
           "imports": [
