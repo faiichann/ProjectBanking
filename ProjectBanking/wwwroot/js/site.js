@@ -27,3 +27,6 @@ filepreview.generate('InformationForBank.pdf', 'InformationForBank.png', functio
     }
     console.log('File preview is test_preview.png');
 });
+
+//fixed navbar
+

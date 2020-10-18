@@ -67,6 +67,21 @@ namespace ProjectBanking.Controllers
         
             return View();
         }
+        public IActionResult choose()
+        {
+
+            return View();
+        }
+        public IActionResult cal1()
+        {
+
+            return View();
+        }
+        public IActionResult cal2()
+        {
+
+            return View();
+        }
         /*public class PdfImageElement : PdfElement
         {
         }*/
