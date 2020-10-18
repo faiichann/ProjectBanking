@@ -1,4 +1,4 @@
-﻿
+﻿@model ProjectBanking.Models.FixedDeposit
 <body>
     <style>
         body {
@@ -6,55 +6,6 @@
         }
     </style>
 
-    <section>
-        <div class="cal-sec1">
-            <div class="container">
-                <div class="text-cal">
-                    <h1 class="textbanner">
-                        คำนวณดอกเบี้ยเเต่ละธนาคาร
-                    </h1>
-                    <p>ฝากประจำ</p>
-                </div>
-                <div class="row justify-content-md-center">
-                    <div class="card-cal">
-                        <div class="col-md-auto">
-                            <div class="card-body">
-
-                                <form>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput">เงินฝาก</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="กรอกจำนวนเงินฝาก">
-                                    </div><hr>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput">จำนวนเดือน</label><br>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">3</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio2">6</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                            <label class="form-check-label" for="inlineRadio3">12</label>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2">เงินฝากต่อเดือน</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="กรอกจำนวนเงิน">
-                                    </div>
-                                </form>
-                                <a href="#toggle-rank2" class="btn-cal1" onclick="myWellshow2()">คำนวณ</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div id="toggle-rank2" class="toggle-rt">
         <section class="rank-cal">
             <div class="container">
                 <div class="text-cal">
@@ -69,24 +20,27 @@
                             <div class="card-body">
                                 <h1 class="card-title">2</h1>
                                 <p>ธนาคารไทยพาณิชย์</p>
+                                <center><p>@ViewBag.Totalfixsavingb1 บาท</p></center>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-auto">
-                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                        <img class="card-img-top" src="~/img/circlebank3.png" alt="Card image cap">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h1 class="card-title">1</h1>
-                                <p>ธนาคารไทยพาณิชย์</p>
+                                <p>ธนาคารกรุงศรีอยุธยา</p>
+                                <center><p>@ViewBag.Totalfixsavingb3 บาท</p></center>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-auto">
-                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                        <img class="card-img-top" src="~/img/circlebank2.png" alt="Card image cap">
                         <div class="card" style="width: 10rem;">
                             <div class="card-body">
                                 <h1 class="card-title">3</h1>
-                                <p>ธนาคารไทยพาณิชย์</p>
+                                <p>ธนาคารกสิกรไทย</p>
+                                <center><p>@ViewBag.Totalfixsavingb2 บาท</p></center>
                             </div>
                         </div>
                     </div>
@@ -101,62 +55,70 @@
                         ตารางเปรียบเทียบอัตราดอกเบี้ย
                     </h1>
                 </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col"> <img class="card-img-top" src="~/img/bank1.png" alt="Card image cap"></th>
-                            <th scope="col"><img class="card-img-top" src="~/img/bank2.png" alt="Card image cap"></th>
-                            <th scope="col"><img class="card-img-top" src="~/img/bank3.png" alt="Card image cap"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">เงินต้น</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">จำนวนเงินฝาก</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">จำนวนดอกเบี้ย</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">ดอกเบี้ย</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">จำนวนเงินที่ได้</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>1</td>
-                        </tr>
+                <div asp-action="cal2">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"> <img class="card-img-top" src="~/img/bank3.png" alt="Card image cap"></th>
+                                <th scope="col"><img class="card-img-top" src="~/img/bank1.png" alt="Card image cap"></th>
+                                <th scope="col"><img class="card-img-top" src="~/img/bank2.png" alt="Card image cap"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>ธนาคารกรุงศรีอยุธยา</td>
+                                <td>ธนาคารไทยพาณิชย์</td>
+                                <td>ธนาคารกสิกรไทย</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.Fmoney)</th>
+                                <td><br />@ViewBag.Earlyfixsavingb2</td>
+                                <td><br />@ViewBag.Earlyfixsavingb1</td>
+                                <td><br />@ViewBag.Earlyfixsavingb3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.Fmonth)</th>
+                                <td><br />@ViewBag.Monthlyfixsavingb2</td>
+                                <td><br />@ViewBag.Monthlyfixsavingb1</td>
+                                <td><br />@ViewBag.Monthlyfixsavingb3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.Fday)</th>
+                                <td><br />@ViewBag.Fterm</td>
+                                <td><br />@ViewBag.Fterm</td>
+                                <td><br />@ViewBag.Fterm</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.Fsum)</th>
+                                <td><br />@ViewBag.Summoneyb2</td>
+                                <td><br />@ViewBag.Summoneyb1</td>
+                                <td><br />@ViewBag.Summoneyb3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.FInterestRate)</th>
+                                <td><br />@ViewBag.InterestRateb2</td>
+                                <td><br />@ViewBag.InterestRateb1</td>
+                                <td><br />@ViewBag.InterestRateb3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.FRate)</th>
+                                <td><br />@ViewBag.Ratesfixsavingb2</td>
+                                <td><br />@ViewBag.Ratesfixsavingb1</td>
+                                <td><br />@ViewBag.Ratesfixsavingb3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@Html.DisplayNameFor(model => model.FTotal)</th>
+                                <td><br />@ViewBag.Totalfixsavingb2</td>
+                                <td><br />@ViewBag.Totalfixsavingb1</td>
+                                <td><br />@ViewBag.Totalfixsavingb3</td>
+                            </tr>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </section>
-    </div>
-    <script type="text/javascript">
-        function myWellshow2() {
-            var x = document.getElementById("toggle-rank2");
-            if (x.style.display == "block") {
-                x.style.display = "none";
-            }
-            else {
-                x.style.display = "block";
-            }
-        }
-    </script>
 </body>

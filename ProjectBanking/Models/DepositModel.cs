@@ -54,21 +54,23 @@ namespace ProjectBanking.Models
         [Display(Name = "ดอกเบี้ยที่ได้รับ")]
         public double FRate { get; set; }
 
-        [Display(Name = "ระยะฝาก/เดือน")]
+        [Display(Name = "ระยะเวลา(เดือน)")]
         [Required(ErrorMessage = "กรุณาเลือกระยะเวลาฝากประจำ")]
         public double Fday { get; set; }
 
         [Required(ErrorMessage = "กรุณาใส่เงินฝาก")]
         [Range(500.00, double.MaxValue, ErrorMessage = "กรุณาใส่เงินฝากเริ่มต้น ขั้นต่ำ500บาท")]
-        [Display(Name = "เงินฝากต้น")]
+        [Display(Name = "เงินฝากเริ่มต้น")]
         public double Fmoney { get; set; }
 
-        [Display(Name = "เงินฝากรวม")]
+        [Display(Name = "เงินฝากประจำรายเดือน")]
         [Required(ErrorMessage = "กรุณาใส่เงินฝากประจำ")]
-        [Range(500.0,double.MaxValue, ErrorMessage = "กรุณาใส่เงินฝากประจำ ขั้นต่ำ500บาท")]
+        [Range(500.00,double.MaxValue, ErrorMessage = "กรุณาใส่เงินฝากประจำ ขั้นต่ำ500บาท")]
         public double Fmonth { get; set; }
 
-        [Display(Name = "เงินฝากทั้งหมด")]
+        [Display(Name = "เงินที่ได้รับ")]
         public double FTotal { get; set; }
+        [Display(Name = "เงินฝากรวม")]
+        public double Fsum { get; set; }
     }
 }
