@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -56,7 +56,7 @@ using ProjectBanking.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 2 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
   
     ViewData["Title"] = "Complete";
 
@@ -65,7 +65,7 @@ using ProjectBanking.Models;
 #nullable disable
             WriteLiteral("\r\n<h1>KComplete</h1>\r\n<h4>คุณได้ลงทุนกับธนาคาร</h4>\r\n<div id=\"pdfcontainer\">\r\n    <h1 style=\"margin-top:30px;\">Confirm Information</h1>\r\n    <p style=\"margin-left:800px;\">");
 #nullable restore
-#line 10 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 10 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                              Write(DateTime.Now);
 
 #line default

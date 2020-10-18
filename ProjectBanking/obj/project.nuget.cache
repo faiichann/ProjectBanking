@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "Kj+byjzaw8vRCHeNLueH9bY/yqFhKUXnhkje8W6U5O6nJhWxXs2vgZisKlMEvtzEmgGsemzOrmoJ7FPzoRKHew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\win10\\source\\repos\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
+  "projectFilePath": "C:\\Users\\JB\\Documents\\GitHub\\ProjectBanking\\ProjectBanking\\ProjectBanking.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\win10\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\win10\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
