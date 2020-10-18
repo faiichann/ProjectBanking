@@ -507,7 +507,7 @@ body {
     background-size: cover;
 }
 .bank-section5 .text-sec5 {
-    padding: 130px 0 0 0;
+    padding: 50px 0 0 0;
 }
 .bank-section5 .text-sec5 h1 {
     font-size: 50px;
@@ -528,10 +528,15 @@ body {
         font-family: 'Kanit', sans-serif;
         color: #000;
     }
-.bank-section5 .card-sec5 img{
+ .bank-section5 .card-sec5 .method img {
+        width: 20%;
+        margin-bottom:80px;
+ }
+.bank-section5 .card-sec5 .sectionpic5 img{
         width:70%;
         height:200px;
 }
+
 
 /*------section 6 ---------*/
 .bank-section6 {
