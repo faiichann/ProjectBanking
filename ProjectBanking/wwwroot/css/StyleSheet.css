@@ -28,7 +28,7 @@ body {
     font-weight: 400;
 }
 
-    .main_menu .main-menu-item ul li .nav-link:hover {
+.main_menu .main-menu-item ul li .nav-link:hover {
         color: #000;
     }
 
@@ -90,40 +90,6 @@ body {
 .dropdown:hover .dropdown-menu {
     transform: scale(1);
 }
-
-@media (max-width: 991px) {
-    /* line 184, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_menu.scss */
-    .main_menu {
-        padding: 26px 0px;
-    }
-    /* line 188, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_menu.scss */
-    .home_menu .main-menu-item {
-        padding-left: 0px;
-    }
-    /* line 192, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_menu.scss */
-    .main_menu .main-menu-item {
-        text-align: left !important;
-    }
-        /* line 195, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_menu.scss */
-        .main_menu .main-menu-item .nav-item {
-            padding: 10px 15px !important;
-        }
-            /* line 198, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_menu.scss */
-            .main_menu .main-menu-item .nav-item .nav-link {
-                padding: 5px 15px !important;
-                color: #000;
-            }
-
-    .navbar-collapse {
-        z-index: 9999 !important;
-        position: absolute;
-        left: 0;
-        top: 50px;
-        width: 100%;
-        background-color: #fff;
-        text-align: center !important;
-    }
-
     .dropdown .dropdown-menu {
         transform: scale(1, 0);
         display: none;
@@ -138,23 +104,6 @@ body {
 
     .dropdown .dropdown-item:hover {
         color: #ffd800 !important;
-    }
-
-    .navbar-brand img {
-        max-width: 60px;
-        height:40px;
-        margin: 0 auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-        display: inline-block;
-        top: 0;
-    }
-
-    .navbar-light .navbar-toggler {
-        border-color: transparent;
-        position: absolute;
-        left: 0;
     }
 
     .menu_icon i {
@@ -639,7 +588,7 @@ body {
 
 .choose-sec1 .card-choose {
         justify-content: center;
-        margin-top: 130px;
+        margin-top: 100px;
 }
 
 .choose-sec1 .card-choose .card-body {
@@ -661,6 +610,9 @@ body {
     cursor:pointer;
 
 }
+.choose-sec1 .card-choose row col{
+    justify-content:center;
+}
 
 .choose-sec1 .card-choose .card img {
         margin: 40px auto auto auto;
@@ -677,6 +629,12 @@ body {
     justify-content:center;
     align-items:center;
 
+}
+.cal-sec1 .card-cal .card-body form {
+        margin-top:30px;
+}
+.cal-sec1 .card-cal .card-body .btn-cal1 {
+        justify-content:center;
 }
 .cal-sec1 .text-cal {
     padding: 100px 0 0 0;
@@ -706,10 +664,31 @@ body {
         font-family: 'Kanit', sans-serif;
         color: #000;
         margin-top: 50px;
-    }
+}
         .cal-sec1 .card-cal .card-body .form-group input {
             border-radius: .7em;
             background: #EFF0F6;
-        }
+ }   
+.btn-cal1 {
+    display: inline-block;
+    padding: 14px 55px;
+    border-radius: 2em;
+    background-color: #5A38FD;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top:30px;
+}
+
+    .btn-cal1:hover {
+        background-color: #3A25A1;
+        color: #F7F7FC;
+    }
+ 
 
 
