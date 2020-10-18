@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;    
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,19 +14,36 @@ using System.Net;
 using System.Data.Entity;
 using System.Web;
 using SelectPdf;
+<<<<<<< HEAD
 using System.Drawing.Imaging;
 using Grpc.Core;
+=======
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+>>>>>>> model-form-required
 
 namespace ProjectBanking.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        [Obsolete]
+        IHostingEnvironment _env;
+
+        [Obsolete]
+        public HomeController(IHostingEnvironment environment)
+        {
+            _env = environment;
+        }
+
+
+        /*private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-        }
+        }*/
 
         public IActionResult Index()
         {
@@ -58,8 +76,12 @@ namespace ProjectBanking.Controllers
         /*public class PdfImageElement : PdfElement
         {
 
+<<<<<<< HEAD
         }*/
         public IActionResult Pdf(string html)
+=======
+        /*public IActionResult Pdf(string html)
+>>>>>>> model-form-required
         {
             html = html.Replace("StrTag", "<").Replace("EndTag", ">");
 
@@ -84,7 +106,7 @@ namespace ProjectBanking.Controllers
                 pdf,
                 "application/pdf",
                 "InformationForBank.pdf");
-        }
+        }*/
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -304,5 +326,37 @@ namespace ProjectBanking.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [Obsolete]
+        public async Task<IActionResult> ImageUpload(IFormFile file)
+        {
+            if(file !=null && file.Length > 0)
+            {
+                var imagePath = @"\Upload\Images\";
+                var uploadPath = _env.WebRootPath + imagePath;
+
+                if (!Directory.Exists(uploadPath))
+                {
+                    Directory.CreateDirectory(uploadPath);
+                }
+
+                var uniqFileName = Guid.NewGuid().ToString();
+                var filename = Path.GetFileName(uniqFileName + "." + file.FileName.Split(".")[1].ToLower());
+                string fullPath = uploadPath + filename;
+
+                imagePath = imagePath + @"\";
+                var filePath = @".." + Path.Combine(imagePath, filename);
+
+                using (var fileStream = new FileStream(fullPath , FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+
+                ViewData["FileLocation"] = filePath;
+            }
+            return View("../Home/Complete", "Formbank");
+        }
+
+
     }
 }

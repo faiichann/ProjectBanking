@@ -8,18 +8,23 @@
 <div id="pdfcontainer">
     <h1 style="margin-top:30px;">Confirm Information</h1>
     <p style="margin-left:800px;">@DateTime.Now</p>
-    <p>ID : @Html.DisplayFor(id => id.CustomerID)</p>
-    <p>Name : @Html.DisplayFor(name => name.CustomerName)</p>
-    <p>Address : @Html.DisplayFor(address => address.CustomerAddress)</p>
-    <p>Phone Number : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
+    <p>ประเภท : @Html.DisplayFor(Select => Select.BankSelect)</p>
+    <p>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</p>
+    <p>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</p>
+    <p>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</p>
+    <p>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</p>
+    <p>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
+    <p>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</p>
     <p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
-    <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />
+    <img src="@ViewData["FileLocation"]" width="500" height="350" />
+    @*<img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" />*@
 </div>
-<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
+@*<form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
     <input asp-for="CustomerImg" class="form-control" type="file" id="fileupload" name="Upload" accept="image/*" onchange="loadFile(event)" multiple />
 </form>
 <asp:FileUpload ID="FileUpload1" runat="server" />
 <asp:Button Text="Upload" runat="server" OnClick="Upload" />
+</form>*@
 
 <button id="btnPdf" onclick="filepreview" accept="image/*">PrintPDF</button>
 
