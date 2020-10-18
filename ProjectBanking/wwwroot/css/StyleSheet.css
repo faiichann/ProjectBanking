@@ -516,7 +516,7 @@ body {
     padding: 14px 55px;
     border-radius: 2em;
     background-color: #5A38FD;
-    font-family: "Roboto", sans-serif;
+    font-family: Kanit;
     font-size: 15px;
     font-weight: 700;
     -webkit-transition: 0.5s;
@@ -662,9 +662,6 @@ a:hover{
     }
 }
 
-.cards {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
 .container {
     padding: 0 16px;
@@ -809,51 +806,214 @@ a:hover{
 /*---responsive---*/
 
 /*--------Filp Card---------*/
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
+.kard {
     position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.cards {
+    -webkit-perspective: 150rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 25rem;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.card__side {
+    height: 25rem;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    top: 0;
+    left: 0;
+    width: 70%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-radius: .7rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
+.card__side--front {
+    background-color: #fff;
 }
 
-/* Style the back side */
-.flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+.card__side--front-1 {
+    background: #4C2B82;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card__side--front-2 {
+    background: #03AA52;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card__side--front-3 {
+    background: #6D5D5D;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card__side--back {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+
+.card__side--back-1 {
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card__side--back-2 {
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card__side--back-3 {
+    background: #fff;
+}
+
+.cards:hover .card__side--front-1,
+.cards:hover .card__side--front-2,
+.cards:hover .card__side--front-3 {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.cards:hover .card__side--back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+.card__title {
+    height: 20rem;
+    padding: 4rem 2rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card__title--1 .fas {
+    font-size: 5rem;
+}
+
+.card__title--2 .fas {
+    font-size: 5rem;
+}
+
+.card__title--3 .fas {
+    font-size: 5rem;
+}
+
+.card__heading {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    
+    width: 75%;
+}
+
+.card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.card__details {
+    padding: 0 2rem 2rem;
+}
+
+.card__details ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+.card__details ul li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+
+.card__details ul li:not(:last-child) {
+                border-bottom: 1px solid #eee;
+            }
+
+.card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem;
+}
+
+.card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.card__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+    .row:not(:last-child) {
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    }
+
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .row [class^="col-"] {
+        float: left;
+    }
+
+        .row [class^="col-"]:not(:last-child) {
+            margin-right: 6rem;
+        }
+
+    .row .col-1-of-3 {
+        width: calc((100% - 2 * 6rem) / 3);
+    }
+
+
+
 
 /*--------Filp Card---------*/
 
@@ -869,7 +1029,7 @@ a:hover{
 }
 
 /*---Select---*/
-* {
+a {
     font-family: Kanit;
 }
 /*---css ที่ส้มโอแก้---*/
