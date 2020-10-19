@@ -103,3 +103,12 @@ document.addEventListener("click", closeAllSelect);
 function goBack() {
     window.history.back();
 }
+function showform() {
+    var x = document.getElementById("showform");
+    if (x.style.display == "block") {
+        x.style.display = "none";
+    }
+    else {
+        x.style.display = "block";
+    }
+}

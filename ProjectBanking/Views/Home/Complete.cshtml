@@ -33,46 +33,46 @@
                                 <form class="formcomplete align-items-center justify-content-center ">
 
                                     <fieldset>
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-8"><span class="number">1</span> ธนาคารไทยพาณิชย์</div>
                                             <div class="col-4" style="justify-content:flex-end"><p>@DateTime.Now</p></div>
                                         </div>
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">ประเภท :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(Select => Select.BankSelect)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">ชื่อบัญชี :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(BN => BN.CustomerBN)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">ชื่อผู้ฝาก :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(name => name.CustomerName)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">เลขบัตรประชาชน :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(id => id.CustomerID)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">ที่อยู่ :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(address => address.CustomerAddress)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">เบอร์ติดต่อ :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(phone => phone.CustomerPhone)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">จำนวนเงินฝาก :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(demoney => demoney.CustomerMoney)"></div>
                                         </div>
 
-                                        <div class="row" style="margin-top:50px;">
+                                        <div class="row" style="margin-top:10px;">
                                             <div class="col-4"><label class="labelconfirm">วันที่สมัครลงทุน :</label></div>
                                             <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(date => date.CustomerDate)"></div>
                                         </div>
@@ -94,6 +94,7 @@
         <asp:Button Text="Upload" runat="server" OnClick="Upload" />*@
                                             </form>
                                         </div>
+                                        <button onclick="window.print()">ปริ้น</button>
                                     </div>
                                 
                             </div>
@@ -104,7 +105,6 @@
         </div>
         <div id="pdfcontainer" style="display:none">
             <h1 style="margin-top:30px;">Confirm Information</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
             <p style="margin-left:800px;">@DateTime.Now</p>
             <p>ประเภท : @Html.DisplayFor(Select => Select.BankSelect)</p>
             <p>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</p>

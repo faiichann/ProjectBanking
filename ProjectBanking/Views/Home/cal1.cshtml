@@ -2,111 +2,104 @@
 <link rel="stylesheet" href="~/css/StyleSheet.css" />
 <body>
 
-        <div asp-action="cal1">
+    <div asp-action="cal1">
 
-            <section class="table-cal">
-                <div class="container">
-                    <div class="text-cal">
-                        <h1 class="textbanner">
-                            ตารางเปรียบเทียบอัตราดอกเบี้ย
-                        </h1>
+        <section class="rank-cal">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <h1 style="color:#5A38FD; margin-bottom:20px;">
+                        ผลการจัดอันดับ
+                    </h1>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-auto">
+                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">2</h1>
+                                <p>ธนาคารไทยพาณิชย์</p>
+                                <center><p>@ViewBag.Totalsavingb1 บาท</p></center>
+                            </div>
+                        </div>
                     </div>
-                    <table class="table">
+                    <div class="col-md-auto">
+                        <img class="card-img-top" src="~/img/circlebank3.png" alt="Card image cap">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">1</h1>
+                                <p>ธนาคารกรุงศรีอยุธยา</p>
+                                <center><p>@ViewBag.Totalsavingb3 บาท</p></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-auto">
+                        <img class="card-img-top" src="~/img/circlebank2.png" alt="Card image cap">
+                        <div class="card" style="width: 10rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">3</h1>
+                                <p>ธนาคารกสิกรไทย</p>
+                                <center><p>@ViewBag.Totalsavingb2 บาท</p></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center" style="margin-top:20px;">
+                    <a href="#sec2" style="color: #ff006e ; cursor:pointer; font-size:16px">ดูตารางเปรียบเทียบ</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec2">
+            <div class="row justify-content-center align-items-center">
+                <h1 style="color:#5A38FD; margin-bottom:20px;">ตารางเปรียบเทียบอัตราดอกเบี้ย</h1>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="cardtable">
+                    <table class="table table-hover table-bordered ">
                         <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col"> <img class="card-img-top" src="~/img/bank3.png" alt="Card image cap"></th>
-                                <th scope="col"><img class="card-img-top" src="~/img/bank1.png" alt="Card image cap"></th>
-                                <th scope="col"><img class="card-img-top" src="~/img/bank2.png" alt="Card image cap"></th>
+                            <tr class="thtable">
+                                <th scope="col" style="border-top-left-radius: 30px;">ธนาคาร</th>
+                                <th scope="col">@Html.DisplayNameFor(model => model.SInterestRate)</th>
+                                <th scope="col">@Html.DisplayNameFor(model => model.Sday)</th>
+                                <th scope="col">@Html.DisplayNameFor(model => model.Smoney)</th>
+                                <th scope="col">@Html.DisplayNameFor(model => model.SRate)</th>
+                                <th scope="col" style="border-top-right-radius: 30px;">@Html.DisplayNameFor(model => model.STotal)</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="btable">
                             <tr>
-                                <td></td>
-                                <td>ธนาคารกรุงศรีอยุธยา</td>
-                                <td>ธนาคารไทยพาณิชย์</td>
-                                <td>ธนาคารกสิกรไทย</td>
+                                <th scope="row" class="thtableimg">ธนาคารกรุงศรีอยุธยา<br /><img src="~/img/bank3.png" style="width:100%" class="imgtable"></th>
+                                <td><br /><br /><h5>0.35</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Sterm</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Earlysavingb2</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Ratesavingb2</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Totalsavingb2</h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">@Html.DisplayNameFor(model => model.Smoney)</th>
-                                <td><br />@ViewBag.Earlysavingb2</td>
-                                <td><br />@ViewBag.Earlysavingb1</td>
-                                <td><br />@ViewBag.Earlysavingb3</td>
+                                <th scope="row">ธนาคารไทยพาณิชย์<br /><img src="~/img/bank1.png" style="width:100%"></th>
+                                <td><br /><br /><h5>0.25</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Sterm</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Earlysavingb1</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Ratesavingb1</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Totalsavingb1</h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">@Html.DisplayNameFor(model => model.Sday)</th>
-                                <td><br />@ViewBag.Sterm</td>
-                                <td><br />@ViewBag.Sterm</td>
-                                <td><br />@ViewBag.Sterm</td>
+                                <th scope="row">ธนาคารกสิกรไทย<br /><img src="~/img/bank2.png" style="width:100%"></th>
+                                <td><br /><br /><h5>0.20</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Sterm</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Earlysavingb3</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Ratesavingb3</h5></td>
+                                <td><br /><br /><h5>@ViewBag.Totalsavingb3</h5></td>
                             </tr>
-                            <tr>
-                                <th scope="row">@Html.DisplayNameFor(model => model.SInterestRate)</th>
-                                <td><br />0.35</td>
-                                <td><br />0.25</td>
-                                <td><br />0.20</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">@Html.DisplayNameFor(model => model.SRate)</th>
-                                <td><br />@ViewBag.Ratesavingb2</td>
-                                <td><br />@ViewBag.Ratesavingb1</td>
-                                <td><br />@ViewBag.Ratesavingb3</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">@Html.DisplayNameFor(model => model.STotal)</th>
-                                <td><br />@ViewBag.Totalsavingb2</td>
-                                <td><br />@ViewBag.Totalsavingb1</td>
-                                <td><br />@ViewBag.Totalsavingb3</td>
-                            </tr>
-
                         </tbody>
                     </table>
-
-                    <section class="rank-cal">
-                        <div class="container">
-                            <div class="text-cal">
-                                <h1 class="textbanner">
-                                    ผลการจัดอันดับ
-                                </h1>
-                            </div>
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-auto">
-                                    <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
-                                    <div class="card" style="width: 10rem;">
-                                        <div class="card-body">
-                                            <h1 class="card-title">2</h1>
-                                            <p>ธนาคารไทยพาณิชย์</p>
-                                            <center><p>@ViewBag.Totalsavingb1 บาท</p></center>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-auto">
-                                    <img class="card-img-top" src="~/img/circlebank3.png" alt="Card image cap">
-                                    <div class="card" style="width: 18rem;">
-                                        <div class="card-body">
-                                            <h1 class="card-title">1</h1>
-                                            <p>ธนาคารกรุงศรีอยุธยา</p>
-                                            <center><p>@ViewBag.Totalsavingb3 บาท</p></center>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-auto">
-                                    <img class="card-img-top" src="~/img/circlebank2.png" alt="Card image cap">
-                                    <div class="card" style="width: 10rem;">
-                                        <div class="card-body">
-                                            <h1 class="card-title">3</h1>
-                                            <p>ธนาคารกสิกรไทย</p>
-                                            <center><p>@ViewBag.Totalsavingb2 บาท</p></center>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <center><button style="border:none;outline:none;" class="btn-cal1" onclick="goBack()">กลับไปหน้าคำนวณ</button></center>
-                        </div>
-                    </section>
-                    
                 </div>
-            </section>
-        </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <center><button style="border:none;outline:none;" class="btn-cal1" onclick="goBack()">กลับไปหน้าคำนวณ</button></center>
+            </div>
+        </section>
+    </div>
     
 </body>
 

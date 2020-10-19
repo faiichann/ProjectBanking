@@ -1,5 +1,47 @@
 ﻿@model ProjectBanking.Models.FixedDeposit
 <body>
+    <section class="rank-cal">
+        <div class="container">
+            <div class="text-cal">
+                <h1 class="textbanner">
+                    ผลการจัดอันดับ
+                </h1>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
+                    <div class="card" style="width: 10rem;">
+                        <div class="card-body">
+                            <h1 class="card-title">2</h1>
+                            <p>ธนาคารไทยพาณิชย์</p>
+                            <center><p>@ViewBag.Totalfixsavingb1 บาท</p></center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <img class="card-img-top" src="~/img/circlebank3.png" alt="Card image cap">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h1 class="card-title">1</h1>
+                            <p>ธนาคารกรุงศรีอยุธยา</p>
+                            <center><p>@ViewBag.Totalfixsavingb3 บาท</p></center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <img class="card-img-top" src="~/img/circlebank2.png" alt="Card image cap">
+                    <div class="card" style="width: 10rem;">
+                        <div class="card-body">
+                            <h1 class="card-title">3</h1>
+                            <p>ธนาคารกสิกรไทย</p>
+                            <center><p>@ViewBag.Totalfixsavingb2 บาท</p></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <center><button style="border:none;outline:none;" class="btn-cal1" onclick="goBack()">กลับไปหน้าคำนวณ</button></center>
+        </div>
+    </section>
 
     <section class="table-cal">
         <div class="container">
@@ -74,46 +116,5 @@
 
         </div>
     </section>
-    <section class="rank-cal">
-        <div class="container">
-            <div class="text-cal">
-                <h1 class="textbanner">
-                    ผลการจัดอันดับ
-                </h1>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="col-md-auto">
-                    <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
-                    <div class="card" style="width: 10rem;">
-                        <div class="card-body">
-                            <h1 class="card-title">2</h1>
-                            <p>ธนาคารไทยพาณิชย์</p>
-                            <center><p>@ViewBag.Totalfixsavingb1 บาท</p></center>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-auto">
-                    <img class="card-img-top" src="~/img/circlebank3.png" alt="Card image cap">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h1 class="card-title">1</h1>
-                            <p>ธนาคารกรุงศรีอยุธยา</p>
-                            <center><p>@ViewBag.Totalfixsavingb3 บาท</p></center>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-auto">
-                    <img class="card-img-top" src="~/img/circlebank2.png" alt="Card image cap">
-                    <div class="card" style="width: 10rem;">
-                        <div class="card-body">
-                            <h1 class="card-title">3</h1>
-                            <p>ธนาคารกสิกรไทย</p>
-                            <center><p>@ViewBag.Totalfixsavingb2 บาท</p></center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <center><button style="border:none;outline:none;" class="btn-cal1" onclick="goBack()">กลับไปหน้าคำนวณ</button></center>
-        </div>
-    </section>
+
 </body>
