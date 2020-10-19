@@ -1243,31 +1243,175 @@ input[type=text]:disabled {
     }
 
 /*----------ranking---------*/
+.card-rank1 {
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    position: absolute;
+    z-index: 98;
+    background-color: white;
+    border-radius: 30px;
+    display: block;
+}
+.card-rank2 {
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    background-color: white;
+    position: absolute;
+    border-radius: 30px;
+    display: block;
+}
+.card-rank3 {
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    background-color: white;
+    position: absolute;
+    border-radius: 30px;
+    display: block;
+}
 .rank-cal {
     margin-bottom: 5%;
     margin-top: 5%;
     text-align: center;
     font-family: Kanit,sans-serif;
+    color: #000;
+    position:relative;
 }
-    .rank-cal .card, img div {
-        box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+.rankimg1 {
+    display: block;
+    margin-right: auto;
+    position: absolute;
+    z-index: 99;
+}
+.rankimg2 {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rankimg3 {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.colrank {
+    flex-direction: column;
+    width: 15%;
+    display: flex;
+}
+
+@media (max-width:767px) {
+    .card-rank1 {
+        width: 25%;
+        margin-left: -2%;
+        top:35%;
+
     }
-    .rank-cal .text-cal h1 {
-        text-align: center;
-        font-size: 50px;
-        font-family: 'Kanit', sans-serif;
-        color: #000;
+
+    .card-rank2 {
+        width: 23%;
+        top: 50%;
+        margin-left: -13%;
     }
-    .rank-cal .text-cal p {
-        text-align: center;
-        font-size: 20px;
-        font-family: 'Kanit', sans-serif;
-        color: #000;
+
+    .card-rank3 {
+        width: 23%;
+        margin-left: 8%;
+        top: 50%;
     }
-    .rank-cal img {
-        margin-bottom:10px;
-        width: 80%;
+    .rankimg1 {
+        width: 16%;
+        margin-left: 1%;
     }
+
+    .rankimg2 {
+        width: 14%;
+        top: 25%;
+        margin-left: -8%;
+    }
+
+    .rankimg3 {
+        margin-left: 14%;
+        top: 25%;
+        width: 14%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .card-rank1 {
+        width: 22%;
+        top:45%;
+        margin-left:-2%;
+    }
+    .card-rank2 {
+        width: 20%;
+        top: 50%;
+        margin-left:-6%;
+    }
+    .card-rank3 {
+        width: 20%;
+        margin-left:4%;
+        top:50%
+    }
+    .rankimg1 {
+        width: 16%;
+        margin-left: 1%;
+    }
+    .rankimg2 {
+        width: 14%;
+        top:25%;
+        margin-left: -3%;
+    }
+    .rankimg3 {
+        margin-left: 6%;
+        top: 25%;
+        width: 14%;
+    }
+}
+
+@media (min-width:1024px) {
+    .card-rank1 {
+        width: 22%;
+        top:62%;
+        margin-left:-1%;
+    }
+
+    .card-rank2 {
+        width: 20%;
+        top: 72%;
+        margin-left: -5%;
+    }
+
+    .card-rank3 {
+        width: 20%;
+        margin-left: 5%;
+        top: 72%
+    }
+
+    .rankimg1 {
+        top:15%;
+        width:14%;
+        margin-left:3%;
+    }
+
+    .rankimg2 {
+        top: 30%;
+        width: 12%;
+        margin-left: -1%;
+    }
+
+    .rankimg3 {
+        top: 30%;
+        width: 12%;
+        margin-left: 9%;
+    }
+}
+
     /*----------table----------*/
 .cardtable {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -1293,6 +1437,16 @@ input[type=text]:disabled {
     padding-bottom: 5px;
     width: 20%;
 }
- 
+/*----------remove arrow----------*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 

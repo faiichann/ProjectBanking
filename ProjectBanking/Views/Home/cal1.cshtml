@@ -3,8 +3,7 @@
 <body>
 
     <div asp-action="cal1">
-
-        <section class="rank-cal">
+        <section class="rank-cal" style=" height: 450px;">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <h1 style="color:#5A38FD; margin-bottom:20px;">
@@ -12,45 +11,57 @@
                     </h1>
                 </div>
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-md-auto">
-                        <img class="card-img-top" src="~/img/circlebank1.png" alt="Card image cap">
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h1 class="card-title">2</h1>
-                                <p>ธนาคารไทยพาณิชย์</p>
-                                <center><p>@ViewBag.Totalsavingb1 บาท</p></center>
+                    <div class="colrank">
+                        <div class="justify-content-center align-items-center" style="width:60%">
+                            <img class="rankimg2" src="~/img/circlebank1.png" >
+                        </div>
+                        <div class="justify-content-center align-items-center">
+                            <div class="card card-rank2">
+                                <div class="card-body">
+                                    <h1 class="card-title">2</h1>
+                                    <h3>0.25 %</h3>
+                                    <p>ธนาคารไทยพาณิชย์</p>
+                                    <center><p>@ViewBag.Totalsavingb1 บาท</p></center>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-auto">
-                        <img class="card-img-top" src="~/img/circlebank3.png" alt="Card image cap">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h1 class="card-title">1</h1>
-                                <p>ธนาคารกรุงศรีอยุธยา</p>
-                                <center><p>@ViewBag.Totalsavingb3 บาท</p></center>
+                    <div class="colrank">
+                        <div class="justify-content-center align-items-center" style="width:70%">
+                            <img class="rankimg1" style="position:absolute;z-index:99;" src="~/img/circlebank3.png">
+                        </div>
+                        <div class="justify-content-center align-items-center" style="margin-left:5%">
+                            <div class="card card-rank1" style="width: 20%;">
+                                <div class="card-body">
+                                    <h1 class="card-title">1</h1>
+                                    <h3>0.35 %</h3>
+                                    <p>ธนาคารกรุงศรีอยุธยา</p>
+                                    <center><p>@ViewBag.Totalsavingb3 บาท</p></center>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-auto">
-                        <img class="card-img-top" src="~/img/circlebank2.png" alt="Card image cap">
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h1 class="card-title">3</h1>
-                                <p>ธนาคารกสิกรไทย</p>
-                                <center><p>@ViewBag.Totalsavingb2 บาท</p></center>
+                    <div class="colrank">
+                        <div class="justify-content-center align-items-center" style="width:50%">
+                            <img class="rankimg3" src="~/img/circlebank2.png">
+                        </div>
+                        <div class="justify-content-center align-items-center">
+                            <div class="card card-rank3">
+                                <div class="card-body">
+                                    <h1 class="card-title">3</h1>
+                                    <h3>0.20 %</h3>
+                                    <p>ธนาคารกสิกรไทย</p>
+                                    <center><p>@ViewBag.Totalsavingb2 บาท</p></center>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-center align-items-center" style="margin-top:20px;">
-                    <a href="#sec2" style="color: #ff006e ; cursor:pointer; font-size:16px">ดูตารางเปรียบเทียบ</a>
                 </div>
             </div>
         </section>
 
         <section id="sec2">
-            <div class="row justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center" style="margin-top:10%;">
                 <h1 style="color:#5A38FD; margin-bottom:20px;">ตารางเปรียบเทียบอัตราดอกเบี้ย</h1>
             </div>
             <div class="row justify-content-center align-items-center">
