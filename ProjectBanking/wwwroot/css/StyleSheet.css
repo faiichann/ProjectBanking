@@ -103,7 +103,7 @@ body {
     .main_menu a i {
         margin-left: 13px;
     }
-}
+
 
 .dropdown-menu {
     border: 0px solid rgba(0, 0, 0, 0.15) !important;
@@ -229,7 +229,7 @@ body {
     }
 }
 /*-------phone--------*/
-}
+
 @media (max-width:767px ) {
     .banner_part .single_banner_slider .banner_text h1 {
         font-size: 20px;
@@ -246,7 +246,7 @@ body {
     }
 }
 
-}
+
 
 /*-------slider show--------*/
 .slide-show {
@@ -953,6 +953,7 @@ input[type=text]:disabled {
     .showcard {
         width: 80%;
     }
+
 }
 @media (min-width:768px) and (max-width:1023px) {
     .colbtn {
@@ -1241,9 +1242,6 @@ input[type=text]:disabled {
         color: #F7F7FC;
     }
 
-.toggle-rt{
-    display:none;
-}
 /*----------ranking---------*/
 .rank-cal {
     margin-bottom: 100px;

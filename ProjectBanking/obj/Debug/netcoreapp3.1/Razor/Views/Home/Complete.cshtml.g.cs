@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -74,7 +74,7 @@ using ProjectBanking.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 2 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
   
     ViewData["Title"] = "Complete";
 
@@ -133,7 +133,7 @@ using ProjectBanking.Models;
                                             <div class=""col-8""><legend><span class=""number"">1</span> ธนาคารไทยพาณิชย์</legend></div>
                                             <div class=""col-4"" style=""justify-content:flex-end""><p>");
 #nullable restore
-#line 38 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 38 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                                                                                               Write(DateTime.Now);
 
 #line default
@@ -146,7 +146,7 @@ using ProjectBanking.Models;
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 2249, "\"", 2302, 1);
 #nullable restore
-#line 42 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 42 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 2257, Html.DisplayFor(Select => Select.BankSelect), 2257, 45, false);
 
 #line default
@@ -161,7 +161,7 @@ WriteAttributeValue("", 2257, Html.DisplayFor(Select => Select.BankSelect), 2257
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 2665, "\"", 2710, 1);
 #nullable restore
-#line 47 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 47 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 2673, Html.DisplayFor(BN => BN.CustomerBN), 2673, 37, false);
 
 #line default
@@ -176,7 +176,7 @@ WriteAttributeValue("", 2673, Html.DisplayFor(BN => BN.CustomerBN), 2673, 37, fa
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 3074, "\"", 3125, 1);
 #nullable restore
-#line 52 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 52 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 3082, Html.DisplayFor(name => name.CustomerName), 3082, 43, false);
 
 #line default
@@ -191,7 +191,7 @@ WriteAttributeValue("", 3082, Html.DisplayFor(name => name.CustomerName), 3082, 
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 3493, "\"", 3538, 1);
 #nullable restore
-#line 57 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 57 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 3501, Html.DisplayFor(id => id.CustomerID), 3501, 37, false);
 
 #line default
@@ -206,7 +206,7 @@ WriteAttributeValue("", 3501, Html.DisplayFor(id => id.CustomerID), 3501, 37, fa
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 3899, "\"", 3959, 1);
 #nullable restore
-#line 62 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 62 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 3907, Html.DisplayFor(address => address.CustomerAddress), 3907, 52, false);
 
 #line default
@@ -221,7 +221,7 @@ WriteAttributeValue("", 3907, Html.DisplayFor(address => address.CustomerAddress
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 4324, "\"", 4378, 1);
 #nullable restore
-#line 67 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 67 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 4332, Html.DisplayFor(phone => phone.CustomerPhone), 4332, 46, false);
 
 #line default
@@ -236,7 +236,7 @@ WriteAttributeValue("", 4332, Html.DisplayFor(phone => phone.CustomerPhone), 433
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 4744, "\"", 4802, 1);
 #nullable restore
-#line 72 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 72 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 4752, Html.DisplayFor(demoney => demoney.CustomerMoney), 4752, 50, false);
 
 #line default
@@ -251,7 +251,7 @@ WriteAttributeValue("", 4752, Html.DisplayFor(demoney => demoney.CustomerMoney),
                                             <div class=""col-8""><input type=""text"" disabled=""disabled""");
                 BeginWriteAttribute("value", " value=\"", 5172, "\"", 5223, 1);
 #nullable restore
-#line 77 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 77 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
 WriteAttributeValue("", 5180, Html.DisplayFor(date => date.CustomerDate), 5180, 43, false);
 
 #line default

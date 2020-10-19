@@ -10,16 +10,6 @@ var loadFile = function (event) {
     }
 };
 
-function showform() {
-    var x = document.getElementById("showform");
-    if (x.style.display == "block") {
-        x.style.display = "none";
-    }
-    else
-    {
-        x.style.display = "block";
-    }
-}
 var filepreview = require('filepreview');
 filepreview.generate('InformationForBank.pdf', 'InformationForBank.png', function (error) {
     if (error) {

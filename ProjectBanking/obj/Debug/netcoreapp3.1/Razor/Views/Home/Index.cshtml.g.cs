@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -86,7 +86,7 @@ using ProjectBanking.Models;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Index.cshtml"
+#line 3 "C:\Users\JB\Documents\GitHub\ProjectBanking\ProjectBanking\Views\Home\Index.cshtml"
   
     ViewData["Title"] = "Index";
 
