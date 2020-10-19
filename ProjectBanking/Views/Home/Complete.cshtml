@@ -104,6 +104,7 @@
         </div>
         <div id="pdfcontainer" style="display:none">
             <h1 style="margin-top:30px;">Confirm Information</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
             <p style="margin-left:800px;">@DateTime.Now</p>
             <p>ประเภท : @Html.DisplayFor(Select => Select.BankSelect)</p>
             <p>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</p>
@@ -128,6 +129,19 @@
         window.history.back();
     }
 </script>
+<configuration>
+    <system.web>
+        <httpRuntime 
+                     maxQueryStringLength = "2048"
+                     maxRequestLength="4096"
+                     maxUrlLength = "260"
+                     enable="True"
+                     requestLengthDiskThreshold="512"
+                     useFullyQualifiedRedirectUrl="True"
+                     executionTimeout="45"
+                     versionHeader="1.1.4128" />
+    </system.web>
+</configuration>
 @*<h1>KComplete</h1>
     <h4>คุณได้ลงทุนกับธนาคาร</h4>
     <div id="pdfcontainer">

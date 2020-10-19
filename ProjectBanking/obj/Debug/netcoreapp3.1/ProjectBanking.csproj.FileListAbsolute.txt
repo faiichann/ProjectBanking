@@ -138,3 +138,4 @@ C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\cal1.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\cal2.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\choose.cshtml.g.cs
+C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Views\web.config

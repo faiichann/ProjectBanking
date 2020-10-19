@@ -214,41 +214,35 @@ body {
         background-color: #3A25A1;
         color: #F7F7FC;
     }
-    .banner_part .single_banner_slider .banner_text h1 {
-        font-size: 40px;
-    }
-}
-
-}
 @media (min-width:768px ) and (max-width: 1023px) {
-    .banner_part .single_banner_slider .banner_text .banner_text_iner .sectionpic img {
-        width: 70%;
-    }
-
     .banner_part .single_banner_slider .banner_text h1 {
-        font-size: 35px;
-        
-    }
-
-    .btn_1 {
-        transform: scale(0.9);
-    }
-}
-/*-------phone--------*/
-}
-@media (max-width:767px ) {
-    .banner_part .single_banner_slider .banner_text h1 {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .btn_1 {
         transform: scale(0.8);
     }
 }
+@media (max-width:768px ) and (max-width: 1023px) {
+    .banner_part .single_banner_slider .banner_text .banner_text_iner img {
+        width: 80%;
+    }
+}
+/*-------phone--------*/
+}
+@media (max-width:767px ) {
+    .banner_part .single_banner_slider .banner_text h1 {
+        font-size: 20px;
+    }
+
+    .btn_1 {
+        transform: scale(0.5);
+    }
+}
 
 @media (max-width:767px ) {
     .banner_part .single_banner_slider .banner_text .banner_text_iner img {
-        width: 70%;
+        width: 50%;
     }
 }
 
@@ -418,291 +412,130 @@ body {
     margin-bottom: 70px;
     padding-right: 80px;
 }
-@media (max-width: 1024px) {
-
-
+/*------section 3 ---------*/
+.bank-section3 {
+    width: 100%;
+    height: 960px;
+    background-color: #fff;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-@media (min-width:769px) and (max-width:1023px) {
-    .bank-section2 {
-        width: 100%;
-        height: 130vh;
-    }
-
-        .bank-section2 h1 {
-            font-size: 35px;
-        }
-
-    .bank-section2 p {
-        top: 80%;
-        font-size: 25px;
-    }
-
-        .sectionpic2 img {
-            left: 60%;
-            position: absolute;
-            width: 50%;
-        }
-    .btn-sec2 {
-        top:40%;
-        transform: scale(0.9);
-    }
-}
-    /*-------phone--------*/
-
-@media (max-width:767px ) {
-    .bank-section2 {
-        width: 100%;
-        height:90vh;       
-    }
-    .bank-section2 h1 {
-        font-size: 22px;
-    }
-
-    .bank-section2 p {
-        top:60%;
-        font-size: 18px;
-    }
-
-    .sectionpic2 img {
-        position:absolute;
-        left:60%;
-        width: 40%;
-    }
-    .btn-sec2 {
-        transform: scale(0.8);
-        top:0;
-        left:0;
-    }
-}
-    /*------section 3 ---------*/
-    .bank-section3 {
-        width: 100%;
-        height: 960px;
-        background-color: #fff;
-        position: relative;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-        .bank-section3 h1 {
-            font-size: 50px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-            margin-left: 600px;
-            position: absolute;
-        }
-
-        .bank-section3 p {
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-            font-size: 30px;
-            margin-top: 120px;
-            margin-left: 600px;
-            position: absolute;
-        }
-
-    .sectionpic3 {
-        display: block;
-        margin-top: 170px;
-    }
-
-@media (min-width:769px) and (max-width:1023px) {
-    .bank-section3 {
-        width: 100%;
-        height: 130vh;
-    }
-
-        .bank-section3 h1 {
-            font-size: 35px;
-            margin-left:45%;
-        }
-
-        .bank-section3 p {
-            top:20%;
-            font-size: 25px;
-            margin-left: 45%;
-        }
-
-    .sectionpic3 img {
-        left:10%;
+    .bank-section3 h1 {
+        font-size: 50px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+        margin-left: 600px;
         position: absolute;
-        width: 50%;
     }
 
-    .btn-sec3 {
-        top: 40%;
-        transform: scale(0.9);
-    }
-}
-/*-------phone--------*/
-
-@media (max-width:767px ) {
-    .bank-section3 {
-        width: 100%;
-        height: 90vh;
-    }
-
-        .bank-section3 h1 {
-            font-size: 22px;
-            margin-left: 45%;
-        }
-
-        .bank-section3 p {
-            top:20%;
-            font-size: 18px;
-            margin-left: 45%;
-        }
-
-    .sectionpic3 img {
+    .bank-section3 p {
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+        font-size: 30px;
+        margin-top: 120px;
+        margin-left: 600px;
         position: absolute;
-        left: 10%;
-        width: 40%;
     }
 
-    .btn-sec3 {
-        transform: scale(0.8);
-        top: 0;
-        left: 0;
-    }
+.sectionpic3 {
+    display: block;
+    margin-top: 170px;
 }
-    /*------section 4 ---------*/
-    .bank-section4 {
-        width: 100%;
-        height: 960px;
-        background-color: #5A38FD;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-        .bank-section4 .text-sec4 {
-            padding: 130px 0 0 0;
-        }
-
-            .bank-section4 .text-sec4 h1 {
-                font-size: 50px;
-                font-family: 'Kanit', sans-serif;
-                color: #fff;
-                text-align: center;
-            }
-
-        .bank-section4 .card-sec4 {
-            justify-content: center;
-            margin-top: 130px;
-        }
-
-            .bank-section4 .card-sec4 .card-body {
-                text-align: center;
-            }
-
-                .bank-section4 .card-sec4 .card-body p {
-                    padding: 20px;
-                    font-size: 20px;
-                    font-family: 'Kanit', sans-serif;
-                    color: #000;
-                }
-
-            .bank-section4 .card-sec4 .card {
-                border-radius: 2em;
-            }
-
-                .bank-section4 .card-sec4 .card img {
-                    border-radius: 2em 2em 0 0;
-                }
-
-    .btn-sec4 {
-        display: inline-block;
-        padding: 14px 55px;
-        border-radius: 2em;
-        background-color: #5A38FD;
-        font-family: "Roboto", sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-        text-transform: capitalize;
+/*------section 4 ---------*/
+.bank-section4 {
+    width: 100%;
+    height: 960px;
+    background-color: #5A38FD;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bank-section4 .text-sec4{
+    padding:130px 0 0 0;
+}
+.bank-section4 .text-sec4 h1 {
+        font-size: 50px;
+        font-family: 'Kanit', sans-serif;
         color: #fff;
-        margin-bottom: 20px;
+        text-align: center;
+}
+.bank-section4 .card-sec4 {
+        justify-content: center;
+        margin-top:130px;
     }
-
-        .btn-sec4:hover {
-            background-color: #3A25A1;
-            color: #F7F7FC;
-        }
-
-@media (min-width:769px) and (max-width:1023px) {
-    .bank-section4 {
-        width: 100%;
-        height: 200vh;
-    }
-
-        .bank-section4 h1 {
-            font-size: 35px;
-            margin-left: 45%;
-        }
-        .bank-section4 .card-sec4 .card {
-            padding:0;
-        }
-
-
-/*-------phone--------*/
-
-@media (max-width:767px ) {
-    .bank-section4 {
-        width: 100%;
-        height: 90vh;
-    }
-
-        .bank-section4 h1 {
-            font-size: 22px;
-            margin-left: 45%;
-        }
-    /*------section 5 ---------*/
+.bank-section4 .card-sec4 .card-body{
+    text-align:center;
+}
+.bank-section4 .card-sec4 .card-body p {
+    padding:20px;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    color: #000;
+}
+.bank-section4 .card-sec4 .card {
+        border-radius:2em;
+}
+.bank-section4 .card-sec4 .card img {
+        border-radius: 2em 2em 0 0;
+}
+.btn-sec4 {
+    display: inline-block;
+    padding: 14px 55px;
+    border-radius: 2em;
+    background-color: #5A38FD;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom:20px;
+}
+.btn-sec4:hover {
+    background-color: #3A25A1;
+    color: #F7F7FC;
+}
+/*------section 5 ---------*/
 .bank-section5 {
-        width: 100%;
-        height: 960px;
-        background-color: #fff;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    width: 100%;
+    height: 960px;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .bank-section5 .text-sec5 {
-       padding: 50px 0 0 0;
+    padding: 50px 0 0 0;
 }
-
 .bank-section5 .text-sec5 h1 {
-      font-size: 50px;
-      font-family: 'Kanit', sans-serif;
-      color: #000;
-      text-align: center;
-}
-
-.bank-section5 .card-sec5 {
-      justify-content: center;
-      margin-top: 150px;
-}
-
-.bank-section5 .card-sec5 .col {
+    font-size: 50px;
+    font-family: 'Kanit', sans-serif;
+    color: #000;
     text-align: center;
 }
-
+.bank-section5 .card-sec5 {
+    justify-content: center;
+    margin-top: 150px;
+}
+.bank-section5 .card-sec5 .col {
+        text-align: center;
+    }
 .bank-section5 .card-sec5 .col p {
-     padding: 50px;
-     font-size: 20px;
-     font-family: 'Kanit', sans-serif;
-     color: #000;
-}
-
-.bank-section5 .card-sec5 .method img {
-      width: 20%;
-      margin-bottom: 80px;
-}
-
-.bank-section5 .card-sec5 .sectionpic5 img {
-     width: 70%;
-     height: 200px;
+        padding: 50px;
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+    }
+ .bank-section5 .card-sec5 .method img {
+        width: 20%;
+        margin-bottom:80px;
+ }
+.bank-section5 .card-sec5 .sectionpic5 img{
+        width:70%;
+        height:200px;
 }
 
 
@@ -715,18 +548,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .bank-section6 .text-sec6 {
     padding: 130px 0 0 0;
 }
 
 .bank-section6 .text-sec6 h1 {
-     font-size: 50px;
-     font-family: 'Kanit', sans-serif;
-     color: #fff;
-     text-align: center;
-}
-
+        font-size: 50px;
+        font-family: 'Kanit', sans-serif;
+        color: #fff;
+        text-align: center;
+    }
 .bank-section6 .card-sec6 .card {
     border-radius: 2em;
 }
@@ -735,33 +566,29 @@ body {
     justify-content: center;
     margin-top: 130px;
 }
-
 .bank-section6 .card-sec6 .card img {
-     margin: 40px auto auto auto;
-     width: 50%;
+    margin:40px auto auto auto;
+    width: 50%;
 }
-
 .bank-section6 .card-sec6 .card-body {
-     text-align: center;
+    text-align: center;
 }
 
 .bank-section6 .card-sec6 .card-body h5 {
-      margin-top: 20px;
-      font-size: 14px;
-      font-family: 'Kanit', sans-serif;
-      color: #000;
+        margin-top:20px;
+        font-size: 14px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
 }
-
 .bank-section6 .card-sec6 .card-body p {
-      font-size: 12px;
-      font-family: 'Kanit', sans-serif;
-      color: #858585;
+        font-size: 12px;
+        font-family: 'Kanit', sans-serif;
+        color: #858585;
 }
-
 .bank-section6 .card-sec6 .card-body img {
-       width: 20%;
-       padding: 2px 10px;
-       margin-bottom: 20px;
+        width:20%;
+        padding:2px 10px;
+        margin-bottom:20px;
 }
 /*--------Filp Card---------*/
 .cards {
@@ -1297,17 +1124,16 @@ input[type=text]:disabled {
 }
 
 .choose-sec1 .text-choose h1 {
-            text-align: center;
-            font-size: 50px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
+    text-align:center;
+    font-size: 50px;
+    font-family: 'Kanit', sans-serif;
+    color: #000;
 }
-
 .choose-sec1 .text-choose p {
-            text-align: center;
-            font-size: 20px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
 }
 
 .choose-sec1 .card-choose {
@@ -1317,165 +1143,152 @@ input[type=text]:disabled {
 
 .choose-sec1 .card-choose .card-body {
             text-align: center;
- }
+}
 
 .choose-sec1 .card-choose .card-body p {
-                padding: 20px;
-                font-size: 20px;
-                font-family: 'Kanit', sans-serif;
-                color: #000;
+   padding: 20px;
+   font-size: 20px;
+   font-family: 'Kanit', sans-serif;
+   color: #000;
 }
 
 .choose-sec1 .card-choose .card {
-            border-radius: 2em;
-            display: grid;
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
-            transition: 0.5s ease;
-            cursor: pointer;
+    border-radius: 2em;
+    display:grid;
+    box-shadow:5px 5px 8px rgba(0,0,0,0.3);
+    transition:0.5s ease;
+    cursor:pointer;
+
+}
+.choose-sec1 .card-choose row col{
+    justify-content:center;
 }
 
-.choose-sec1 .card-choose row col {
-            justify-content: center;
+.choose-sec1 .card-choose .card img {
+        margin: 40px auto auto auto;
+        width: 50%;
+    }
+.choose-sec1 .card-choose .card:hover {
+        transform: scale(1.2);
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
+    }
+/*----------cal1----------*/
+
+.cal-sec1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:100px;
+
+}
+.cal-sec1 .card-cal .card-body form {
+        margin-top:30px;
+}
+.cal-sec1 .card-cal .card-body .btn-cal1 {
+        justify-content:center;
+}
+.cal-sec1 .text-cal {
+    padding: 100px 0 0 0;
 }
 
-        .choose-sec1 .card-choose .card img {
-            margin: 40px auto auto auto;
-            width: 50%;
-        }
-
-        .choose-sec1 .card-choose .card:hover {
-            transform: scale(1.2);
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.1);
-        }
-    /*----------cal1----------*/
-
-    .cal-sec1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 100px;
+.cal-sec1 .text-cal h1 {
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
     }
 
-        .cal-sec1 .card-cal .card-body form {
-            margin-top: 30px;
-        }
-
-        .cal-sec1 .card-cal .card-body .btn-cal1 {
-            justify-content: center;
-        }
-
-        .cal-sec1 .text-cal {
-            padding: 100px 0 0 0;
-        }
-
-            .cal-sec1 .text-cal h1 {
-                text-align: center;
-                font-size: 50px;
-                font-family: 'Kanit', sans-serif;
-                color: #000;
-            }
-
-            .cal-sec1 .text-cal p {
-                text-align: center;
-                font-size: 20px;
-                font-family: 'Kanit', sans-serif;
-                color: #000;
-            }
-
-        .cal-sec1 .card-cal {
-            display: grid;
-            border-radius: 2em;
-            width: 40%;
-            background: #fff;
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-            text-align: left;
-            font-size: 20px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-            margin-top: 50px;
-        }
-
-            .cal-sec1 .card-cal .card-body .form-group input {
-                border-radius: .7em;
-                background: #EFF0F6;
-            }
-
-    .btn-cal1 {
-        display: inline-block;
-        padding: 14px 55px;
+.cal-sec1 .text-cal p {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+    }
+    .cal-sec1 .card-cal {
+        display: grid;
         border-radius: 2em;
-        background-color: #5A38FD;
-        font-family: "Roboto", sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-        text-transform: capitalize;
-        color: #fff;
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
-
-        .btn-cal1:hover {
-            background-color: #3A25A1;
-            color: #F7F7FC;
-        }
-
-    .toggle-rt {
-        display: none;
-    }
-    /*----------ranking---------*/
-    .rank-cal {
-        margin-bottom: 100px;
-        margin-top: 100px;
-        text-align: center;
-        font-family: Kanit,sans-serif;
-    }
-
-        .rank-cal .card, img div {
-            box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
-        }
-
-        .rank-cal .text-cal h1 {
-            text-align: center;
-            font-size: 50px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-        }
-
-        .rank-cal .text-cal p {
-            text-align: center;
-            font-size: 20px;
-            font-family: 'Kanit', sans-serif;
-            color: #000;
-        }
-
-        .rank-cal img {
-            margin-bottom: 10px;
-            width: 80%;
-        }
-    /*----------table----------*/
-    .table-cal {
+        width: 40%;
+        background: #fff;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+        text-align: left;
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
         margin-top: 50px;
-        justify-content: center;
-        align-items: center;
-        font-family: Kanit,sans-serif;
-        text-align: center;
-        margin-bottom: 50px;
+}
+        .cal-sec1 .card-cal .card-body .form-group input {
+            border-radius: .7em;
+            background: #EFF0F6;
+ }   
+.btn-cal1 {
+    display: inline-block;
+    padding: 14px 55px;
+    border-radius: 2em;
+    background-color: #5A38FD;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top:30px;
+}
+
+    .btn-cal1:hover {
+        background-color: #3A25A1;
+        color: #F7F7FC;
     }
 
+.toggle-rt{
+    display:none;
+}
+/*----------ranking---------*/
+.rank-cal {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Kanit,sans-serif;
+}
+    .rank-cal .card, img div {
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+    }
+    .rank-cal .text-cal h1 {
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+    }
+    .rank-cal .text-cal p {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Kanit', sans-serif;
+        color: #000;
+    }
+    .rank-cal img {
+        margin-bottom:10px;
+        width: 80%;
+    }
+    /*----------table----------*/
+.table-cal {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: Kanit,sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
         .table-cal table {
             background-color: #fff;
-            border-radius: 2em;
+            border-radius: 2em;         
         }
-
-        .table-cal tr th, td {
-            padding: 40px 40px;
-        }
-
-        .table-cal table img {
-            width: 70%;
-        }
+    .table-cal tr th,td{
+        padding:40px 40px;
+    }
+.table-cal table img {
+    width:70%;
+}
  
 
 
