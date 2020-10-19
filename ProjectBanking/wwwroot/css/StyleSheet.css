@@ -6,7 +6,7 @@ body {
     font-size: 14px;
     justify-content: center;
     align-items: center;
-    background-color: #eee9f0;
+    background-color: #fff;
 }
 
 .main_menu .navbar-brand {
@@ -16,7 +16,7 @@ body {
 
 .main_menu .navbar {
     padding: 0px;
-    background-color: #eee9f0;
+    background-color: #fff;
 }
 
 .main_menu .main-menu-item ul li .nav-link {
@@ -53,6 +53,7 @@ body {
     display: inline-block;
     margin-left: .255em;
     vertical-align: .255em;
+    content: "";
     border: 0px solid transparent;
 }
 
@@ -62,17 +63,12 @@ body {
     width: 100%;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
     top: 0;
-    background-color: #eee9f0;
+    background-color: #fff;
 }
 
     .menu_fixed .active_color {
-        color: #ff3513 !important;
+        color: #fff !important;
     }
-.dropdown .dropdown-menu {
-    transform: scale(1, 0);
-    display: none;
-    margin-top: 0px;
-}
 
 .dropdown .dropdown-menu {
     transition: all 0.5s;
@@ -84,16 +80,30 @@ body {
     background-color: #5A38FD;
 }
 
-.dropdown:hover .dropdown-menu {
-    transform: scale(1);
-}
-
 .dropdown .dropdown-menu .dropdown-item {
     font-size: 14px;
     padding: 8px 20px !important;
     color: #fff !important;
     background-color: #5A38FD;
     text-transform: capitalize;
+
+}
+
+.dropdown:hover .dropdown-menu {
+    transform: scale(1);
+}
+.dropdown .dropdown-menu {
+    transform: scale(1, 0);
+    display: none;
+    margin-top: 0px;
+}
+.dropdown:hover .dropdown-menu {
+    transform: scale(1);
+    display: block;
+    color: #ffd800;
+}
+.dropdown .dropdown-item:hover {
+    color: #ffd800 !important;
 }
 
     .menu_icon i {
@@ -108,6 +118,9 @@ body {
 .dropdown-menu {
     border: 0px solid rgba(0, 0, 0, 0.15) !important;
     background-color: #fafafa;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .main-menu-item {
@@ -411,6 +424,35 @@ body {
     font-family: "Roboto Condensed", sans-serif;
     margin-bottom: 70px;
     padding-right: 80px;
+}
+@media (min-width:768px ) and (max-width: 1023px){
+    .bank-section2 h1 {
+        font-size: 40px;
+    }
+
+    .bank-section2 p {
+        font-size: 35px;
+
+    }
+    .sectionpic2 img {
+        width: 50%;
+        position: absolute;
+        left: 0;
+    }
+}
+@media (max-width:767px ){
+    .bank-section2 h1 {
+        font-size: 20px;
+    }
+
+    .bank-section2 p {
+        font-size: 15px;
+    }
+    .sectionpic2 img {
+        width: 30%;
+        position: absolute;
+        left:0;
+    }
 }
 /*------section 3 ---------*/
 .bank-section3 {
@@ -1241,13 +1283,12 @@ input[type=text]:disabled {
         background-color: #3A25A1;
         color: #F7F7FC;
     }
-
 /*----------ranking---------*/
 .rank-cal {
     margin-bottom: 100px;
     margin-top: 100px;
     text-align: center;
-    font-family: Kanit,sans-serif;
+    font-family: Kanit, sans-serif;
 }
     .rank-cal .card, img div {
         box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
@@ -1268,6 +1309,31 @@ input[type=text]:disabled {
         margin-bottom:10px;
         width: 80%;
     }
+
+@media (min-width: 1024px) {
+    .rank-cal img {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768 px ) and (max-width: 1023px) {
+    .rank-cal img {
+        width: 30%;
+    }
+    .col-md-auto card {
+        justify-content: center;
+        text-align:center;
+    }
+}
+
+@media (max-width: 767px) {
+    .rank-cal img {
+        width: 20%;
+    }
+    .col-md-auto card{
+        justify-content:center;
+    }
+}
     /*----------table----------*/
 .table-cal {
     margin-top: 50px;
