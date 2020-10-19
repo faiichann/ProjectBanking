@@ -1,6 +1,6 @@
 ﻿
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Kanit";
     padding: 0;
     margin: 0;
     font-size: 14px;
@@ -128,8 +128,7 @@ body {
             vertical-align: middle;
         }
 
-.banner_part .single_banner_slider .banner_text h1 {
-            font-size: 50px;
+.banner_part .single_banner_slider .banner_text .textbanner{
             font-family: 'Kanit', sans-serif;
             color: #000;
             margin-top: 50px;
@@ -150,6 +149,7 @@ body {
     margin-bottom: 70px;
     padding-right: 80px;
 }
+
 
     .banner_part .owl-nav {
         position: absolute;
@@ -210,29 +210,70 @@ body {
     position:absolute;
 }
 
+.img-index1 {
+    
+}
     .btn_1:hover {
         background-color: #3A25A1;
         color: #F7F7FC;
     }
+@media (min-width:1024px) {
+    .banner_part .textbanner{
+        padding-top:0%;
+        padding-left:8%;
+        font-size:55px;
+        font-weight:400;
+        max-width:80%;
+        width:70%
+    }
+    .img-index1 .banner_text_iner{
+        max-width:80%;
+        width:100%;
+        height:auto;
+    }
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+    .img-index1 {
+        width: 100%;
+    }
+}
+
 @media (min-width:768px ) and (max-width: 1023px) {
-    .banner_part .single_banner_slider .banner_text h1 {
-        font-size: 30px;
+    .banner_part .single_banner_slider .banner_text {
+        width: 70%;
+        padding-left: 8%;
+        width: 35%
     }
 
+
+@media (min-width:768px) and (max-width:1023px) {
+    .textbanner {
+        font-size:30px;
+        font-weight:400;
+        width:100%;
+    }
+}
     .btn_1 {
         transform: scale(0.8);
     }
 }
-@media (max-width:768px ) and (max-width: 1023px) {
-    .banner_part .single_banner_slider .banner_text .banner_text_iner img {
-        width: 80%;
-    }
+
 }
 /*-------phone--------*/
 
 @media (max-width:767px ) {
-    .banner_part .single_banner_slider .banner_text h1 {
-        font-size: 20px;
+    .banner_part .single_banner_slider .banner_text{
+       
+        width:100%;
+    }
+   .banner_text_iner{
+       width:30%;
+   }
+    .img-index1{
+        width:100%;
+        max-width:400px;
     }
 
     .btn_1 {
@@ -240,8 +281,19 @@ body {
     }
 }
 
+@media (max-width:767px) {
+    .banner_part .textbanner {
+        padding-top: 0%;
+        padding-left: 20%;
+        font-size: 55px;
+        font-weight: 400;
+        max-width: 80%;
+        width: 70%
+    }
+}
+
 @media (max-width:767px ) {
-    .banner_part .single_banner_slider .banner_text .banner_text_iner img {
+    .banner_part .single_banner_slider .banner_text .banner_text_iner{
         width: 50%;
     }
 }
