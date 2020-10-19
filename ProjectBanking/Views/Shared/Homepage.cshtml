@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjectBanking</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 </head>
@@ -46,15 +45,12 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                 <form asp-controller="Home" asp-action="Page" method="post">
-                                    <input type="submit" class="dropdown-item" name="bank" value="1">
+                                    <input type="submit" class="dropdown-item" name="bank" value="1"/>
                                     ธนาคารไทยพาณิชย์
-                                    </input>
-                                    <input type="submit" class="dropdown-item" name="bank" value="2">
+                                    <input type="submit" class="dropdown-item" name="bank" value="2"/>
                                     ธนาคารกสิกรไทย
-                                    </input>
-                                    <input type="submit" class="dropdown-item" name="bank" value="3">
+                                    <input type="submit" class="dropdown-item" name="bank" value="3"/>
                                     ธนาคารกรุงศรีอยุธยา
-                                    </input>
                                 </form>
                             </div>
                         </li>
