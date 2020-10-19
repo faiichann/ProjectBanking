@@ -78,7 +78,6 @@
                                     </div>
                                     <div class="row align-items-center justify-content-center" style="margin-top:50px;">
                                         <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" style="display:block; margin-left:auto; margin-right:auto;" class="img-thumbnail" width="500" height="350" />
-                                        @*<img src="@ViewData["FileLocation"]" width="500" height="350" />*@
                                     </div>
                                 </fieldset>
                             </form>
@@ -88,8 +87,6 @@
                                     <form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
                                         <label for="file-upload" class="btn-img form-control">อัพโหลดรูปภาพ</label>
                                         <input class="btn-img form-control" asp-for="CustomerImg" type="file" id="file-upload" name="Upload" accept="image/*" onchange="loadFile(event)" hidden />
-                                        @*<asp:FileUpload ID="FileUpload1" runat="server" />
-                                    <asp:Button Text="Upload" runat="server" OnClick="Upload" />*@
                                     </form>
                                 </div>
                                 <button class="btn-print" style="border:none;outline:none;" onclick="window.print()">ปริ้นหน้านี้</button>
@@ -106,17 +103,18 @@
             </div>
         </div>
         <div id="pdfcontainer" style="display:none">
-            <h1 style="margin-top:30px;">Confirm Information</h1>
-            <p style="margin-left:800px;">@DateTime.Now</p>
-            <p>ประเภท : @Html.DisplayFor(Select => Select.BankSelect)</p>
-            <p>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</p>
-            <p>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</p>
-            <p>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</p>
-            <p>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</p>
-            <p>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</p>
-            <p>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</p>
-            <p>Date : @Html.DisplayFor(date => date.CustomerDate)</p>
-            <img src="@ViewData["FileLocation"]" width="500" height="350" />
+            <center>
+                <h1 style="margin-top:30px;">ข้อมูลสำหรับการลงทุน</h1>
+                <p style="margin-left:800px;">@DateTime.Now</p>
+                <h3>ประเภทบัญชี : @Html.DisplayFor(Select => Select.BankSelect)</h3>
+                <h3>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</h3>
+                <h3>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</h3>
+                <h3>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</h3>
+                <h3>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</h3>
+                <h3>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</h3>
+                <h3>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</h3>
+                <h3>Date : @Html.DisplayFor(date => date.CustomerDate)</h3>
+            </center>
         </div>
     </section>
 
