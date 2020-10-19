@@ -127,17 +127,17 @@ namespace ProjectBanking.Controllers
 
         public IActionResult Page()
         {
-                int bank = Convert.ToInt32(HttpContext.Request.Form["bank"].ToString());
+                string bank = HttpContext.Request.Form["bank"].ToString();
 
-                if (bank == 1)
+                if (bank == "ธนาคารไทยพาณิชย์")
                 {
                     ViewBag.bank = "ธนาคารไทยพาณิชย์".ToString();
             }
-                if (bank == 2)
+                if (bank == "ธนาคารกรุงศรีอยุธยา")
                 {
                     ViewBag.bank = "ธนาคารกรุงศรีอยุธยา".ToString();
             }
-                if (bank == 3)
+                if (bank == "ธนาคารกสิกรไทย")
                 {
                     ViewBag.bank = "ธนาคารกสิกรไทย".ToString();
             }
