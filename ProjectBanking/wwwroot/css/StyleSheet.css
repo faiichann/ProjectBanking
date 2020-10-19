@@ -841,23 +841,23 @@ body {
     }
 
 .btn-img {
-    background-color: #5A38FD;
+    background-color: #ffffff;
     border: none;
-    color: white;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: #5A38FD;
+    padding: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 2px 2px;
-    border-radius: 25px;
+    border-radius: 18px;
 }
 
     .btn-img:hover {
-        background-color: #c6c3c3;
-        color: #5A38FD;
+        background-color: #5A38FD;
+        color: #ffffff;
         text-decoration: none;
     }
 
@@ -879,6 +879,26 @@ body {
     .btn-edit:hover {
         background-color: #ff3513;
         color: #fafafa;
+        text-decoration: none;
+    }
+
+.btn-print {
+    background-color: #5A38FD;
+    border: none;
+    color: white;
+    padding: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    border-radius: 18px;
+}
+    .btn-print:hover {
+        background-color: #ffffff;
+        color: #5A38FD;
         text-decoration: none;
     }
 
