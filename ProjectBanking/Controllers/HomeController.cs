@@ -97,7 +97,7 @@ namespace ProjectBanking.Controllers
             //string imgFile = Server.MapPath("~/files/logo.png");
 
             // define a rendering result object
-           // PdfRenderingResult result;
+            // PdfRenderingResult result;
 
             // create image element from file path with real image size
             //PdfImageElement img1 = new PdfImageElement(0, 0, imgFile);

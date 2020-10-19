@@ -2,121 +2,121 @@
 @{
     ViewData["Title"] = "Complete";
 }
-    <section class="headcomplete">
-        <div class="container">
-            <div class="row justify-content-center">
-                <h1 class="display-5 Ctitle">การลงทุนเสร็จเรียบร้อย</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="img-fluid">
-                    <img src="~/img/completepage.png" class="picconfirm">
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="colbtn">
-                    <a href="#cardshow" class="btn-white" onclick="showform()">ตรวจสอบข้อมูล</a>
-                </div>
-                <div class="colbtn">
-                    <a  href="#" class="btn-pdf" id="btnPdf" onclick="filepreview" accept="image/*">ดาวน์โหลดPDF</a>
-                </div>
+<section class="headcomplete">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="display-5 Ctitle">การลงทุนเสร็จเรียบร้อย</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="img-fluid">
+                <img src="~/img/completepage.png" class="picconfirm">
             </div>
         </div>
-    </section>
+        <div class="row justify-content-center">
+            <div class="colbtn">
+                <a href="#cardshow" class="btn-white" onclick="showform()">ตรวจสอบข้อมูล</a>
+            </div>
+            <div class="colbtn">
+                <a href="#" class="btn-pdf" id="btnPdf" onclick="filepreview" accept="image/*">ดาวน์โหลดPDF</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="showform" class="bodycomplete">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="showcard" id="cardshow">
-                    <div class="card-header " style="background:none; text-align:center ;color:blue"><h3>ข้อมูลการลงทุน</h3></div>
-                    <div class="row">
-                        <div class="col-12">
-                            <form class="formcomplete align-items-center justify-content-center ">
+<section id="showform" class="bodycomplete">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="showcard" id="cardshow">
+                <div class="card-header " style="background:none; text-align:center ;color:blue"><h3>ข้อมูลการลงทุน</h3></div>
+                <div class="row">
+                    <div class="col-12">
+                        <form class="formcomplete align-items-center justify-content-center ">
 
-                                <fieldset>
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-8"><span class="number">1</span> ธนาคารไทยพาณิชย์</div>
-                                        <div class="col-4" style="justify-content:flex-end"><p>@DateTime.Now</p></div>
-                                    </div>
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">ประเภท :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(Select => Select.BankSelect)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">ชื่อบัญชี :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(BN => BN.CustomerBN)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">ชื่อผู้ฝาก :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(name => name.CustomerName)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">เลขบัตรประชาชน :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(id => id.CustomerID)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">ที่อยู่ :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(address => address.CustomerAddress)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">เบอร์ติดต่อ :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(phone => phone.CustomerPhone)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">จำนวนเงินฝาก :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(demoney => demoney.CustomerMoney)"></div>
-                                    </div>
-
-                                    <div class="row" style="margin-top:10px;">
-                                        <div class="col-4"><label class="labelconfirm">วันที่สมัครลงทุน :</label></div>
-                                        <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(date => date.CustomerDate)"></div>
-                                    </div>
-                                    <div class="row align-items-center justify-content-center" style="margin-top:50px;">
-                                        <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" style="display:block; margin-left:auto; margin-right:auto;" class="img-thumbnail" width="500" height="350" />
-                                    </div>
-                                </fieldset>
-                            </form>
-                            <div style="margin-bottom:5%;" class="row justify-content-center">
-
-                                <div class="colbtn">
-                                    <form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
-                                        <label for="file-upload" class="btn-img form-control">อัพโหลดรูปภาพ</label>
-                                        <input class="btn-img form-control" asp-for="CustomerImg" type="file" id="file-upload" name="Upload" accept="image/*" onchange="loadFile(event)" hidden />
-                                    </form>
+                            <fieldset>
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-8"><span class="number">1</span> ธนาคารไทยพาณิชย์</div>
+                                    <div class="col-4" style="justify-content:flex-end"><p>@DateTime.Now</p></div>
                                 </div>
-                                <button class="btn-print" style="border:none;outline:none;" onclick="window.print()">ปริ้นหน้านี้</button>
-                            </div>
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">ประเภท :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(Select => Select.BankSelect)"></div>
+                                </div>
 
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">ชื่อบัญชี :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(BN => BN.CustomerBN)"></div>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">ชื่อผู้ฝาก :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(name => name.CustomerName)"></div>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">เลขบัตรประชาชน :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(id => id.CustomerID)"></div>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">ที่อยู่ :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(address => address.CustomerAddress)"></div>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">เบอร์ติดต่อ :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(phone => phone.CustomerPhone)"></div>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">จำนวนเงินฝาก :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(demoney => demoney.CustomerMoney)"></div>
+                                </div>
+
+                                <div class="row" style="margin-top:10px;">
+                                    <div class="col-4"><label class="labelconfirm">วันที่สมัครลงทุน :</label></div>
+                                    <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(date => date.CustomerDate)"></div>
+                                </div>
+                                <div class="row align-items-center justify-content-center" style="margin-top:50px;">
+                                    <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" style="display:block; margin-left:auto; margin-right:auto;" class="img-thumbnail" width="500" height="350" />
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div style="margin-bottom:5%;" class="row justify-content-center">
+
+                            <div class="colbtn">
+                                <form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
+                                    <label for="file-upload" class="btn-img form-control">อัพโหลดรูปภาพ</label>
+                                    <input class="btn-img form-control" asp-for="CustomerImg" type="file" id="file-upload" name="Upload" accept="image/*" onchange="loadFile(event)" hidden />
+                                </form>
+                            </div>
+                            <button class="btn-print" style="border:none;outline:none;" onclick="window.print()">ปริ้นหน้านี้</button>
                         </div>
 
                     </div>
 
                 </div>
-            </div>
-            <div class="row justify-content-center align-items-center" style="margin-top:3%">
-                    <a asp-action="Index" class="btn-edit">กลับสู่หน้าหลัก</a>
+
             </div>
         </div>
-        <div id="pdfcontainer" style="display:none">
-            <center>
-                <h1 style="margin-top:30px;">ข้อมูลสำหรับการลงทุน</h1>
-                <p style="margin-left:800px;">@DateTime.Now</p>
-                <h3>ประเภทบัญชี : @Html.DisplayFor(Select => Select.BankSelect)</h3>
-                <h3>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</h3>
-                <h3>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</h3>
-                <h3>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</h3>
-                <h3>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</h3>
-                <h3>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</h3>
-                <h3>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</h3>
-                <h3>Date : @Html.DisplayFor(date => date.CustomerDate)</h3>
-            </center>
+        <div class="row justify-content-center align-items-center" style="margin-top:3%">
+            <a asp-action="Index" class="btn-edit">กลับสู่หน้าหลัก</a>
         </div>
-    </section>
+    </div>
+    <div id="pdfcontainer" style="display:none">
+        <center>
+            <h1 style="margin-top:100px; margin-bottom:50px">ข้อมูลสำหรับการลงทุน</h1>
+            <p style="margin-left:800px;">@DateTime.Now</p>
+            <h3>ประเภทบัญชี : @Html.DisplayFor(Select => Select.BankSelect)</h3>
+            <h3>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</h3>
+            <h3>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</h3>
+            <h3>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</h3>
+            <h3>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</h3>
+            <h3>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</h3>
+            <h3>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</h3>
+            <h3>Date : @Html.DisplayFor(date => date.CustomerDate)</h3>
+        </center>
+    </div>
+</section>
 
 <script type="text/javascript">
     $("#btnPdf").click(function () {
@@ -131,10 +131,9 @@
 </script>
 <configuration>
     <system.web>
-        <httpRuntime 
-                     maxQueryStringLength = "2048"
+        <httpRuntime maxQueryStringLength="2048"
                      maxRequestLength="4096"
-                     maxUrlLength = "260"
+                     maxUrlLength="260"
                      enable="True"
                      requestLengthDiskThreshold="512"
                      useFullyQualifiedRedirectUrl="True"
@@ -167,4 +166,14 @@
 
 @*<button id="btnPdf" onclick="filepreview" accept="image/*">PrintPDF</button>
     <br />
-    <button onclick="goBack()">กลับไปแก้ไขข้อมูล</button>*@
+    <button onclick="goBack()">กลับไปแก้ไขข้อมูล</button>
+    h3>ประเภทบัญชี : @Html.DisplayFor(Select => Select.BankSelect)</h3>
+                <h3>ชื่อบัญชี : @Html.DisplayFor(BN => BN.CustomerBN)</h3>
+                <h3>ชื่อผู้ฝาก : @Html.DisplayFor(name => name.CustomerName)</h3>
+                <h3>เลขบัตรประชาชน : @Html.DisplayFor(id => id.CustomerID)</h3>
+                <h3>ที่อยู่ : @Html.DisplayFor(address => address.CustomerAddress)</h3>
+                <h3>เบอร์ติดต่อ : @Html.DisplayFor(phone => phone.CustomerPhone)</h3>
+                <h3>จำนวนเงินฝาก : @Html.DisplayFor(demoney => demoney.CustomerMoney)</h3>
+                <h3>Date : @Html.DisplayFor(date => date.CustomerDate)</h3>
+
+*@
