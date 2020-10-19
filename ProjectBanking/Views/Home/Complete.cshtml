@@ -77,12 +77,12 @@
                                         <div class="col-8"><input type="text" disabled="disabled" value="@Html.DisplayFor(date => date.CustomerDate)"></div>
                                     </div>
                                     <div class="row align-items-center justify-content-center" style="margin-top:50px;">
-                                        <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" class="img-thumbnail" width="500" height="350" />
+                                        <img id="show" src="@Html.DisplayFor(img => img.CustomerImg) " alt="Your profile" style="display:block; margin-left:auto; margin-right:auto;" class="img-thumbnail" width="500" height="350" />
                                         @*<img src="@ViewData["FileLocation"]" width="500" height="350" />*@
                                     </div>
                                 </fieldset>
                             </form>
-                            <div class="row justify-content-center">
+                            <div style="margin-bottom:5%;" class="row justify-content-center">
 
                                 <div class="colbtn">
                                     <form asp-action="Complete" method="post" enctype="multipart/form-data" asp-controller="Home">
@@ -98,10 +98,11 @@
                         </div>
 
                     </div>
+
                 </div>
             </div>
-            <div class="colbtn">
-                <center><a asp-action="Index" class="btn-edit">กลับสู่หน้าหลัก</a></center>
+            <div class="row justify-content-center align-items-center" style="margin-top:3%">
+                    <a asp-action="Index" class="btn-edit">กลับสู่หน้าหลัก</a>
             </div>
         </div>
         <div id="pdfcontainer" style="display:none">
