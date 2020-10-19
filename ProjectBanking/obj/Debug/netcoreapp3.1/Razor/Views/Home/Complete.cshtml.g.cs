@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -74,7 +74,7 @@ using ProjectBanking.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 2 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
   
     ViewData["Title"] = "Complete";
 
@@ -370,7 +370,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </div>\r\n    </div>\r\n    <div id=\"pdfcontainer\" style=\"display:none\">\r\n        <center>\r\n            <h1 style=\"margin-top:100px; margin-bottom:50px\">ข้อมูลสำหรับการลงทุน</h1>\r\n            <p style=\"margin-left:800px;\">");
 #nullable restore
-#line 108 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 108 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                                      Write(DateTime.Now);
 
 #line default
@@ -386,7 +386,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>ชื่อบัญชี : ");
 #nullable restore
-#line 110 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 110 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                       Write(Html.DisplayFor(BN => BN.CustomerBN));
 
 #line default
@@ -394,7 +394,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>ชื่อผู้ฝาก : ");
 #nullable restore
-#line 111 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 111 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                        Write(Html.DisplayFor(name => name.CustomerName));
 
 #line default
@@ -402,7 +402,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>เลขบัตรประชาชน : ");
 #nullable restore
-#line 112 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 112 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                            Write(Html.DisplayFor(id => id.CustomerID));
 
 #line default
@@ -410,7 +410,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>ที่อยู่ : ");
 #nullable restore
-#line 113 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 113 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                     Write(Html.DisplayFor(address => address.CustomerAddress));
 
 #line default
@@ -418,7 +418,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>เบอร์ติดต่อ : ");
 #nullable restore
-#line 114 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 114 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                         Write(Html.DisplayFor(phone => phone.CustomerPhone));
 
 #line default
@@ -426,7 +426,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>จำนวนเงินฝาก : ");
 #nullable restore
-#line 115 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 115 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                          Write(Html.DisplayFor(demoney => demoney.CustomerMoney));
 
 #line default
@@ -434,7 +434,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
 #nullable disable
             WriteLiteral("</p>\r\n            <p>Date : ");
 #nullable restore
-#line 116 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
+#line 116 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Complete.cshtml"
                  Write(Html.DisplayFor(date => date.CustomerDate));
 
 #line default

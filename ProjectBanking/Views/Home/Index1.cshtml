@@ -1,0 +1,341 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/indexstyle.css">
+</head>
+<body>
+    <section class="secindex-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="tex-sec1">
+                        <h1>
+                            ให้เราเป็นผู้ช่วยที่ดีที่สุด <br>
+                            ในการหาธนาคารที่เหมาะกับคุณ <br>
+                            ในการลงทุนครั้งนี้ !
+                        </h1>
+                        <a href="#Compare" class="btn-index1" style="text-decoration-line:none;">เริ่มเลย !</a>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="pic-sec1">
+                        <img src="~/img/Section1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="secindex-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="pic-sec2">
+                        <img src="~/img/Section2.png">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tex-sec2">
+                        <h1>
+                            เปรียบเทียบดอกเบี้ย <br>
+                            ครบจบที่นี่ที่เดียว
+                        </h1>
+                        <p>
+                            เพียงเเค่กรอกข้อมูลจำนวนเงินที่ท่านต้องการ <br>
+                            จะลงทุนก็สามารถเช็คดอกเบี้ยของแต่ละ <br>
+                            ธนาคารได้ในรอบเดียว
+                        </p>
+                        <a asp-action="choose" class="btn-index2" style="text-decoration-line:none;">เปรียบเทียบดอกเบี้ย</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="secindex-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="pic-sec3">
+                        <img src="~/img/Section3.png">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tex-sec3">
+                        <h1>
+                            ขั้นตอนการสมัครลงทุน<br>
+                            ง่ายกว่าที่คุณคิด
+                        </h1>
+                        <p>
+                            ไม่ต้องเตรียมเอกสารสมัครให้ยุ่งยาก<br>
+                            เเค่คุณมีบัตรประชาชนก็สามารถลงทุน<br>
+                            กับธนาคารที่สนใจได้เลย
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Info">
+        <div class="bank-section4">
+            <div class="container">
+                <div class="text-sec4">
+                    <h1 class="textbanner">
+                        เลือกลงทุนกับธนาคารชั้นนำของประเทศ
+                    </h1>
+                </div>
+                <div class="card-sec4">
+                    <div class="rows">
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="card__side card__side--front-1">
+                                    <div class="card__title card__title--1">
+                                        <img src="~/img/bank1.png" class="card-img-top" alt="Card image cap">
+                                    </div>
+
+                                    <div class="card__details">
+
+                                        <p style="justify-content:center; color:white; font-size:15px;margin-left:18px;">ธนาคารไทยพาณิชย์</p>
+
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-1">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> อัตราดอกเบี้ยเงินฝาก</p>
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> ออมทรัพย์</p>
+                                            <p style="justify-content:center; color:black;">0.25%/ปี</p>
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> ฝากประจำ</p>
+                                            <p style="justify-content:center; color:black;">3 เดือน 0.37%</p>
+                                            <p style="justify-content:center; color:black;">6 เดือน 0.49%</p>
+                                            <p style="justify-content:center; color:black;">12 เดือน 0.49%</p>
+                                            <form asp-controller="Home" asp-action="Page" method="post">
+                                                <input type="submit" class="btn-sec4" name="bank" value="1" />สมัครเลย
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="card__side card__side--front-2">
+                                    <div class="card__title card__title--2">
+
+                                        <img src="~/img/bank2.png" class="card-img-top" alt="Card image cap" />
+                                    </div>
+
+                                    <div class="card__details">
+                                        <p style="justify-content:center; color:white; font-size:15px;margin-left:20px;">ธนาคารกสิกรไทย</p>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-2">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> อัตราดอกเบี้ยเงินฝาก</p>
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> ออมทรัพย์</p>
+                                            <p style="justify-content:center; color:black;">0.25%/ปี</p>
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> ฝากประจำ</p>
+                                            <p style="justify-content:center; color:black;">3 เดือน 0.35%</p>
+                                            <p style="justify-content:center; color:black;">6 เดือน 0.45%</p>
+                                            <p style="justify-content:center; color:black;">12 เดือน 0.45%</p>
+                                            <form asp-controller="Home" asp-action="Page" method="post">
+                                                <input type="submit" class="btn-sec4" name="bank" value="2" />สมัครเลย
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-1-of-3">
+                            <div class="cards">
+                                <div class="card__side card__side--front-3">
+                                    <div class="card__title card__title--3">
+
+                                        <img src="~/img/bank3.png" class="card-img-top" alt="Card image cap" />
+                                    </div>
+
+                                    <div class="card__details">
+                                        <p style="justify-content:center; color:white; font-size:15px;margin-left:16px;">ธนาคารกรุงศรีอยุธยา</p>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-3">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> อัตราดอกเบี้ยเงินฝาก</p>
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> ออมทรัพย์</p>
+                                            <p style="justify-content:center; color:black;">0.25%/ปี</p>
+                                            <br />
+                                            <p style="justify-content:center; color:black;"> ฝากประจำ</p>
+                                            <p style="justify-content:center; color:black;">3 เดือน 0.38%</p>
+                                            <p style="justify-content:center; color:black;">6 เดือน 0.5%</p>
+                                            <p style="justify-content:center; color:black;">12 เดือน 0.5%</p>
+                                            <form asp-controller="Home" asp-action="Page" method="post">
+                                                <input class="btn-sec4" name="bank" value="3" type="submit" />สมัครเลย
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="bank-section5" id="Howto">
+            <div class="container">
+                <div class="text-sec5">
+                    <h1 class="textbanner">
+                        ใช้งานง่ายเเค่ 3 ขั้นตอน
+                    </h1>
+                </div>
+                <div class="card-sec5">
+                    <div class="row">
+                        <div class="col">
+                            <div class="method">
+                                <img src="~/img/method1.png">
+                            </div>
+                            <div class="sectionpic5">
+                                <img src="~/img/Section5.png">
+                            </div>
+                            <p class="card-text5">
+                                เลือกธนาคารที่คุณสนใจ<br>
+                                จากการเปรียบเทียบ<br>
+                                อัตราดอกเบี้ย
+                            </p>
+                        </div>
+                        <div class="col">
+                            <div class="method">
+                                <img src="~/img/method2.png">
+                            </div>
+                            <div class="sectionpic5">
+                                <img src="~/img/Section5-2.png">
+                                <p class="card-text5">
+                                    กรอกข้อมูลการสมัคร<br>
+                                    พร้อมกับอัพโหลด<br>
+                                    รูปบัตรประชาชน
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="method">
+                                <img src="~/img/method3.png">
+                            </div>
+                            <div class="sectionpic5">
+                                <img src="~/img/Section5-3.png">
+                                <p class="card-text5">
+                                    การสมัครเป็นอันเสร็จ<br>
+                                    เรียบร้อย
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="bank-section6" id="Contact">
+            <div class="container">
+                <div class="text-sec6">
+                    <h1 class="textbanner">
+                        ติดต่อพวกเราได้ที่
+                    </h1>
+                </div>
+                <div class="card-sec6">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top" src="~/img/Ellipse 4.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        Nichkamon Promputta
+                                    </h5>
+                                    <p>Backend Developer</p>
+                                    <img src="~/img/facebook.png">
+                                    <img src="~/img/instagram.png">
+                                    <img src="~/img/google-plus.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top" src="~/img/Ellipse 5.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        Songklod Duangkaew
+                                    </h5>
+                                    <p>Frontend Developer</p>
+                                    <img src="~/img/facebook.png">
+                                    <img src="~/img/instagram.png">
+                                    <img src="~/img/google-plus.png">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top" src="~/img/Ellipse 6.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        Papitchaya Withaisong
+                                    </h5>
+                                    <p>Frontend Developer</p>
+                                    <img src="~/img/facebook.png">
+                                    <img src="~/img/instagram.png">
+                                    <img src="~/img/google-plus.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 15rem;">
+                                <img class="card-img-top" src="~/img/Ellipse 7.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-text">
+                                        Dechit Nanthavadee
+                                    </h5>
+                                    <p>Backend Developer</p>
+                                    <img src="~/img/facebook.png">
+                                    <img src="~/img/instagram.png">
+                                    <img src="~/img/google-plus.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

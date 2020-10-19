@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -86,7 +86,7 @@ using ProjectBanking.Models;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Index.cshtml"
+#line 3 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Index.cshtml"
   
     ViewData["Title"] = "Index";
 
@@ -107,7 +107,7 @@ using ProjectBanking.Models;
                                     ในการหาธนาคารที่เหมาะกับคุณ <br>
                                     ในการลงทุนครั้งนี้ !
                                 </h1>
-                                <a href=""#Compare"" class=""btn_1"" style=""text-decoration-line:none;"">เริ่มเลย !</a>
+                                <a href=""#Compare"" class=""btn-index1"" style=""text-decoration-line:none;"">เริ่มเลย !</a>
                                 <div class=""sectionpic"">
                                     ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "53dbd6c4d9ab3a447c14a654250c5ed10609da2e14046", async() => {

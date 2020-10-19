@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\_ViewImports.cshtml"
 using ProjectBanking.Models;
 
 #line default
@@ -72,7 +72,7 @@ using ProjectBanking.Models;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 3 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
   
     ViewData["Title"] = "Fixed";
 
@@ -103,7 +103,7 @@ using ProjectBanking.Models;
                     __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper);
 #nullable restore
-#line 21 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 21 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSummary = global::Microsoft.AspNetCore.Mvc.Rendering.ValidationSummary.ModelOnly;
 
 #line default
@@ -137,7 +137,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                     __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 32 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 32 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Fmoney);
 
 #line default
@@ -159,7 +159,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 36 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 36 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Fday);
 
 #line default
@@ -187,7 +187,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 37 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 37 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Fday);
 
 #line default
@@ -215,7 +215,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
-#line 38 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 38 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Fday);
 
 #line default
@@ -243,7 +243,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 39 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 39 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Fday);
 
 #line default
@@ -274,7 +274,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                     __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
                     __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
-#line 47 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 47 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Fmonth);
 
 #line default
@@ -322,7 +322,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 DefineSection("Scripts", async() => {
                     WriteLiteral("\r\n");
 #nullable restore
-#line 63 "C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
+#line 63 "C:\Users\GP62M\source\repos\ProjectBanking\ProjectBanking\Views\Home\Fixed.cshtml"
           await Html.RenderPartialAsync("_ValidationScriptsPartial");
 
 #line default
