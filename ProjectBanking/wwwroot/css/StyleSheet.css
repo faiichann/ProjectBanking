@@ -241,12 +241,15 @@ body {
 }
 
 @media (min-width:768px ) and (max-width: 1023px) {
-    .banner_part .single_banner_slider .banner_text {
-        width: 70%;
+    .banner_part .single_banner_slider .banner_text .textbanner {
+        padding-top: 0%;
         padding-left: 8%;
-        width: 35%
+        font-size: 55px;
+        font-weight: 400;
+        max-width: 80%;
+        width: 70%
     }
-
+}
 
 @media (min-width:768px) and (max-width:1023px) {
     .textbanner {
@@ -260,7 +263,7 @@ body {
     }
 }
 
-}
+
 /*-------phone--------*/
 
 @media (max-width:767px ) {
