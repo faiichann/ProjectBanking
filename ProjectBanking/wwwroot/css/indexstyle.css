@@ -177,7 +177,7 @@
         color: #000;
     }
 
-.pic-sec3 {
+.pic-sec3 img {
     margin-top: 30%;
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -188,16 +188,17 @@
     .pic-sec3 img {
         position:absolute;
         width:50%;
-        top:5%;
         
     }
 
     .tex-sec3 h1 {
         font-size: 38px;
+        margin-left:50%;
     }
 
     .tex-sec3 p {
         font-size: 22px;
+        margin-left: 50%;
     }
 }
 
