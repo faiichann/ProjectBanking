@@ -1430,7 +1430,7 @@ input[type=text]:disabled {
     }
 }
 
-@media (min-width:768px) and (max-width:1023px) {
+@media (min-width:768px) and (max-width:1024px) {
     .card-rank1 {
         width: 22%;
         top:45%;
