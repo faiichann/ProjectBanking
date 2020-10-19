@@ -211,7 +211,7 @@ body {
 }
 
 .img-index1 {
-    
+    position:relative;
 }
     .btn_1:hover {
         background-color: #3A25A1;
@@ -235,9 +235,7 @@ body {
 
 
 @media (min-width:768px) and (max-width:1023px) {
-    .img-index1 {
-        width: 100%;
-    }
+
 }
 
 @media (min-width:768px ) and (max-width: 1023px) {
@@ -274,13 +272,16 @@ body {
    .banner_text_iner{
        width:30%;
    }
-    .img-index1{
-        width:100%;
-        max-width:400px;
-    }
 
     .btn_1 {
         transform: scale(0.5);
+    }
+}
+@media (max-width:767px) {
+    .img-index1 {
+        margin-left:-30px;
+        width:40%;
+        max-width:100%
     }
 }
 
