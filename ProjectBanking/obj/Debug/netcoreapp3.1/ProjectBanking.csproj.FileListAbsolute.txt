@@ -130,7 +130,6 @@ C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Home1.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.csproj.CoreCompileInputs.cache
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\ProjectBanking.MvcApplicationPartsAssemblyInfo.cache
@@ -139,4 +138,3 @@ C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\cal2.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\choose.cshtml.g.cs
 C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\bin\Debug\netcoreapp3.1\Views\web.config
-C:\Users\win10\source\repos\ProjectBanking\ProjectBanking\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index1.cshtml.g.cs

@@ -68,11 +68,6 @@ namespace ProjectBanking.Controllers
             ViewBag.bankpage = Page();
             return View();
         }
-        public IActionResult Home1()
-        {
-        
-            return View();
-        }
         public IActionResult choose()
         {
 
